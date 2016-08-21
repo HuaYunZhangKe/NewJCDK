@@ -1,0 +1,32 @@
+//
+//  JCDK.pch
+//  JCDK
+//
+//  Created by 张科 on 16/8/19.
+//  Copyright © 2016年 张科. All rights reserved.
+//
+
+#ifndef JCDK_pch
+#define JCDK_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+/*
+ 倒入头文件
+ －－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－ */
+#import "UIColor+YYAdd.h"
+/*
+ 宏定义 －－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－ */
+
+#define K_Server_H5_URL @"http://uzhitou.cn/"
+#define K_Server_Main_URL @"http://app.uzhitou.cn/"
+#define JCDK_Screen_HEIGHT [UIScreen mainScreen].bounds.size.height
+#define JCDK_Screen_WIDTH [UIScreen mainScreen].bounds.size.width
+#define kAppColor [UIColor colorWithRGB:0x2f3439]
+#define kNavTitleColor [UIColor colorWithRGB:0xffffff]
+
+
+#define kHexColor(hex) [UIColor colorWithRGB:hex]
+//防止block 循环引用
+#define WeakSelf(x)      __weak typeof (self) x = self
+#endif /* JCDK_pch */
