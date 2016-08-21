@@ -325,6 +325,9 @@
 		0ADF87DE1D66AC1A00E73526 /* First */ = {
 			isa = PBXGroup;
 			children = (
+				C4423F2A1D69C3C000B74C85 /* C */,
+				C4423F2B1D69C3C000B74C85 /* M */,
+				C4423F2C1D69C3C000B74C85 /* V */,
 				0ADF88E61D67166E00E73526 /* FHomeVC.h */,
 				0ADF88E71D67166E00E73526 /* FHomeVC.m */,
 				0ADF88E81D67166E00E73526 /* FHomeVC.xib */,
@@ -616,6 +619,27 @@
 			path = jcdk_images;
 			sourceTree = "<group>";
 		};
+		C4423F2A1D69C3C000B74C85 /* C */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		C4423F2B1D69C3C000B74C85 /* M */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
+		C4423F2C1D69C3C000B74C85 /* V */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = V;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -897,6 +921,7 @@
 				GCC_PREFIX_HEADER = $SRCROOT/JCDK/Resources/JCDK.pch;
 				IBSC_FLATTEN_NIBS = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/JCDK/xcdDefault/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = no.JCDK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -911,6 +936,7 @@
 				GCC_PREFIX_HEADER = $SRCROOT/JCDK/Resources/JCDK.pch;
 				IBSC_FLATTEN_NIBS = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/JCDK/xcdDefault/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = no.JCDK;
 				PRODUCT_NAME = "$(TARGET_NAME)";

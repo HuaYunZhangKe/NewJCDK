@@ -49,7 +49,7 @@
  */
 - (UIStatusBarStyle)preferredStatusBarStyle
 {
-    return UIStatusBarStyleDefault;
+    return UIStatusBarStyleLightContent;
 }
 
 - (void)didReceiveMemoryWarning {
