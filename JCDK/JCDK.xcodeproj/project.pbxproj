@@ -358,6 +358,9 @@
 		0ADF87E11D66AC1A00E73526 /* Second */ = {
 			isa = PBXGroup;
 			children = (
+				0ADF890C1D69C51900E73526 /* C */,
+				0ADF890D1D69C51900E73526 /* M */,
+				0ADF890E1D69C51900E73526 /* V */,
 				0ADF88EB1D67168200E73526 /* SHomeVC.h */,
 				0ADF88EC1D67168200E73526 /* SHomeVC.m */,
 				0ADF88ED1D67168200E73526 /* SHomeVC.xib */,
@@ -617,6 +620,27 @@
 				0ADF88801D6709FD00E73526 /* zhmx_right.png */,
 			);
 			path = jcdk_images;
+			sourceTree = "<group>";
+		};
+		0ADF890C1D69C51900E73526 /* C */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		0ADF890D1D69C51900E73526 /* M */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
+		0ADF890E1D69C51900E73526 /* V */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = V;
 			sourceTree = "<group>";
 		};
 		C4423F2A1D69C3C000B74C85 /* C */ = {
