@@ -24,8 +24,6 @@
 #define JCDK_Screen_WIDTH [UIScreen mainScreen].bounds.size.width
 #define kAppColor [UIColor colorWithRGB:0x2f3439]
 #define kNavTitleColor [UIColor colorWithRGB:0xffffff]
-
-
 #define kHexColor(hex) [UIColor colorWithRGB:hex]
 //防止block 循环引用
 #define WeakSelf(x)      __weak typeof (self) x = self
