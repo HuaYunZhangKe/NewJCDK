@@ -40,7 +40,7 @@
     _headImg.layer.cornerRadius = 24;
     self.nameLabel = [[JCDKBaseLabel alloc] initWithFrame:CGRectMake(_headImg.right + 10, _headImg.top, self.frame.size.width, 15)];
     [headView addSubview:_nameLabel];
-    _nameLabel.text = @"宝宝熊";
+    _nameLabel.text = @"宝宝熊 (会员号:123456)";
     
     UILabel *label = [[JCDKBaseLabel alloc] initWithFrame:CGRectMake(_nameLabel.left, _nameLabel.bottom +20,40, 13)];
     [headView addSubview:label];

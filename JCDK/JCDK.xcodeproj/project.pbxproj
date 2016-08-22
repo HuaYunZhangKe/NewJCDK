@@ -114,6 +114,9 @@
 		0ADF89061D6946D900E73526 /* UIImage+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADF89051D6946D900E73526 /* UIImage+Utils.m */; };
 		0ADF89091D69608000E73526 /* JCDKBaseNaviVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADF89081D69608000E73526 /* JCDKBaseNaviVC.m */; };
 		0ADF890B1D699C7100E73526 /* xiaowanzi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0ADF890A1D699C7100E73526 /* xiaowanzi.jpg */; };
+		C43FC1F21D6B1C01002C6E42 /* FreeReciveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C43FC1F11D6B1C01002C6E42 /* FreeReciveViewController.m */; };
+		C43FC1F51D6B22BF002C6E42 /* FreeView.m in Sources */ = {isa = PBXBuildFile; fileRef = C43FC1F41D6B22BF002C6E42 /* FreeView.m */; };
+		C43FC1F81D6B25F9002C6E42 /* FreeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C43FC1F71D6B25F9002C6E42 /* FreeTableViewCell.m */; };
 		C4B13C7E1D6A96F6007A5009 /* MyView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4B13C7D1D6A96F6007A5009 /* MyView.m */; };
 		C4B13C811D6ACEA9007A5009 /* JCDKBaseLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C4B13C801D6ACEA9007A5009 /* JCDKBaseLabel.m */; };
 /* End PBXBuildFile section */
@@ -251,6 +254,12 @@
 		0ADF89071D69608000E73526 /* JCDKBaseNaviVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCDKBaseNaviVC.h; sourceTree = "<group>"; };
 		0ADF89081D69608000E73526 /* JCDKBaseNaviVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCDKBaseNaviVC.m; sourceTree = "<group>"; };
 		0ADF890A1D699C7100E73526 /* xiaowanzi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = xiaowanzi.jpg; sourceTree = "<group>"; };
+		C43FC1F01D6B1C01002C6E42 /* FreeReciveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeReciveViewController.h; sourceTree = "<group>"; };
+		C43FC1F11D6B1C01002C6E42 /* FreeReciveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FreeReciveViewController.m; sourceTree = "<group>"; };
+		C43FC1F31D6B22BF002C6E42 /* FreeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeView.h; sourceTree = "<group>"; };
+		C43FC1F41D6B22BF002C6E42 /* FreeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FreeView.m; sourceTree = "<group>"; };
+		C43FC1F61D6B25F9002C6E42 /* FreeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeTableViewCell.h; sourceTree = "<group>"; };
+		C43FC1F71D6B25F9002C6E42 /* FreeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FreeTableViewCell.m; sourceTree = "<group>"; };
 		C4B13C7C1D6A96F6007A5009 /* MyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyView.h; sourceTree = "<group>"; };
 		C4B13C7D1D6A96F6007A5009 /* MyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyView.m; sourceTree = "<group>"; };
 		C4B13C7F1D6ACEA9007A5009 /* JCDKBaseLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCDKBaseLabel.h; sourceTree = "<group>"; };
@@ -702,6 +711,8 @@
 		C4B13C791D6A96DC007A5009 /* C */ = {
 			isa = PBXGroup;
 			children = (
+				C43FC1F01D6B1C01002C6E42 /* FreeReciveViewController.h */,
+				C43FC1F11D6B1C01002C6E42 /* FreeReciveViewController.m */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -718,6 +729,10 @@
 			children = (
 				C4B13C7C1D6A96F6007A5009 /* MyView.h */,
 				C4B13C7D1D6A96F6007A5009 /* MyView.m */,
+				C43FC1F31D6B22BF002C6E42 /* FreeView.h */,
+				C43FC1F41D6B22BF002C6E42 /* FreeView.m */,
+				C43FC1F61D6B25F9002C6E42 /* FreeTableViewCell.h */,
+				C43FC1F71D6B25F9002C6E42 /* FreeTableViewCell.m */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -887,7 +902,10 @@
 				0ADF880B1D66B6B500E73526 /* NSData+YSAdd.m in Sources */,
 				0ADF88181D66C58E00E73526 /* NavigationView.m in Sources */,
 				0ADF88EE1D67168200E73526 /* SHomeVC.m in Sources */,
+				C43FC1F21D6B1C01002C6E42 /* FreeReciveViewController.m in Sources */,
 				C4B13C811D6ACEA9007A5009 /* JCDKBaseLabel.m in Sources */,
+				C43FC1F51D6B22BF002C6E42 /* FreeView.m in Sources */,
+				C43FC1F81D6B25F9002C6E42 /* FreeTableViewCell.m in Sources */,
 				0ADF88F31D67169000E73526 /* THomeVC.m in Sources */,
 				0ADF88311D66F22500E73526 /* ToolBarView.m in Sources */,
 				0ADF89021D67360800E73526 /* LoginVC.m in Sources */,

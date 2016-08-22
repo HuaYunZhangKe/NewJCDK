@@ -9,6 +9,7 @@
 #import "FiveHomeVC.h"
 #import "NavigationView.h"
 #import "MyView.h"
+#import "FreeReciveViewController.h"
 @interface FiveHomeVC ()<UITableViewDataSource,UITableViewDelegate>
 @property(nonatomic,retain)MyView *myView;
 @property(nonatomic,retain)NSArray *dataArr;
@@ -22,16 +23,26 @@
     NavigationView *navigationView = [[[NSBundle mainBundle] loadNibNamed:@"NavigationView" owner:self options:nil] objectAtIndex:3];
     navigationView.frame = CGRectMake(0, 0, JCDK_Screen_WIDTH, 64);
        [self.view addSubview:navigationView];
-        [self.view addSubview:_myView];
-    _myView.tableView.dataSource = self;
-    _myView.tableView.delegate = self;
-    _myView.tableView.separatorColor = kHexColor(0x1f2425);
     [self.view addSubview:self.myView];
+    [_myView.leftBtn addTarget:self action:@selector(kabiChongZhi:) forControlEvents:UIControlEventTouchUpInside];
+    [_myView.rightBtn addTarget:self action:@selector(yinbiChongZhi:) forControlEvents:UIControlEventTouchUpInside];
 
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+#pragma mark - button 点击事件
+-(void)kabiChongZhi:(UIButton *)sender
+{
+  /*** 咖币充值 */
+    NSLog(@"1111");
+}
+-(void)yinbiChongZhi:(UIButton *)sender
+{
+    /*** 银币充值 */
+    NSLog(@"222");
+
 }
 #pragma mark - tableView dataSource
 
@@ -46,19 +57,17 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 
-    
-    
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cell"];
     if(!cell)
     {
         cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     }
     cell.backgroundColor = kHexColor(0x2a2e32);
-    cell.textLabel.text = _dataArr[indexPath.section][indexPath.row];
+    cell.textLabel.text = self.dataArr[indexPath.section][indexPath.row];
     cell.textLabel.textColor = [ UIColor whiteColor];
     cell.detailTextLabel.textColor = [ UIColor whiteColor];
     cell.detailTextLabel.font = [UIFont systemFontOfSize:13];
-    cell.imageView.image = [UIImage imageNamed:_imgArr[indexPath.section][indexPath.row]];
+    cell.imageView.image = [UIImage imageNamed:self.imgArr[indexPath.section][indexPath.row]];
 
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     if(indexPath.section == 0)
@@ -93,6 +102,12 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     NSLog(@"点击 %ld-%ld",indexPath.section,indexPath.row);
+    if(indexPath.section == 1 && indexPath.row == 1)
+    {
+        FreeReciveViewController *free = [FreeReciveViewController new];
+        [self.navigationController pushViewController:free animated:YES];
+        
+    }
 }
 
 #pragma mark - 懒加载
@@ -121,7 +136,7 @@
         self.myView = [[MyView alloc] initWithFrame:CGRectMake(0, 64, JCDK_Screen_WIDTH, JCDK_Screen_HEIGHT  )];
         _myView.tableView.dataSource = self;
         _myView.tableView.delegate = self;
-        _myView.tableView.separatorColor = [UIColor blackColor];
+        _myView.tableView.separatorColor = kHexColor(0x1f2425);
         
     }
     return _myView;

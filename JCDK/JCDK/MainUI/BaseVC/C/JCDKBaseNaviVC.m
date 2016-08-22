@@ -17,6 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setNavigationBarHidden:YES];
+   
+
     self.interactivePopGestureRecognizer.delegate = self;
 }
 
