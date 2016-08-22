@@ -11,8 +11,6 @@
 #import "MyView.h"
 @interface FiveHomeVC ()<UITableViewDataSource,UITableViewDelegate>
 @property(nonatomic,retain)MyView *myView;
-@property(nonatomic,retain)NavigationView *navigationView;
-
 @property(nonatomic,retain)NSArray *dataArr;
 @property(nonatomic,retain)NSArray *imgArr;
 @end
@@ -21,7 +19,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.frame = CGRectMake(0, 0, JCDK_Screen_WIDTH, JCDK_Screen_HEIGHT);
-    [self.view addSubview:self.navigationView];
+    NavigationView *navigationView = [[[NSBundle mainBundle] loadNibNamed:@"NavigationView" owner:self options:nil] objectAtIndex:3];
+    navigationView.frame = CGRectMake(0, 0, JCDK_Screen_WIDTH, 64);
+       [self.view addSubview:navigationView];
+        [self.view addSubview:_myView];
+    _myView.tableView.dataSource = self;
+    _myView.tableView.delegate = self;
+    _myView.tableView.separatorColor = kHexColor(0x1f2425);
     [self.view addSubview:self.myView];
 
 }
@@ -49,7 +53,7 @@
     {
         cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     }
-    cell.backgroundColor = kHexColor(0x22272c);
+    cell.backgroundColor = kHexColor(0x2a2e32);
     cell.textLabel.text = _dataArr[indexPath.section][indexPath.row];
     cell.textLabel.textColor = [ UIColor whiteColor];
     cell.detailTextLabel.textColor = [ UIColor whiteColor];
@@ -114,22 +118,13 @@
 {
     if (!_myView)
     {
-        _myView = [[MyView alloc] initWithFrame:CGRectMake(0, 64, JCDK_Screen_WIDTH, JCDK_Screen_HEIGHT  )];
+        self.myView = [[MyView alloc] initWithFrame:CGRectMake(0, 64, JCDK_Screen_WIDTH, JCDK_Screen_HEIGHT  )];
         _myView.tableView.dataSource = self;
         _myView.tableView.delegate = self;
         _myView.tableView.separatorColor = [UIColor blackColor];
         
     }
     return _myView;
-}
-- (NavigationView *)navigationView
-{
-    if (!_navigationView)
-    {
-        _navigationView = [[[NSBundle mainBundle] loadNibNamed:@"NavigationView" owner:self options:nil] objectAtIndex:3];
-        _navigationView.frame = CGRectMake(0, 0, JCDK_Screen_WIDTH, 64);
-    }
-    return _navigationView;
 }
 
 @end
