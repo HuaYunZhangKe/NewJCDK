@@ -54,7 +54,7 @@
     [headView addSubview:_kabiCount];
     _kabiCount.text = @"10000";
     
-UILabel *yin = [[JCDKBaseLabel alloc] initWithFrame:CGRectMake(_kabiCount.right + 10, _kabiCount.top, label.width, label.height)];
+    UILabel *yin = [[JCDKBaseLabel alloc] initWithFrame:CGRectMake(_kabiCount.right + 10, _kabiCount.top, label.width, label.height)];
     [headView addSubview:yin];
     yin.text = @"银币";
     UIImageView *yImg =[[ UIImageView alloc] initWithFrame:CGRectMake(yin.right, yin.top, 13, 13)];
