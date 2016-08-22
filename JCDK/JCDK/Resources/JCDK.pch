@@ -8,16 +8,14 @@
 
 #ifndef JCDK_pch
 #define JCDK_pch
-
-// Include any system framework and library headers here that should be included in all compilation units.
-// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 /*
  倒入头文件
  －－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－ */
 #import "UIColor+YYAdd.h"
+#import "UIView+YYAdd.h"
+
 /*
  宏定义 －－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－ */
-
 #define K_Server_H5_URL @"http://uzhitou.cn/"
 #define K_Server_Main_URL @"http://app.uzhitou.cn/"
 #define JCDK_Screen_HEIGHT [UIScreen mainScreen].bounds.size.height

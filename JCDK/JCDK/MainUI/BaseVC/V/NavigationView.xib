@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -206,10 +206,10 @@
                             <state key="normal" image="bfzx_bottom.png"/>
                             <variation key="default">
                                 <mask key="constraints">
-                                    <exclude reference="t9x-8I-nWY"/>
                                     <exclude reference="3uR-FW-KuK"/>
-                                    <exclude reference="GCE-1E-GVh"/>
                                     <exclude reference="7lQ-Sb-Ql4"/>
+                                    <exclude reference="GCE-1E-GVh"/>
+                                    <exclude reference="t9x-8I-nWY"/>
                                 </mask>
                             </variation>
                             <connections>
@@ -230,10 +230,10 @@
                             <state key="normal" image="set.png"/>
                             <variation key="default">
                                 <mask key="constraints">
-                                    <exclude reference="hlK-H0-nLG"/>
                                     <exclude reference="6eo-eT-dGG"/>
-                                    <exclude reference="uOr-AV-eeN"/>
                                     <exclude reference="J8W-iY-ofI"/>
+                                    <exclude reference="hlK-H0-nLG"/>
+                                    <exclude reference="uOr-AV-eeN"/>
                                 </mask>
                             </variation>
                             <connections>
@@ -362,10 +362,10 @@
                             <state key="normal" image="bstj_top_right1.png"/>
                             <variation key="default">
                                 <mask key="constraints">
+                                    <exclude reference="aEs-gT-ArR"/>
                                     <exclude reference="d1m-Q9-XwV"/>
                                     <exclude reference="iHp-qp-ZBP"/>
                                     <exclude reference="iW3-lI-aYP"/>
-                                    <exclude reference="aEs-gT-ArR"/>
                                 </mask>
                             </variation>
                             <connections>
@@ -386,10 +386,10 @@
                             <state key="normal" image="bstj_top_right2.png"/>
                             <variation key="default">
                                 <mask key="constraints">
-                                    <exclude reference="Ne6-9N-c2f"/>
                                     <exclude reference="CG6-kL-DCd"/>
-                                    <exclude reference="kZc-VR-lMH"/>
                                     <exclude reference="M9d-3l-KR8"/>
+                                    <exclude reference="Ne6-9N-c2f"/>
+                                    <exclude reference="kZc-VR-lMH"/>
                                 </mask>
                             </variation>
                             <connections>
@@ -400,21 +400,6 @@
                             <rect key="frame" x="6" y="0.0" width="91" height="44"/>
                             <connections>
                                 <action selector="left2Click:" destination="JKh-iO-Sf8" eventType="touchUpInside" id="ilX-62-tYj"/>
-                            </connections>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B5d-xj-bkL">
-                            <rect key="frame" x="218" y="8" width="80" height="28"/>
-                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="28" id="2Eg-uV-f0d"/>
-                                <constraint firstAttribute="width" constant="80" id="qvM-k9-Yhi"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                            <state key="normal" title="比赛推荐">
-                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <connections>
-                                <action selector="introBtnAction:" destination="JKh-iO-Sf8" eventType="touchUpInside" id="9ra-t8-7m3"/>
                             </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="比分中心" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J5h-wN-d4I" userLabel="shuxian">
@@ -438,6 +423,21 @@
                             </state>
                             <connections>
                                 <action selector="ziXunAction:" destination="JKh-iO-Sf8" eventType="touchUpInside" id="XqA-d7-NUr"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B5d-xj-bkL">
+                            <rect key="frame" x="220" y="8" width="80" height="28"/>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="28" id="2Eg-uV-f0d"/>
+                                <constraint firstAttribute="width" constant="80" id="qvM-k9-Yhi"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                            <state key="normal" title="比赛推荐">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="introBtnAction:" destination="JKh-iO-Sf8" eventType="touchUpInside" id="9ra-t8-7m3"/>
                             </connections>
                         </button>
                     </subviews>
