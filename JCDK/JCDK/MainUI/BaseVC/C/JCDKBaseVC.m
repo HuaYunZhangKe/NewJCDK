@@ -18,7 +18,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = kAppColor;
 //    [self.navigationItem setHidesBackButton:YES ];
-//     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"rerturn"] style:UIBarButtonItemStylePlain target:self action:@selector(back)];
+     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"rerturn"] style:UIBarButtonItemStylePlain target:self action:@selector(back)];
 self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
 
 self.navigationController .navigationBar.translucent = NO;

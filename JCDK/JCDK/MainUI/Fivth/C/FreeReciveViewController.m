@@ -37,6 +37,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.navigationItem.title = @"免费领金币";
     [self.freeView.tableView registerClass:[FreeTableViewCell class] forCellReuseIdentifier:@"cell"];
     [self.view addSubview:self.freeView];
 }
