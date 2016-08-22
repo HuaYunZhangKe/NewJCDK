@@ -41,7 +41,7 @@
 -(void)layoutSubviews
 {
     [super layoutSubviews];
-self.img.frame = CGRectMake(16, 12.5, 70 /2, 70/2);
+    self.img.frame = CGRectMake(16, 12.5, 70 /2, 70/2);
     self.titleLb.frame = CGRectMake(_img.right + 10, _img.top, 100, 13);
     self.point.frame = CGRectMake(_titleLb.left, _titleLb.bottom + 10, 9, 9);
     self.countLb .frame = CGRectMake(_point.right +12/2, _point.top, 100, 9);
