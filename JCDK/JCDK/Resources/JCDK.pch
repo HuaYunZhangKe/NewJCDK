@@ -13,7 +13,7 @@
  －－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－ */
 #import "UIColor+YYAdd.h"
 #import "UIView+YYAdd.h"
-
+#import "JCDKBaseLabel.h"
 /*
  宏定义 －－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－ */
 #define K_Server_H5_URL @"http://uzhitou.cn/"
