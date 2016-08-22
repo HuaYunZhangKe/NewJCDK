@@ -11,6 +11,8 @@
 #import "MyView.h"
 @interface FiveHomeVC ()<UITableViewDataSource,UITableViewDelegate>
 @property(nonatomic,retain)MyView *myView;
+@property(nonatomic,retain)NavigationView *navigationView;
+
 @property(nonatomic,retain)NSArray *dataArr;
 @property(nonatomic,retain)NSArray *imgArr;
 @end
@@ -19,9 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.frame = CGRectMake(0, 0, JCDK_Screen_WIDTH, JCDK_Screen_HEIGHT);
-    NavigationView *navigationView = [[[NSBundle mainBundle] loadNibNamed:@"NavigationView" owner:self options:nil] objectAtIndex:3];
-    navigationView.frame = CGRectMake(0, 0, JCDK_Screen_WIDTH, 64);
-       [self.view addSubview:navigationView];
+    [self.view addSubview:self.navigationView];
     [self.view addSubview:self.myView];
 
 }
@@ -114,13 +114,22 @@
 {
     if (!_myView)
     {
-        self.myView = [[MyView alloc] initWithFrame:CGRectMake(0, 64, JCDK_Screen_WIDTH, JCDK_Screen_HEIGHT  )];
+        _myView = [[MyView alloc] initWithFrame:CGRectMake(0, 64, JCDK_Screen_WIDTH, JCDK_Screen_HEIGHT  )];
         _myView.tableView.dataSource = self;
         _myView.tableView.delegate = self;
         _myView.tableView.separatorColor = [UIColor blackColor];
         
     }
     return _myView;
+}
+- (NavigationView *)navigationView
+{
+    if (!_navigationView)
+    {
+        _navigationView = [[[NSBundle mainBundle] loadNibNamed:@"NavigationView" owner:self options:nil] objectAtIndex:3];
+        _navigationView.frame = CGRectMake(0, 0, JCDK_Screen_WIDTH, 64);
+    }
+    return _navigationView;
 }
 
 @end
