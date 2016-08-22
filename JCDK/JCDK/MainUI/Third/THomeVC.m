@@ -25,6 +25,7 @@
 {
     NavigationView *navigationView = [[[NSBundle mainBundle] loadNibNamed:@"NavigationView" owner:self options:nil] objectAtIndex:1];
     [navigationView setNib1];
+    navigationView.titleLabel1.text = @"猜球";
     navigationView.frame = CGRectMake(0, 0, JCDK_Screen_WIDTH, 64);
     navigationView.buttonBlock1 = ^(NSInteger button)
     {

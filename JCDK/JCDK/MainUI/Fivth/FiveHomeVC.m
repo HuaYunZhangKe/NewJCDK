@@ -44,7 +44,7 @@
     [self.view addSubview:_myView];
     _myView.tableView.dataSource = self;
     _myView.tableView.delegate = self;
-    _myView.tableView.separatorColor = [UIColor blackColor];
+    _myView.tableView.separatorColor = kHexColor(0x1f2425);
 
       self.dataArr = @[@[@"已购推荐",@"我的推荐",@"我的关注",@"投注记录"],@[@"账户明细",@"免费领取金币",@"赠送好友",@"我的邀请",@"排行设置"],@[@"我的消息",@"我的帖子",@"我的收藏",@"意见反馈"],@[@"更多设置"]];
     self.imgArr = @[@[@"my1@2x",@"my2@2x",@"my3@2x",@"my4@2x"],@[@"my5@2x",@"my6@2x",@"my7@2x",@"my8@2x",@"my9@2x"],@[@"my10@2x",@"my11@2x",@"my12@2x",@"my13@2x"],@[@"my14@2x"]];
@@ -67,7 +67,7 @@
     {
         cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     }
-    cell.backgroundColor = kHexColor(0x22272c);
+    cell.backgroundColor = kHexColor(0x2a2e32);
     cell.textLabel.text = _dataArr[indexPath.section][indexPath.row];
     cell.textLabel.textColor = [ UIColor whiteColor];
     cell.detailTextLabel.textColor = [ UIColor whiteColor];
