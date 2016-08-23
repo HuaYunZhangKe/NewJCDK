@@ -9,6 +9,7 @@
 #import "FreeReciveViewController.h"
 #import "FreeView.h"
 #import "FreeTableViewCell.h"
+#import "NavigationView.h"
 @interface FreeReciveViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property(nonatomic,retain)FreeView *freeView;
 @property(nonatomic,retain)NSArray *arr;
@@ -27,7 +28,7 @@
 -(FreeView *)freeView
 {
     if (!_freeView) {
-        self.freeView = [[FreeView alloc] initWithFrame:self.view.bounds];
+        self.freeView = [[FreeView alloc] initWithFrame:CGRectMake(0, 64, JCDK_Screen_WIDTH, JCDK_Screen_HEIGHT  )];
         self.freeView.tableView .dataSource = self;
         self.freeView.tableView.delegate = self;
         self.freeView.tableView.separatorColor =  kHexColor(0x1f2425);
@@ -36,8 +37,15 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    self.navigationItem.title = @"免费领金币";
+    WeakSelf(wc);
+    NavigationView *navigationView = [[[NSBundle mainBundle] loadNibNamed:@"NavigationView" owner:self options:nil] objectAtIndex:4];
+    navigationView.titleLabel4.text = @"免费领金币";
+    navigationView.buttonBlock4 = ^(NSInteger button)
+    {
+        [wc.navigationController popViewControllerAnimated:NO];
+    };
+    navigationView.frame = CGRectMake(0, 0, JCDK_Screen_WIDTH, 64);
+    [self.view addSubview:navigationView];
     [self.freeView.tableView registerClass:[FreeTableViewCell class] forCellReuseIdentifier:@"cell"];
     [self.view addSubview:self.freeView];
 }

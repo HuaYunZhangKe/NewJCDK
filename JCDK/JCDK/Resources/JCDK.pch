@@ -20,8 +20,22 @@
 #define K_Server_Main_URL @"http://app.uzhitou.cn/"
 #define JCDK_Screen_HEIGHT [UIScreen mainScreen].bounds.size.height
 #define JCDK_Screen_WIDTH [UIScreen mainScreen].bounds.size.width
+//状态栏颜色
+#define kStatusBarColor [UIColor colorWithRGB:0x293033]
+//导航栏颜色
+#define kNavigationBarColor [UIColor colorWithRGB:0x303438]
 #define kAppColor [UIColor colorWithRGB:0x2f3439]
 #define kNavTitleColor [UIColor colorWithRGB:0xffffff]
+#define kWhiteColor1 [UIColor colorWithRGB:0xffffff]
+#define kWhiteColor2 [UIColor colorWithRGB:0xcccccc]
+#define kRedColor [UIColor colorWithRGB:0xab0300]
+#define kBlueColor [UIColor colorWithRGB:0x0900cc]
+#define kYellowColor [UIColor colorWithRGB:0xf2a400]
+#define kGreenColor [UIColor colorWithRGB:0x089600]
+
+
+
+
 #define kHexColor(hex) [UIColor colorWithRGB:hex]
 //防止block 循环引用
 #define WeakSelf(x)      __weak typeof (self) x = self

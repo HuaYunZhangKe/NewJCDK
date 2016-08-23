@@ -7,7 +7,10 @@
 //
 
 #import "JCDKBaseVC.h"
-
+#import "JCDKBaseTableView.h"
+#import "FirstHHeaderView.h"
 @interface FHomeVC : JCDKBaseVC
+@property (weak, nonatomic) IBOutlet JCDKBaseTableView *tableView;
+@property (retain, nonatomic) FirstHHeaderView *headerView;
 
 @end

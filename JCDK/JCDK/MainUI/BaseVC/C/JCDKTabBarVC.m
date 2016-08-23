@@ -33,33 +33,21 @@
 {
  
     NSArray *naviArr = @[self.firstNaviVC, self.secondNaviVC, self.thirdNaviVC, self.fourthNaviVC, self.fivthNaviVC];
-    NSArray *itemsNormalPic = @[@"menu_index_an.png", @"menu_befen_an.png", @"menu_ball_an.png", @"menu_tujian_an.png", @"menu_my_an.png"];
-    NSArray *itemsSelectedPics = @[@"menu_index_liliang.png", @"menu_befen_liang.png",@"menu_ball_liang.png" , @"menu_tujian_liang.png", @"menu_my_liang.png"];
+//    NSArray *itemsNormalPic = @[@"menu_index_an.png", @"menu_befen_an.png", @"menu_ball_an.png", @"menu_tujian_an.png", @"menu_my_an.png"];
+//    NSArray *itemsSelectedPics = @[@"menu_index_liliang.png", @"menu_befen_liang.png",@"menu_ball_liang.png" , @"menu_tujian_liang.png", @"menu_my_liang.png"];
+    NSArray *itemsNormalPic = @[@"home.png", @"core.png", @"guess.png", @"recommend.png", @"user.png"];
+    NSArray *itemsSelectedPics = @[@"home-on.png", @"core-on.png",@"guess-on.png" , @"recommend-on.png", @"user-on.png"];
+
     NSArray *itemsTitle = @[@"首页",@"比分",@"猜球",@"推荐",@"我的"];
     for(int i = 0;i<naviArr.count;i++)
     {
         UIViewController *controller = naviArr[i];
         UITabBarItem *tabItem = [[UITabBarItem alloc] init];
         tabItem.tag = i;
-        CGFloat nwidth = 17;
-        CGFloat nheight = 17;
-        CGFloat swidth = 24;
-        CGFloat sheight = 24;
-        if (i == 2)
-        {
-            nwidth = 16;
-            nheight = 16;
-            swidth = 22.5;
-            sheight = 22.5;
-
-        }
-        if (i == 4)
-        {
-            nwidth = 15;
-            nheight = 17;
-            swidth = 22;
-            sheight = 25;
-        }
+        CGFloat nwidth = 20;
+        CGFloat nheight = 20;
+        CGFloat swidth = 20;
+        CGFloat sheight = 20;
         UIImage *norPic = [[[UIImage imageNamed:itemsNormalPic[i] ] scaleImageToSize:CGSizeMake(nwidth, nheight) ] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         [tabItem setImage:norPic];
         UIImage *selectedPic = [[[UIImage imageNamed:itemsSelectedPics[i]] scaleImageToSize:CGSizeMake(swidth, sheight) ]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];

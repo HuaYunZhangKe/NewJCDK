@@ -39,14 +39,17 @@
 @property (nonatomic, copy)YSBlockWithInteger buttonBlock2;
 //index3
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel3;
-
-
-
+//index4
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel4;
+@property (weak, nonatomic) IBOutlet UIButton *leftBtn4;
+@property (nonatomic, copy)YSBlockWithInteger buttonBlock4;
 #pragma mark -function
 - (void)setNib0;
 - (void)setNib1;
 - (void)setNib2;
 - (void)setNib3;
+- (void)setNib4;
+
 
 
 @end

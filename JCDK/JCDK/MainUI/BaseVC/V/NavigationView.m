@@ -35,6 +35,10 @@
 {
     
 }
+- (void)setNib4
+{
+    
+}
 #pragma mark - IBAction
 //index0
 - (IBAction)left0BtnClick:(id)sender
@@ -130,4 +134,17 @@
         
     }
 }
+
+//index4
+- (IBAction)bakcBtnCLick:(id)sender
+{
+    if (_buttonBlock4)
+    {
+        _buttonBlock4(0);
+    }
+}
+
+
+
+
 @end
