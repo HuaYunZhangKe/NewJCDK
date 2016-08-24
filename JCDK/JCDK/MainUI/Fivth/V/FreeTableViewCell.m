@@ -34,6 +34,7 @@
         self.countLb.font = [UIFont systemFontOfSize:10];
         self.detailLb.font = [UIFont systemFontOfSize:13];
         self.dayLb.font= [UIFont systemFontOfSize:10];
+        self.titleLb.font = [UIFont systemFontOfSize:15];
 }
     return self;
 

@@ -10,5 +10,6 @@
 
 @interface FreeView : UIView
 @property(nonatomic,retain)UITableView *tableView;
-
+@property(nonatomic,retain)JCDKBaseLabel *renwu;
+@property(nonatomic,retain)JCDKBaseLabel *jinbiCount;
 @end

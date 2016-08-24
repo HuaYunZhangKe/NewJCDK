@@ -41,23 +41,27 @@
     self.nameLabel = [[JCDKBaseLabel alloc] initWithFrame:CGRectMake(_headImg.right + 10, _headImg.top, self.frame.size.width, 15)];
     [headView addSubview:_nameLabel];
     _nameLabel.text = @"宝宝熊 (会员号:123456)";
-    
+    _nameLabel.font = [UIFont systemFontOfSize:15];
     UILabel *label = [[JCDKBaseLabel alloc] initWithFrame:CGRectMake(_nameLabel.left, _nameLabel.bottom +20,40, 13)];
     [headView addSubview:label];
     label.text = @"咖币";
     UIImageView *kImg =[[ UIImageView alloc] initWithFrame:CGRectMake(label.right, label.top, 13, 13)];
     [headView addSubview:kImg];
     kImg.image = [UIImage imageNamed:@"kabi"];
+    label.font = [UIFont systemFontOfSize:15];
 
     
     self.kabiCount= [[ JCDKBaseLabel alloc] initWithFrame:CGRectMake(kImg.right +10, kImg.top, 100, kImg.height)];
     [headView addSubview:_kabiCount];
     _kabiCount.text = @"10000";
-    
+    _kabiCount.font = [UIFont systemFontOfSize:15];
+
    UILabel *yin = [[JCDKBaseLabel alloc] initWithFrame:CGRectMake(_kabiCount.right + 10, _kabiCount.top, label.width, label.height)];
    
     [headView addSubview:yin];
     yin.text = @"银币";
+    yin.font = [UIFont systemFontOfSize:15];
+
     UIImageView *yImg =[[ UIImageView alloc] initWithFrame:CGRectMake(yin.right, yin.top, 13, 13)];
     [headView addSubview:yImg];
     
@@ -65,7 +69,8 @@
     self.yinbiCount = [[JCDKBaseLabel alloc] initWithFrame:CGRectMake(yImg.right + 10, yImg.top, 100, yImg.height)];
     [headView addSubview:_yinbiCount];
     _yinbiCount.text = @"111";
-    
+    _yinbiCount.font = [UIFont systemFontOfSize:15];
+
     self.leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     _leftBtn.frame = CGRectMake(label.left, label.bottom+ 10, 60, 20);
     [headView addSubview:_leftBtn];
@@ -76,6 +81,12 @@
 
     [_rightBtn setTitle:@"充值+" forState:0];
     [_leftBtn setTitle:@"充值+" forState:0];
+    _rightBtn.titleLabel.font = [UIFont systemFontOfSize:15];
+    _leftBtn.titleLabel.font = [UIFont systemFontOfSize:15];
+    _leftBtn.backgroundColor = kHexColor(0xf2a327);
+    _rightBtn.backgroundColor = kHexColor(0xf2a327);
+    _rightBtn.layer.cornerRadius = 12;
+    _leftBtn.layer.cornerRadius = 12;
 
 }
 

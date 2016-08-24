@@ -66,6 +66,7 @@
     cell.textLabel.text = self.dataArr[indexPath.section][indexPath.row];
     cell.textLabel.textColor = [ UIColor whiteColor];
     cell.detailTextLabel.textColor = [ UIColor whiteColor];
+    cell.textLabel.font =[ UIFont systemFontOfSize:15];
     cell.detailTextLabel.font = [UIFont systemFontOfSize:13];
     cell.imageView.image = [UIImage imageNamed:self.imgArr[indexPath.section][indexPath.row]];
 
