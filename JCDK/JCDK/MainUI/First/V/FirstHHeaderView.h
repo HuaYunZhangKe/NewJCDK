@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UIView *helpView;
 
 @property (weak, nonatomic) IBOutlet GBView *bgView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *adHeight;
 
 @property (nonatomic, copy)YSBlockWithInteger topTapBlock;
 @property (nonatomic, copy)YSBlockWithInteger middleTapBlock;

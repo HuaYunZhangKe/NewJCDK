@@ -8,9 +8,16 @@
 
 #import "FHomeVC.h"
 #import "NavigationView.h"
+#import "FHIntroduceTabCell.h"
+#import "FHTableCell.h"
+
 @interface FHomeVC ()<UITableViewDelegate, UITableViewDataSource>
 
 @end
+static NSString *itabInde = @"tintroduce";
+static NSString *imatch = @"tmatch";
+static NSString *itopic = @"ttopic";
+
 
 @implementation FHomeVC
 
@@ -20,6 +27,11 @@
     [self setnavigationBar];
     [self settingTableView];
     
+}
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:YES];
+    self.edgesForExtendedLayout = UIRectEdgeNone;
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -46,6 +58,8 @@
 - (void)settingTableView
 {
     self.tableView.tableHeaderView = self.headerView;
+    
+    [self.tableView registerClass:[FHIntroduceTabCell class] forCellReuseIdentifier:itabInde];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
 
@@ -57,7 +71,8 @@
     if (!_headerView)
     {
         _headerView = [[[NSBundle mainBundle] loadNibNamed:@"FirstHHeaderView" owner:self options:nil] objectAtIndex:0];
-        _headerView.frame = CGRectMake(0, 0, JCDK_Screen_WIDTH, 263);
+        _headerView.frame = CGRectMake(0, 0, self.view.width, 263);
+        _headerView.layer.masksToBounds = YES;
         [_headerView setHeaderView];
     }
     return _headerView;
@@ -65,20 +80,59 @@
 #pragma mark - tableview datasource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    if (section == 0)
+    {
+        return 1;
+    }
+    else if (section == 1)
+    {
+        return 4;
+    }
+    else
+    {
+        return 4;
+
+    }
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return 10;
+    return 12;
 }
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 10;
+    if (indexPath.section == 0)
+    {
+        return 194;
+    }
+    else if (indexPath.section == 1)
+    {
+        if (indexPath.row == 0)
+        {
+            return 40;
+        }
+        else
+        {
+            return 98;
+        }
+    }
+    else
+    {
+        if (indexPath.row == 0)
+        {
+            return 40;
+        }
+        else
+        {
+            return 150;
+        }
+
+    }
 }
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
@@ -89,11 +143,45 @@
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cell"];
-    if(!cell)
+    if (indexPath.section == 0)
     {
-        cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+        FHIntroduceTabCell *cell = [[FHIntroduceTabCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:itabInde];
+        cell.backgroundColor = [UIColor redColor];
+        [cell setContentWithArray:@[@"a", @"b",@"c",@"d",@"e",@"f",@"g",@"h"]];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        return cell;
     }
-    return cell;
+    else if (indexPath.section == 1)
+    {
+        if (indexPath.row == 0)
+        {
+            FHTableCell *cell = [[[NSBundle mainBundle] loadNibNamed:@"FHTableCell" owner:self options:nil] objectAtIndex:0];
+            return cell;
+
+        }
+        else
+        {
+            FHTableCell *cell = [[[NSBundle mainBundle] loadNibNamed:@"FHTableCell" owner:self options:nil] objectAtIndex:2];
+            return cell;
+
+        }
+    }
+    else
+    {
+        if (indexPath.row == 0)
+        {
+            FHTableCell *cell = [[[NSBundle mainBundle] loadNibNamed:@"FHTableCell" owner:self options:nil] objectAtIndex:1];
+            return cell;
+            
+        }
+        else
+        {
+            FHTableCell *cell = [[[NSBundle mainBundle] loadNibNamed:@"FHTableCell" owner:self options:nil] objectAtIndex:3];
+            return cell;
+            
+        }
+
+    }
+
 }
 @end

@@ -12,7 +12,8 @@
 
 - (void)awakeFromNib
 {
-    
+//    _adHeight.constant = JCDK_Screen_HEIGHT / 4.0;
+    [self layoutIfNeeded];
 }
 
 - (void)setHeaderView
@@ -40,13 +41,14 @@
                            ];
     // Do any additional setup after loading the view.
     BHInfiniteScrollView* infinitePageView1 = [BHInfiniteScrollView
-                                               infiniteScrollViewWithFrame:self.adView.frame Delegate:self ImagesArray:urlsArray];
+                                               infiniteScrollViewWithFrame:self.adView.bounds Delegate:self ImagesArray:urlsArray];
     infinitePageView1.dotSize = 10;
     infinitePageView1.pageControlAlignmentOffset = CGSizeMake(0, 20);
-    infinitePageView1.titleView.textColor = [UIColor whiteColor];
-    infinitePageView1.titleView.margin = 30;
+//    infinitePageView1.titleView.textColor = [UIColor whiteColor];
+//    infinitePageView1.titleView.margin = 30;
+    infinitePageView1.scrollDirection  = BHInfiniteScrollViewScrollDirectionHorizontal;
     infinitePageView1.titleView.hidden = YES;
-    infinitePageView1.scrollTimeInterval = 10;
+    infinitePageView1.scrollTimeInterval = 5;
     infinitePageView1.autoScrollToNextPage = YES;
     infinitePageView1.delegate = self;
     [self.adView addSubview:infinitePageView1];

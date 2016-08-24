@@ -254,7 +254,7 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="E1B-zw-gog" secondAttribute="trailing" id="2jr-vc-bwl"/>
                 <constraint firstItem="E1B-zw-gog" firstAttribute="top" secondItem="2K5-r5-DS5" secondAttribute="bottom" id="3WV-FV-E8m"/>
@@ -274,6 +274,7 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="adHeight" destination="yYq-RX-lij" id="DUr-U1-Oyn"/>
                 <outlet property="adView" destination="zzF-HJ-oPq" id="XrH-hZ-Q3O"/>
                 <outlet property="baseketBallView" destination="Pe8-1e-V6k" id="GUk-jF-qJ0"/>
                 <outlet property="bgView" destination="TLm-Cr-Jlq" id="Tcm-S4-Hu3"/>
@@ -281,7 +282,7 @@
                 <outlet property="helpView" destination="EU4-Fc-kaX" id="SLZ-xD-q7j"/>
                 <outlet property="introduView" destination="pSs-Qe-6Oh" id="mbq-fc-slX"/>
             </connections>
-            <point key="canvasLocation" x="270" y="314.5"/>
+            <point key="canvasLocation" x="723" y="311.5"/>
         </view>
     </objects>
     <resources>
