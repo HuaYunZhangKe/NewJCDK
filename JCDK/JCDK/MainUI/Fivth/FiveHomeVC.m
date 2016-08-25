@@ -10,6 +10,7 @@
 #import "NavigationView.h"
 #import "MyView.h"
 #import "FreeReciveViewController.h"
+#import "TouZhuViewController.h"
 @interface FiveHomeVC ()<UITableViewDataSource,UITableViewDelegate>
 @property(nonatomic,retain)MyView *myView;
 @property(nonatomic,retain)NSArray *dataArr;
@@ -26,6 +27,7 @@
     [self.view addSubview:self.myView];
     [_myView.leftBtn addTarget:self action:@selector(kabiChongZhi:) forControlEvents:UIControlEventTouchUpInside];
     [_myView.rightBtn addTarget:self action:@selector(yinbiChongZhi:) forControlEvents:UIControlEventTouchUpInside];
+    
 
 }
 - (void)didReceiveMemoryWarning {
@@ -108,6 +110,10 @@
         FreeReciveViewController *free = [FreeReciveViewController new];
         [self.navigationController pushViewController:free animated:YES];
         
+    }if(indexPath.section == 0 &&indexPath.row == 3)
+    {
+        TouZhuViewController *touzhu =[[TouZhuViewController alloc] initWithNibName:@"TouZhuViewController" bundle:nil];
+        [self.navigationController pushViewController:touzhu animated:YES];
     }
 }
 
