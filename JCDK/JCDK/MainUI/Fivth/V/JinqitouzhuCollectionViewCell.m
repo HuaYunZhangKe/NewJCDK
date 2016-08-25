@@ -37,9 +37,8 @@
     self.segment = [[UISegmentedControl alloc] initWithItems:@[@"按时间",@"按场次"]];
     self.segment.frame = CGRectMake(77, 10, 200, 40);
     [headView addSubview:self.segment];
-    self.segment.tintColor = [UIColor redColor];
+    self.segment.tintColor = kRedColor;
     
-    _segment.layer.cornerRadius = 20;
     NSDictionary* unselectedTextAttributes = @{NSFontAttributeName:[UIFont boldSystemFontOfSize:14],
                                                NSForegroundColorAttributeName: [UIColor whiteColor]};
      [_segment setTitleTextAttributes:unselectedTextAttributes forState:UIControlStateNormal];
@@ -48,6 +47,10 @@
     [_segment setTitleTextAttributes:selectedTextAttributes forState:UIControlStateSelected];//设置文字属性
     [_segment addTarget:self action:@selector(segAction:) forControlEvents:UIControlEventValueChanged];
     _segment.selectedSegmentIndex = 0;
+    _segment.layer.cornerRadius = 20;
+    _segment.layer.masksToBounds = YES;
+    _segment.layer.borderWidth = 1.0;
+    _segment.layer.borderColor = kRedColor.CGColor;
 
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -87,6 +90,14 @@
 
 -(void)segAction:(UISegmentedControl *)seg
 {
-    
+    if(seg.selectedSegmentIndex == 1)
+    {
+        [_tableView reloadData];
+    }
+    else
+        
+    {
+        [_tableView reloadData];
+    }
 }
 @end

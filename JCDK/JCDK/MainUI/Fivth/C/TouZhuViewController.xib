@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TouZhuViewController">
             <connections>
+                <outlet property="bgView" destination="WGt-KJ-8fy" id="LVi-6m-Vyc"/>
                 <outlet property="collectionView" destination="GXL-XI-faT" id="AdZ-CM-K0A"/>
                 <outlet property="firstBtn" destination="dHH-LE-Po3" id="CMS-sC-7m9"/>
                 <outlet property="secondBtn" destination="tbL-5v-gkm" id="qfb-MP-NPV"/>
@@ -22,7 +23,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WGt-KJ-8fy">
                     <rect key="frame" x="0.0" y="64" width="600" height="40"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tbL-5v-gkm">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tbL-5v-gkm">
                             <rect key="frame" x="200" y="0.0" width="200" height="40"/>
                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                             <state key="normal" title="未结投注"/>
@@ -30,7 +31,7 @@
                                 <action selector="sectionBtn:" destination="-1" eventType="touchUpInside" id="czw-DS-EEi"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tM8-Fv-qes">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tM8-Fv-qes">
                             <rect key="frame" x="400" y="0.0" width="200" height="40"/>
                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                             <state key="normal" title="历史记录"/>
@@ -38,11 +39,14 @@
                                 <action selector="thirdBtn:" destination="-1" eventType="touchUpInside" id="62J-hm-fQm"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dHH-LE-Po3">
-                            <rect key="frame" x="0.0" y="2" width="200" height="40"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dHH-LE-Po3">
+                            <rect key="frame" x="0.0" y="0.0" width="200" height="40"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="13"/>
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <state key="normal" title="近期投注"/>
+                            <state key="normal" title="近期投注">
+                                <color key="titleColor" red="0.94901960784313721" green="0.64313725490196072" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
                             <connections>
                                 <action selector="firstBtn:" destination="-1" eventType="touchUpInside" id="z1w-V5-iJQ"/>
                             </connections>
@@ -50,15 +54,18 @@
                     </subviews>
                     <color key="backgroundColor" red="0.12549019610000001" green="0.1450980392" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="bottom" secondItem="dHH-LE-Po3" secondAttribute="bottom" constant="-2" id="0US-r8-Uq1"/>
+                        <constraint firstAttribute="bottom" secondItem="dHH-LE-Po3" secondAttribute="bottom" id="0US-r8-Uq1"/>
                         <constraint firstItem="tbL-5v-gkm" firstAttribute="leading" secondItem="dHH-LE-Po3" secondAttribute="trailing" id="6in-yI-Nr4"/>
                         <constraint firstItem="tM8-Fv-qes" firstAttribute="top" secondItem="WGt-KJ-8fy" secondAttribute="top" id="FAw-Uc-GfF"/>
                         <constraint firstItem="tbL-5v-gkm" firstAttribute="top" secondItem="WGt-KJ-8fy" secondAttribute="top" id="Grp-Yj-Jev"/>
-                        <constraint firstItem="dHH-LE-Po3" firstAttribute="top" secondItem="WGt-KJ-8fy" secondAttribute="top" constant="2" id="H5S-9I-Vk7"/>
+                        <constraint firstItem="dHH-LE-Po3" firstAttribute="top" secondItem="WGt-KJ-8fy" secondAttribute="top" id="H5S-9I-Vk7"/>
                         <constraint firstItem="dHH-LE-Po3" firstAttribute="leading" secondItem="WGt-KJ-8fy" secondAttribute="leading" id="Hki-U7-xpc"/>
+                        <constraint firstItem="tbL-5v-gkm" firstAttribute="width" secondItem="dHH-LE-Po3" secondAttribute="width" id="V0m-e6-Usr"/>
+                        <constraint firstAttribute="trailing" secondItem="tM8-Fv-qes" secondAttribute="trailing" id="VrN-So-CaW"/>
                         <constraint firstItem="tM8-Fv-qes" firstAttribute="leading" secondItem="tbL-5v-gkm" secondAttribute="trailing" id="Ze8-c0-zI6"/>
                         <constraint firstAttribute="bottom" secondItem="tM8-Fv-qes" secondAttribute="bottom" id="aed-FP-8FS"/>
                         <constraint firstAttribute="bottom" secondItem="tbL-5v-gkm" secondAttribute="bottom" id="eon-h8-ec9"/>
+                        <constraint firstItem="tM8-Fv-qes" firstAttribute="width" secondItem="dHH-LE-Po3" secondAttribute="width" id="tfe-Lb-3cG"/>
                         <constraint firstAttribute="height" constant="40" id="w1v-Bf-cON"/>
                     </constraints>
                 </view>
