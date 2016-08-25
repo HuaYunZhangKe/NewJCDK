@@ -25,6 +25,14 @@
 		0A142EF21D6C4CEB006D1640 /* BHInfiniteScrollViewTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A142EEE1D6C4CEB006D1640 /* BHInfiniteScrollViewTitleView.m */; };
 		0A142EF51D6C5706006D1640 /* JCDKBaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A142EF41D6C5706006D1640 /* JCDKBaseTableView.m */; };
 		0A142EF81D6C6825006D1640 /* GBView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A142EF71D6C6825006D1640 /* GBView.m */; };
+		0A142F211D6D3832006D1640 /* FHIntroduceTabCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A142F201D6D3832006D1640 /* FHIntroduceTabCell.m */; };
+		0A142F251D6D7BD5006D1640 /* FHIntroduceColletionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A142F231D6D7BD5006D1640 /* FHIntroduceColletionCell.m */; };
+		0A142F261D6D7BD5006D1640 /* FHIntroduceColletionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A142F241D6D7BD5006D1640 /* FHIntroduceColletionCell.xib */; };
+		0A142F521D6DACC2006D1640 /* FHTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A142F501D6DACC2006D1640 /* FHTableCell.m */; };
+		0A142F531D6DACC2006D1640 /* FHTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A142F511D6DACC2006D1640 /* FHTableCell.xib */; };
+		0A142F561D6EA189006D1640 /* SHCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A142F551D6EA189006D1640 /* SHCollectionCell.m */; };
+		0A142F5F1D6EA5C0006D1640 /* BiFenTabCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A142F5D1D6EA5C0006D1640 /* BiFenTabCell.m */; };
+		0A142F601D6EA5C0006D1640 /* BiFenTabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A142F5E1D6EA5C0006D1640 /* BiFenTabCell.xib */; };
 		0A9F0BB51D6B4C2E00B931BD /* MBUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9F0BB41D6B4C2E00B931BD /* MBUtil.m */; };
 		0ADF87F51D66AC8500E73526 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADF87EF1D66AC8500E73526 /* AppDelegate.m */; };
 		0ADF87F61D66AC8500E73526 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ADF87F01D66AC8500E73526 /* Assets.xcassets */; };
@@ -168,6 +176,19 @@
 		0A142EF41D6C5706006D1640 /* JCDKBaseTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCDKBaseTableView.m; sourceTree = "<group>"; };
 		0A142EF61D6C6825006D1640 /* GBView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBView.h; sourceTree = "<group>"; };
 		0A142EF71D6C6825006D1640 /* GBView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBView.m; sourceTree = "<group>"; };
+		0A142F1F1D6D3832006D1640 /* FHIntroduceTabCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHIntroduceTabCell.h; sourceTree = "<group>"; };
+		0A142F201D6D3832006D1640 /* FHIntroduceTabCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FHIntroduceTabCell.m; sourceTree = "<group>"; };
+		0A142F221D6D7BD5006D1640 /* FHIntroduceColletionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHIntroduceColletionCell.h; sourceTree = "<group>"; };
+		0A142F231D6D7BD5006D1640 /* FHIntroduceColletionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FHIntroduceColletionCell.m; sourceTree = "<group>"; };
+		0A142F241D6D7BD5006D1640 /* FHIntroduceColletionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FHIntroduceColletionCell.xib; sourceTree = "<group>"; };
+		0A142F4F1D6DACC2006D1640 /* FHTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHTableCell.h; sourceTree = "<group>"; };
+		0A142F501D6DACC2006D1640 /* FHTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FHTableCell.m; sourceTree = "<group>"; };
+		0A142F511D6DACC2006D1640 /* FHTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FHTableCell.xib; sourceTree = "<group>"; };
+		0A142F541D6EA189006D1640 /* SHCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHCollectionCell.h; sourceTree = "<group>"; };
+		0A142F551D6EA189006D1640 /* SHCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHCollectionCell.m; sourceTree = "<group>"; };
+		0A142F5C1D6EA5C0006D1640 /* BiFenTabCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BiFenTabCell.h; sourceTree = "<group>"; };
+		0A142F5D1D6EA5C0006D1640 /* BiFenTabCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BiFenTabCell.m; sourceTree = "<group>"; };
+		0A142F5E1D6EA5C0006D1640 /* BiFenTabCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BiFenTabCell.xib; sourceTree = "<group>"; };
 		0A9F0BB31D6B4C2E00B931BD /* MBUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBUtil.h; sourceTree = "<group>"; };
 		0A9F0BB41D6B4C2E00B931BD /* MBUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBUtil.m; sourceTree = "<group>"; };
 		0ADF87C21D66A44500E73526 /* JCDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JCDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -770,6 +791,11 @@
 		0ADF890E1D69C51900E73526 /* V */ = {
 			isa = PBXGroup;
 			children = (
+				0A142F541D6EA189006D1640 /* SHCollectionCell.h */,
+				0A142F551D6EA189006D1640 /* SHCollectionCell.m */,
+				0A142F5C1D6EA5C0006D1640 /* BiFenTabCell.h */,
+				0A142F5D1D6EA5C0006D1640 /* BiFenTabCell.m */,
+				0A142F5E1D6EA5C0006D1640 /* BiFenTabCell.xib */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -804,6 +830,14 @@
 				0A142EDF1D6C3668006D1640 /* FirstHHeaderView.xib */,
 				0A142EF61D6C6825006D1640 /* GBView.h */,
 				0A142EF71D6C6825006D1640 /* GBView.m */,
+				0A142F1F1D6D3832006D1640 /* FHIntroduceTabCell.h */,
+				0A142F201D6D3832006D1640 /* FHIntroduceTabCell.m */,
+				0A142F4F1D6DACC2006D1640 /* FHTableCell.h */,
+				0A142F501D6DACC2006D1640 /* FHTableCell.m */,
+				0A142F511D6DACC2006D1640 /* FHTableCell.xib */,
+				0A142F221D6D7BD5006D1640 /* FHIntroduceColletionCell.h */,
+				0A142F231D6D7BD5006D1640 /* FHIntroduceColletionCell.m */,
+				0A142F241D6D7BD5006D1640 /* FHIntroduceColletionCell.xib */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -994,11 +1028,13 @@
 				0ADF88A81D6709FD00E73526 /* my3@2x.png in Resources */,
 				0ADF87F61D66AC8500E73526 /* Assets.xcassets in Resources */,
 				0ADF88851D6709FD00E73526 /* bstj_top_right1.png in Resources */,
+				0A142F601D6EA5C0006D1640 /* BiFenTabCell.xib in Resources */,
 				0ADF88871D6709FD00E73526 /* date.png in Resources */,
 				0A142ED81D6C31C1006D1640 /* recommend-on.png in Resources */,
 				0ADF88EF1D67168200E73526 /* SHomeVC.xib in Resources */,
 				0ADF88BA1D6709FD00E73526 /* sszx3.png in Resources */,
 				0ADF87F71D66AC8500E73526 /* LaunchScreen.storyboard in Resources */,
+				0A142F261D6D7BD5006D1640 /* FHIntroduceColletionCell.xib in Resources */,
 				0ADF88A91D6709FD00E73526 /* my4@2x.png in Resources */,
 				0ADF88C31D6709FD00E73526 /* wrongf_out.png in Resources */,
 				0ADF88AC1D6709FD00E73526 /* my7@2x.png in Resources */,
@@ -1011,6 +1047,7 @@
 				0ADF88A31D6709FD00E73526 /* my11@2x.png in Resources */,
 				0ADF88A41D6709FD00E73526 /* my12@2x.png in Resources */,
 				0ADF88951D6709FD00E73526 /* login_phone.png in Resources */,
+				0A142F531D6DACC2006D1640 /* FHTableCell.xib in Resources */,
 				0A142ED71D6C31C1006D1640 /* home.png in Resources */,
 				0ADF88151D66C4A900E73526 /* NavigationView.xib in Resources */,
 				0ADF88C41D6709FD00E73526 /* wujiaoxing.png in Resources */,
@@ -1073,7 +1110,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A142F561D6EA189006D1640 /* SHCollectionCell.m in Sources */,
 				0ADF88E91D67166E00E73526 /* FHomeVC.m in Sources */,
+				0A142F251D6D7BD5006D1640 /* FHIntroduceColletionCell.m in Sources */,
 				0A142EF21D6C4CEB006D1640 /* BHInfiniteScrollViewTitleView.m in Sources */,
 				0ADF87F51D66AC8500E73526 /* AppDelegate.m in Sources */,
 				0A9F0BB51D6B4C2E00B931BD /* MBUtil.m in Sources */,
@@ -1099,11 +1138,14 @@
 				0A142EF01D6C4CEB006D1640 /* FXPageControl.m in Sources */,
 				0ADF89021D67360800E73526 /* LoginVC.m in Sources */,
 				0A142EF81D6C6825006D1640 /* GBView.m in Sources */,
+				0A142F521D6DACC2006D1640 /* FHTableCell.m in Sources */,
 				0ADF89091D69608000E73526 /* JCDKBaseNaviVC.m in Sources */,
 				0ADF88341D66F22600E73526 /* ZKTextView.m in Sources */,
 				0ADF88081D66B60900E73526 /* NSString+YSAdd.m in Sources */,
+				0A142F211D6D3832006D1640 /* FHIntroduceTabCell.m in Sources */,
 				C4B13C7E1D6A96F6007A5009 /* MyView.m in Sources */,
 				0ADF88301D66F22500E73526 /* AlertAndAction.m in Sources */,
+				0A142F5F1D6EA5C0006D1640 /* BiFenTabCell.m in Sources */,
 				0A142EEF1D6C4CEB006D1640 /* BHInfiniteScrollView.m in Sources */,
 				0ADF88131D66C44900E73526 /* JCDKBaseVC.m in Sources */,
 				0ADF89061D6946D900E73526 /* UIImage+Utils.m in Sources */,

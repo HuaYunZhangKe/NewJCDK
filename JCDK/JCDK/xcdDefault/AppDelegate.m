@@ -19,6 +19,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     [self.window makeKeyAndVisible];
     self.window.rootViewController = self.jcdkTabbarVC;
+    NSLog(@"app path:%@",[[NSBundle mainBundle] bundlePath]);
     return YES;
 }
 
