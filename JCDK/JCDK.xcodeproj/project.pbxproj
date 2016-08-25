@@ -30,6 +30,9 @@
 		0A142F261D6D7BD5006D1640 /* FHIntroduceColletionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A142F241D6D7BD5006D1640 /* FHIntroduceColletionCell.xib */; };
 		0A142F521D6DACC2006D1640 /* FHTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A142F501D6DACC2006D1640 /* FHTableCell.m */; };
 		0A142F531D6DACC2006D1640 /* FHTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A142F511D6DACC2006D1640 /* FHTableCell.xib */; };
+		0A142F561D6EA189006D1640 /* SHCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A142F551D6EA189006D1640 /* SHCollectionCell.m */; };
+		0A142F5F1D6EA5C0006D1640 /* BiFenTabCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A142F5D1D6EA5C0006D1640 /* BiFenTabCell.m */; };
+		0A142F601D6EA5C0006D1640 /* BiFenTabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A142F5E1D6EA5C0006D1640 /* BiFenTabCell.xib */; };
 		0A9F0BB51D6B4C2E00B931BD /* MBUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9F0BB41D6B4C2E00B931BD /* MBUtil.m */; };
 		0ADF87F51D66AC8500E73526 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADF87EF1D66AC8500E73526 /* AppDelegate.m */; };
 		0ADF87F61D66AC8500E73526 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ADF87F01D66AC8500E73526 /* Assets.xcassets */; };
@@ -181,6 +184,11 @@
 		0A142F4F1D6DACC2006D1640 /* FHTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHTableCell.h; sourceTree = "<group>"; };
 		0A142F501D6DACC2006D1640 /* FHTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FHTableCell.m; sourceTree = "<group>"; };
 		0A142F511D6DACC2006D1640 /* FHTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FHTableCell.xib; sourceTree = "<group>"; };
+		0A142F541D6EA189006D1640 /* SHCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHCollectionCell.h; sourceTree = "<group>"; };
+		0A142F551D6EA189006D1640 /* SHCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHCollectionCell.m; sourceTree = "<group>"; };
+		0A142F5C1D6EA5C0006D1640 /* BiFenTabCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BiFenTabCell.h; sourceTree = "<group>"; };
+		0A142F5D1D6EA5C0006D1640 /* BiFenTabCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BiFenTabCell.m; sourceTree = "<group>"; };
+		0A142F5E1D6EA5C0006D1640 /* BiFenTabCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BiFenTabCell.xib; sourceTree = "<group>"; };
 		0A9F0BB31D6B4C2E00B931BD /* MBUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBUtil.h; sourceTree = "<group>"; };
 		0A9F0BB41D6B4C2E00B931BD /* MBUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBUtil.m; sourceTree = "<group>"; };
 		0ADF87C21D66A44500E73526 /* JCDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JCDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -783,6 +791,11 @@
 		0ADF890E1D69C51900E73526 /* V */ = {
 			isa = PBXGroup;
 			children = (
+				0A142F541D6EA189006D1640 /* SHCollectionCell.h */,
+				0A142F551D6EA189006D1640 /* SHCollectionCell.m */,
+				0A142F5C1D6EA5C0006D1640 /* BiFenTabCell.h */,
+				0A142F5D1D6EA5C0006D1640 /* BiFenTabCell.m */,
+				0A142F5E1D6EA5C0006D1640 /* BiFenTabCell.xib */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -1015,6 +1028,7 @@
 				0ADF88A81D6709FD00E73526 /* my3@2x.png in Resources */,
 				0ADF87F61D66AC8500E73526 /* Assets.xcassets in Resources */,
 				0ADF88851D6709FD00E73526 /* bstj_top_right1.png in Resources */,
+				0A142F601D6EA5C0006D1640 /* BiFenTabCell.xib in Resources */,
 				0ADF88871D6709FD00E73526 /* date.png in Resources */,
 				0A142ED81D6C31C1006D1640 /* recommend-on.png in Resources */,
 				0ADF88EF1D67168200E73526 /* SHomeVC.xib in Resources */,
@@ -1096,6 +1110,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A142F561D6EA189006D1640 /* SHCollectionCell.m in Sources */,
 				0ADF88E91D67166E00E73526 /* FHomeVC.m in Sources */,
 				0A142F251D6D7BD5006D1640 /* FHIntroduceColletionCell.m in Sources */,
 				0A142EF21D6C4CEB006D1640 /* BHInfiniteScrollViewTitleView.m in Sources */,
@@ -1130,6 +1145,7 @@
 				0A142F211D6D3832006D1640 /* FHIntroduceTabCell.m in Sources */,
 				C4B13C7E1D6A96F6007A5009 /* MyView.m in Sources */,
 				0ADF88301D66F22500E73526 /* AlertAndAction.m in Sources */,
+				0A142F5F1D6EA5C0006D1640 /* BiFenTabCell.m in Sources */,
 				0A142EEF1D6C4CEB006D1640 /* BHInfiniteScrollView.m in Sources */,
 				0ADF88131D66C44900E73526 /* JCDKBaseVC.m in Sources */,
 				0ADF89061D6946D900E73526 /* UIImage+Utils.m in Sources */,
