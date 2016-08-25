@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -28,47 +28,6 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E1B-zw-gog">
                     <rect key="frame" x="0.0" y="136" width="600" height="90"/>
                     <subviews>
-                        <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TAo-Ub-5oc">
-                            <rect key="frame" x="0.0" y="0.0" width="150" height="90"/>
-                            <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="index_football.png" translatesAutoresizingMaskIntoConstraints="NO" id="BXi-Fy-tHS">
-                                    <rect key="frame" x="54" y="13" width="42" height="42"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="42" id="Cao-6m-wnl"/>
-                                        <constraint firstAttribute="width" constant="42" id="cxQ-rj-LkQ"/>
-                                    </constraints>
-                                </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="足球专区" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w9G-NT-HIJ">
-                                    <rect key="frame" x="53" y="66" width="44" height="13.5"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iUS-9y-g27" userLabel="shuixian">
-                                    <rect key="frame" x="149" y="13" width="1" height="65"/>
-                                    <color key="backgroundColor" red="0.090196078431372548" green="0.10196078431372549" blue="0.10196078431372549" alpha="1" colorSpace="calibratedRGB"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="1" id="0iS-LW-glC"/>
-                                        <constraint firstAttribute="height" constant="65" id="Jvc-8W-iLl"/>
-                                    </constraints>
-                                </view>
-                            </subviews>
-                            <color key="backgroundColor" red="0.18431372549019609" green="0.19215686274509802" blue="0.21176470588235294" alpha="1" colorSpace="calibratedRGB"/>
-                            <constraints>
-                                <constraint firstItem="w9G-NT-HIJ" firstAttribute="top" secondItem="BXi-Fy-tHS" secondAttribute="bottom" constant="11" id="FKL-wc-oZh"/>
-                                <constraint firstItem="w9G-NT-HIJ" firstAttribute="centerX" secondItem="TAo-Ub-5oc" secondAttribute="centerX" id="H8p-ea-mfW"/>
-                                <constraint firstItem="BXi-Fy-tHS" firstAttribute="centerX" secondItem="TAo-Ub-5oc" secondAttribute="centerX" id="XLb-4b-jRL"/>
-                                <constraint firstItem="BXi-Fy-tHS" firstAttribute="top" secondItem="iUS-9y-g27" secondAttribute="top" id="cBb-ic-zy7"/>
-                                <constraint firstItem="BXi-Fy-tHS" firstAttribute="top" secondItem="TAo-Ub-5oc" secondAttribute="top" constant="12" id="hjs-Uc-ru2"/>
-                                <constraint firstItem="iUS-9y-g27" firstAttribute="centerY" secondItem="TAo-Ub-5oc" secondAttribute="centerY" id="qTl-Zr-K2j"/>
-                                <constraint firstAttribute="trailing" secondItem="iUS-9y-g27" secondAttribute="trailing" id="yQ1-Gx-FtH"/>
-                            </constraints>
-                            <variation key="default">
-                                <mask key="constraints">
-                                    <exclude reference="hjs-Uc-ru2"/>
-                                </mask>
-                            </variation>
-                        </view>
                         <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pe8-1e-V6k">
                             <rect key="frame" x="150" y="0.0" width="150.5" height="90"/>
                             <subviews>
@@ -128,8 +87,8 @@
                                         <constraint firstAttribute="width" constant="1" id="ozM-AJ-7al"/>
                                     </constraints>
                                 </view>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="推荐排行" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GJR-3w-Ke7">
-                                    <rect key="frame" x="53" y="66" width="44" height="13.5"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="推荐排行" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GJR-3w-Ke7">
+                                    <rect key="frame" x="53" y="64" width="44" height="13.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
@@ -189,6 +148,47 @@
                             <variation key="default">
                                 <mask key="constraints">
                                     <exclude reference="vnO-Mi-VOg"/>
+                                </mask>
+                            </variation>
+                        </view>
+                        <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TAo-Ub-5oc">
+                            <rect key="frame" x="0.0" y="0.0" width="150" height="90"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="index_football.png" translatesAutoresizingMaskIntoConstraints="NO" id="BXi-Fy-tHS">
+                                    <rect key="frame" x="54" y="13" width="42" height="42"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="42" id="Cao-6m-wnl"/>
+                                        <constraint firstAttribute="width" constant="42" id="cxQ-rj-LkQ"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="足球专区" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w9G-NT-HIJ">
+                                    <rect key="frame" x="53" y="66" width="44" height="13.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iUS-9y-g27" userLabel="shuixian">
+                                    <rect key="frame" x="149" y="13" width="1" height="65"/>
+                                    <color key="backgroundColor" red="0.090196078431372548" green="0.10196078431372549" blue="0.10196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="1" id="0iS-LW-glC"/>
+                                        <constraint firstAttribute="height" constant="65" id="Jvc-8W-iLl"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" red="0.18431372549019609" green="0.19215686274509802" blue="0.21176470588235294" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstItem="w9G-NT-HIJ" firstAttribute="top" secondItem="BXi-Fy-tHS" secondAttribute="bottom" constant="11" id="FKL-wc-oZh"/>
+                                <constraint firstItem="w9G-NT-HIJ" firstAttribute="centerX" secondItem="TAo-Ub-5oc" secondAttribute="centerX" id="H8p-ea-mfW"/>
+                                <constraint firstItem="BXi-Fy-tHS" firstAttribute="centerX" secondItem="TAo-Ub-5oc" secondAttribute="centerX" id="XLb-4b-jRL"/>
+                                <constraint firstItem="BXi-Fy-tHS" firstAttribute="top" secondItem="iUS-9y-g27" secondAttribute="top" id="cBb-ic-zy7"/>
+                                <constraint firstItem="BXi-Fy-tHS" firstAttribute="top" secondItem="TAo-Ub-5oc" secondAttribute="top" constant="12" id="hjs-Uc-ru2"/>
+                                <constraint firstItem="iUS-9y-g27" firstAttribute="centerY" secondItem="TAo-Ub-5oc" secondAttribute="centerY" id="qTl-Zr-K2j"/>
+                                <constraint firstAttribute="trailing" secondItem="iUS-9y-g27" secondAttribute="trailing" id="yQ1-Gx-FtH"/>
+                            </constraints>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="hjs-Uc-ru2"/>
                                 </mask>
                             </variation>
                         </view>
