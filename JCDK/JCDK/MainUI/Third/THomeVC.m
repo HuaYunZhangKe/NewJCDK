@@ -8,6 +8,7 @@
 
 #import "THomeVC.h"
 #import "NavigationView.h"
+#import "LRProgress.h"
 
 @interface THomeVC ()
 
@@ -43,6 +44,11 @@
         }
         
     };
+    LRProgress *progress = [[LRProgress alloc] initWithFrame:CGRectMake(20, 100, 200, 20)];
+    progress.progress = 0.3;
+    progress.leftColor = [UIColor redColor];
+    progress.rightColor = [UIColor yellowColor];
+    [self.view addSubview:progress];
     [self.view addSubview:navigationView];
 }
 - (void)didReceiveMemoryWarning

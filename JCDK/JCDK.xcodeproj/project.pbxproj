@@ -33,6 +33,7 @@
 		0A142F561D6EA189006D1640 /* SHCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A142F551D6EA189006D1640 /* SHCollectionCell.m */; };
 		0A142F5F1D6EA5C0006D1640 /* BiFenTabCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A142F5D1D6EA5C0006D1640 /* BiFenTabCell.m */; };
 		0A142F601D6EA5C0006D1640 /* BiFenTabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A142F5E1D6EA5C0006D1640 /* BiFenTabCell.xib */; };
+		0A142F8D1D702E03006D1640 /* LRProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A142F8C1D702E03006D1640 /* LRProgress.m */; };
 		0A9F0BB51D6B4C2E00B931BD /* MBUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9F0BB41D6B4C2E00B931BD /* MBUtil.m */; };
 		0ADF87F51D66AC8500E73526 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADF87EF1D66AC8500E73526 /* AppDelegate.m */; };
 		0ADF87F61D66AC8500E73526 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ADF87F01D66AC8500E73526 /* Assets.xcassets */; };
@@ -194,6 +195,8 @@
 		0A142F5C1D6EA5C0006D1640 /* BiFenTabCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BiFenTabCell.h; sourceTree = "<group>"; };
 		0A142F5D1D6EA5C0006D1640 /* BiFenTabCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BiFenTabCell.m; sourceTree = "<group>"; };
 		0A142F5E1D6EA5C0006D1640 /* BiFenTabCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BiFenTabCell.xib; sourceTree = "<group>"; };
+		0A142F8B1D702E03006D1640 /* LRProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRProgress.h; sourceTree = "<group>"; };
+		0A142F8C1D702E03006D1640 /* LRProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRProgress.m; sourceTree = "<group>"; };
 		0A9F0BB31D6B4C2E00B931BD /* MBUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBUtil.h; sourceTree = "<group>"; };
 		0A9F0BB41D6B4C2E00B931BD /* MBUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBUtil.m; sourceTree = "<group>"; };
 		0ADF87C21D66A44500E73526 /* JCDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JCDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -690,6 +693,8 @@
 		0ADF88261D66F22500E73526 /* MyDefineView */ = {
 			isa = PBXGroup;
 			children = (
+				0A142F8B1D702E03006D1640 /* LRProgress.h */,
+				0A142F8C1D702E03006D1640 /* LRProgress.m */,
 				0A9F0BB31D6B4C2E00B931BD /* MBUtil.h */,
 				0A9F0BB41D6B4C2E00B931BD /* MBUtil.m */,
 				0ADF88271D66F22500E73526 /* AlertAndAction.h */,
@@ -1145,6 +1150,7 @@
 				C4F3ACA81D6F0BE80089C699 /* TouZhuViewController.m in Sources */,
 				0ADF87F91D66AC8500E73526 /* main.m in Sources */,
 				0ADF88041D66B3E100E73526 /* UIView+YYAdd.m in Sources */,
+				0A142F8D1D702E03006D1640 /* LRProgress.m in Sources */,
 				0ADF88F81D6716A200E73526 /* FiveHomeVC.m in Sources */,
 				0ADF88FD1D6716B200E73526 /* FourthVC.m in Sources */,
 				0ADF88CE1D670AD500E73526 /* JCDKTabBarVC.m in Sources */,
