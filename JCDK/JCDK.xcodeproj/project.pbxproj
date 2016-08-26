@@ -150,6 +150,7 @@
 		C4F3ACA91D6F0BE80089C699 /* TouZhuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4F3ACA71D6F0BE80089C699 /* TouZhuViewController.xib */; };
 		C4F3ACAC1D6F18830089C699 /* JinqitouzhuCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F3ACAB1D6F18830089C699 /* JinqitouzhuCollectionViewCell.m */; };
 		C4F3ACAF1D6F1DCA0089C699 /* JinqiTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F3ACAE1D6F1DCA0089C699 /* JinqiTableViewCell.m */; };
+		C4F5E42C1D706BD7009E69D5 /* HeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F5E42B1D706BD7009E69D5 /* HeadView.m */; };
 		F54EE2B19DCC2E3BC2D81AF1 /* libPods-JCDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B4F8A09065328201474E94F /* libPods-JCDK.a */; };
 /* End PBXBuildFile section */
 
@@ -345,6 +346,8 @@
 		C4F3ACAB1D6F18830089C699 /* JinqitouzhuCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JinqitouzhuCollectionViewCell.m; sourceTree = "<group>"; };
 		C4F3ACAD1D6F1DCA0089C699 /* JinqiTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JinqiTableViewCell.h; sourceTree = "<group>"; };
 		C4F3ACAE1D6F1DCA0089C699 /* JinqiTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JinqiTableViewCell.m; sourceTree = "<group>"; };
+		C4F5E42A1D706BD7009E69D5 /* HeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadView.h; sourceTree = "<group>"; };
+		C4F5E42B1D706BD7009E69D5 /* HeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadView.m; sourceTree = "<group>"; };
 		D97ED11B4E6F7B32FFE47593 /* Pods-JCDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JCDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JCDK/Pods-JCDK.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -898,6 +901,8 @@
 			children = (
 				C4F3ACAA1D6F18830089C699 /* JinqitouzhuCollectionViewCell.h */,
 				C4F3ACAB1D6F18830089C699 /* JinqitouzhuCollectionViewCell.m */,
+				C4F5E42A1D706BD7009E69D5 /* HeadView.h */,
+				C4F5E42B1D706BD7009E69D5 /* HeadView.m */,
 				C4F3ACAD1D6F1DCA0089C699 /* JinqiTableViewCell.h */,
 				C4F3ACAE1D6F1DCA0089C699 /* JinqiTableViewCell.m */,
 				C4B13C7C1D6A96F6007A5009 /* MyView.h */,
@@ -1158,6 +1163,7 @@
 				0ADF88311D66F22500E73526 /* ToolBarView.m in Sources */,
 				0A142EF01D6C4CEB006D1640 /* FXPageControl.m in Sources */,
 				0ADF89021D67360800E73526 /* LoginVC.m in Sources */,
+				C4F5E42C1D706BD7009E69D5 /* HeadView.m in Sources */,
 				0A142EF81D6C6825006D1640 /* GBView.m in Sources */,
 				0A142F521D6DACC2006D1640 /* FHTableCell.m in Sources */,
 				C4F3ACAF1D6F1DCA0089C699 /* JinqiTableViewCell.m in Sources */,

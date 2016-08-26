@@ -8,6 +8,7 @@
 
 #import "TouZhuViewController.h"
 #import "JinqitouzhuCollectionViewCell.h"
+#import "NavigationView.h"
 @interface TouZhuViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UIScrollViewDelegate>
 @property (nonatomic, retain)UIView *scrollLine;
 @end
@@ -18,9 +19,17 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.firstBtn.width = self.view.frame.size.width /3;
-    self.secondBtn.width = self.view.frame.size.width /3;
-    self.thirdBtn.width = self.view.frame.size.width /3;
+    WeakSelf(wc);
+    NavigationView *navigationView = [[[NSBundle mainBundle] loadNibNamed:@"NavigationView" owner:self options:nil] objectAtIndex:4];
+    navigationView.titleLabel4.text = @"投注记录";
+    navigationView.buttonBlock4 = ^(NSInteger button)
+    {
+        [wc.navigationController popViewControllerAnimated:NO];
+    };
+    navigationView.frame = CGRectMake(0, 0, JCDK_Screen_WIDTH, 64);
+    [self.view addSubview:navigationView];
+
+    
     [self.bgView addSubview:self.scrollLine];
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
@@ -33,7 +42,6 @@
     self.collectionView.pagingEnabled = YES;
     [self.collectionView registerClass:[JinqitouzhuCollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
    
-
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
