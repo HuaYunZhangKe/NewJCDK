@@ -29,7 +29,7 @@
     return _leftView;
 }
 - (UIView *)rightView
-{ing
+{
     if (!_rightView)
     {
         _rightView = [UIView new];
