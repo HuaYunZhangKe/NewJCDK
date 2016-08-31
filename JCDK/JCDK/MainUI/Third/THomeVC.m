@@ -115,7 +115,7 @@
         [collectionView registerNib:[UINib nibWithNibName:@"ThirdCollectionCell2" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:@"Third2"];
 
         ThirdCollectionCell2 *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Third2" forIndexPath:indexPath];
-        [cell settingIndex2Nib];
+//        [cell settingIndex2Nib];
         return cell;
     }
 }

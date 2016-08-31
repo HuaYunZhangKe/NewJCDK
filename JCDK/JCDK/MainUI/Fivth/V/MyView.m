@@ -32,6 +32,7 @@
     
     UIView *headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, JCDK_Screen_WIDTH, 100)];
     headView.backgroundColor = kHexColor(0x2a2e32);
+    
     self.tableView.tableHeaderView = headView;
     
     self.headImg = [[UIImageView alloc] initWithFrame:CGRectMake(self.left + 10, headView.top+ 10, 48, 48)];
@@ -87,6 +88,10 @@
     _rightBtn.backgroundColor = kHexColor(0xf2a327);
     _rightBtn.layer.cornerRadius = 12;
     _leftBtn.layer.cornerRadius = 12;
+    self.headViewBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    self.headViewBtn.frame = CGRectMake(0, 0, headView.width, headView.height - 30);
+    self.headViewBtn.backgroundColor = [UIColor clearColor];
+    [headView addSubview:self.headViewBtn];
 
 }
 

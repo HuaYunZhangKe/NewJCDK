@@ -11,6 +11,7 @@
 #import "MyView.h"
 #import "FreeReciveViewController.h"
 #import "TouZhuViewController.h"
+#import "LoginVC.h"
 @interface FiveHomeVC ()<UITableViewDataSource,UITableViewDelegate>
 @property(nonatomic,retain)MyView *myView;
 @property(nonatomic,retain)NSArray *dataArr;
@@ -27,7 +28,7 @@
     [self.view addSubview:self.myView];
     [_myView.leftBtn addTarget:self action:@selector(kabiChongZhi:) forControlEvents:UIControlEventTouchUpInside];
     [_myView.rightBtn addTarget:self action:@selector(yinbiChongZhi:) forControlEvents:UIControlEventTouchUpInside];
-    
+    [_myView.headViewBtn addTarget:self action:@selector(headViewBtnClick:) forControlEvents:UIControlEventTouchUpInside];
 
 }
 - (void)didReceiveMemoryWarning {
@@ -45,6 +46,11 @@
     /*** 银币充值 */
     NSLog(@"222");
 
+}
+- (void)headViewBtnClick:(UIButton *)sender
+{
+    LoginVC *loginVC = [[LoginVC alloc] initWithNibName:@"LoginVC" bundle:nil];
+    [self.navigationController pushViewController:loginVC animated:YES];
 }
 #pragma mark - tableView dataSource
 

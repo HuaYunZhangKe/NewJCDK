@@ -1,18 +1,18 @@
 //
-//  LoginVC.m
+//  ForgetPassWordVC.m
 //  JCDK
 //
-//  Created by 张科 on 16/8/19.
+//  Created by 张科 on 16/8/31.
 //  Copyright © 2016年 张科. All rights reserved.
 //
 
-#import "LoginVC.h"
+#import "ForgetPassWordVC.h"
 
-@interface LoginVC ()
+@interface ForgetPassWordVC ()
 
 @end
 
-@implementation LoginVC
+@implementation ForgetPassWordVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];

@@ -19,6 +19,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    [self settingIndex2Nib];
 }
 - (void)settingIndex2Nib
 {

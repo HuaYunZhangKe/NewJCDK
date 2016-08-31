@@ -49,6 +49,13 @@
 		0A95303E1D767E1600D5ED36 /* PaiHangTabCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A95303C1D767E1600D5ED36 /* PaiHangTabCell.m */; };
 		0A95303F1D767E1600D5ED36 /* PaiHangTabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A95303D1D767E1600D5ED36 /* PaiHangTabCell.xib */; };
 		0A9F0BB51D6B4C2E00B931BD /* MBUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9F0BB41D6B4C2E00B931BD /* MBUtil.m */; };
+		0AA7EE3D1D770A4E00F43725 /* ForgetPassWordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA7EE331D770A4E00F43725 /* ForgetPassWordVC.m */; };
+		0AA7EE3E1D770A4E00F43725 /* ForgetPassWordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AA7EE341D770A4E00F43725 /* ForgetPassWordVC.xib */; };
+		0AA7EE3F1D770A4E00F43725 /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA7EE361D770A4E00F43725 /* LoginVC.m */; };
+		0AA7EE401D770A4E00F43725 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AA7EE371D770A4E00F43725 /* LoginVC.xib */; };
+		0AA7EE411D770A4E00F43725 /* RegistVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA7EE391D770A4E00F43725 /* RegistVC.m */; };
+		0AA7EE421D770A4E00F43725 /* RegistVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AA7EE3A1D770A4E00F43725 /* RegistVC.xib */; };
+		0AA7EE451D770B0000F43725 /* EnterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA7EE441D770B0000F43725 /* EnterView.m */; };
 		0ADF87F51D66AC8500E73526 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADF87EF1D66AC8500E73526 /* AppDelegate.m */; };
 		0ADF87F61D66AC8500E73526 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ADF87F01D66AC8500E73526 /* Assets.xcassets */; };
 		0ADF87F71D66AC8500E73526 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ADF87F11D66AC8500E73526 /* LaunchScreen.storyboard */; };
@@ -151,8 +158,6 @@
 		0ADF88F91D6716A200E73526 /* FiveHomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ADF88F71D6716A200E73526 /* FiveHomeVC.xib */; };
 		0ADF88FD1D6716B200E73526 /* FourthVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADF88FB1D6716B200E73526 /* FourthVC.m */; };
 		0ADF88FE1D6716B200E73526 /* FourthVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ADF88FC1D6716B200E73526 /* FourthVC.xib */; };
-		0ADF89021D67360800E73526 /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADF89001D67360800E73526 /* LoginVC.m */; };
-		0ADF89031D67360800E73526 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ADF89011D67360800E73526 /* LoginVC.xib */; };
 		0ADF89061D6946D900E73526 /* UIImage+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADF89051D6946D900E73526 /* UIImage+Utils.m */; };
 		0ADF89091D69608000E73526 /* JCDKBaseNaviVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADF89081D69608000E73526 /* JCDKBaseNaviVC.m */; };
 		0ADF890B1D699C7100E73526 /* xiaowanzi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0ADF890A1D699C7100E73526 /* xiaowanzi.jpg */; };
@@ -234,6 +239,17 @@
 		0A95303D1D767E1600D5ED36 /* PaiHangTabCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaiHangTabCell.xib; sourceTree = "<group>"; };
 		0A9F0BB31D6B4C2E00B931BD /* MBUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBUtil.h; sourceTree = "<group>"; };
 		0A9F0BB41D6B4C2E00B931BD /* MBUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBUtil.m; sourceTree = "<group>"; };
+		0AA7EE321D770A4E00F43725 /* ForgetPassWordVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetPassWordVC.h; sourceTree = "<group>"; };
+		0AA7EE331D770A4E00F43725 /* ForgetPassWordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetPassWordVC.m; sourceTree = "<group>"; };
+		0AA7EE341D770A4E00F43725 /* ForgetPassWordVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgetPassWordVC.xib; sourceTree = "<group>"; };
+		0AA7EE351D770A4E00F43725 /* LoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
+		0AA7EE361D770A4E00F43725 /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
+		0AA7EE371D770A4E00F43725 /* LoginVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
+		0AA7EE381D770A4E00F43725 /* RegistVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistVC.h; sourceTree = "<group>"; };
+		0AA7EE391D770A4E00F43725 /* RegistVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistVC.m; sourceTree = "<group>"; };
+		0AA7EE3A1D770A4E00F43725 /* RegistVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegistVC.xib; sourceTree = "<group>"; };
+		0AA7EE431D770B0000F43725 /* EnterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnterView.h; sourceTree = "<group>"; };
+		0AA7EE441D770B0000F43725 /* EnterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnterView.m; sourceTree = "<group>"; };
 		0ADF87C21D66A44500E73526 /* JCDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JCDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ADF87C61D66A44500E73526 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0ADF87EE1D66AC8500E73526 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -358,9 +374,6 @@
 		0ADF88FA1D6716B200E73526 /* FourthVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourthVC.h; sourceTree = "<group>"; };
 		0ADF88FB1D6716B200E73526 /* FourthVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourthVC.m; sourceTree = "<group>"; };
 		0ADF88FC1D6716B200E73526 /* FourthVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FourthVC.xib; sourceTree = "<group>"; };
-		0ADF88FF1D67360800E73526 /* LoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
-		0ADF89001D67360800E73526 /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
-		0ADF89011D67360800E73526 /* LoginVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
 		0ADF89041D6946D900E73526 /* UIImage+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Utils.h"; sourceTree = "<group>"; };
 		0ADF89051D6946D900E73526 /* UIImage+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Utils.m"; sourceTree = "<group>"; };
 		0ADF89071D69608000E73526 /* JCDKBaseNaviVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCDKBaseNaviVC.h; sourceTree = "<group>"; };
@@ -439,6 +452,38 @@
 				0A142EEE1D6C4CEB006D1640 /* BHInfiniteScrollViewTitleView.m */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		0AA7EE311D770A4E00F43725 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				0AA7EE321D770A4E00F43725 /* ForgetPassWordVC.h */,
+				0AA7EE331D770A4E00F43725 /* ForgetPassWordVC.m */,
+				0AA7EE341D770A4E00F43725 /* ForgetPassWordVC.xib */,
+				0AA7EE351D770A4E00F43725 /* LoginVC.h */,
+				0AA7EE361D770A4E00F43725 /* LoginVC.m */,
+				0AA7EE371D770A4E00F43725 /* LoginVC.xib */,
+				0AA7EE381D770A4E00F43725 /* RegistVC.h */,
+				0AA7EE391D770A4E00F43725 /* RegistVC.m */,
+				0AA7EE3A1D770A4E00F43725 /* RegistVC.xib */,
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		0AA7EE3B1D770A4E00F43725 /* M */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
+		0AA7EE3C1D770A4E00F43725 /* V */ = {
+			isa = PBXGroup;
+			children = (
+				0AA7EE431D770B0000F43725 /* EnterView.h */,
+				0AA7EE441D770B0000F43725 /* EnterView.m */,
+			);
+			path = V;
 			sourceTree = "<group>";
 		};
 		0ADF87B91D66A44500E73526 = {
@@ -579,9 +624,9 @@
 		0ADF87E51D66AC1A00E73526 /* LogAndReg */ = {
 			isa = PBXGroup;
 			children = (
-				0ADF88FF1D67360800E73526 /* LoginVC.h */,
-				0ADF89001D67360800E73526 /* LoginVC.m */,
-				0ADF89011D67360800E73526 /* LoginVC.xib */,
+				0AA7EE311D770A4E00F43725 /* C */,
+				0AA7EE3B1D770A4E00F43725 /* M */,
+				0AA7EE3C1D770A4E00F43725 /* V */,
 			);
 			path = LogAndReg;
 			sourceTree = "<group>";
@@ -1010,6 +1055,7 @@
 				TargetAttributes = {
 					0ADF87C11D66A44500E73526 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = DRG4X8U43Q;
 					};
 				};
 			};
@@ -1036,6 +1082,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AA7EE421D770A4E00F43725 /* RegistVC.xib in Resources */,
+				0AA7EE3E1D770A4E00F43725 /* ForgetPassWordVC.xib in Resources */,
 				0ADF88B71D6709FD00E73526 /* sszx.png in Resources */,
 				0ADF88B81D6709FD00E73526 /* sszx1.png in Resources */,
 				0ADF890B1D699C7100E73526 /* xiaowanzi.jpg in Resources */,
@@ -1076,6 +1124,7 @@
 				0ADF88911D6709FD00E73526 /* index_tuijian@2x.png in Resources */,
 				0ADF88971D6709FD00E73526 /* menu_ball_an.png in Resources */,
 				0ADF88AD1D6709FD00E73526 /* my8@2x.png in Resources */,
+				0AA7EE401D770A4E00F43725 /* LoginVC.xib in Resources */,
 				0ADF88821D6709FD00E73526 /* bfzx_bottom.png in Resources */,
 				0A142ED31D6C31C1006D1640 /* core.png in Resources */,
 				0ADF889E1D6709FD00E73526 /* menu_my_liang.png in Resources */,
@@ -1084,7 +1133,6 @@
 				0A9530131D71938200D5ED36 /* ThirdCollectionCell.xib in Resources */,
 				0ADF88C21D6709FD00E73526 /* ture.png in Resources */,
 				0ADF88A61D6709FD00E73526 /* my14@2x.png in Resources */,
-				0ADF89031D67360800E73526 /* LoginVC.xib in Resources */,
 				0ADF88F91D6716A200E73526 /* FiveHomeVC.xib in Resources */,
 				0ADF88C01D6709FD00E73526 /* sszx_smallpic.png in Resources */,
 				0A142EDA1D6C31C1006D1640 /* user-on.png in Resources */,
@@ -1212,9 +1260,12 @@
 				0A9F0BB51D6B4C2E00B931BD /* MBUtil.m in Sources */,
 				0ADF88031D66B3E100E73526 /* UIColor+YYAdd.m in Sources */,
 				C4F3ACA81D6F0BE80089C699 /* TouZhuViewController.m in Sources */,
+				0AA7EE3D1D770A4E00F43725 /* ForgetPassWordVC.m in Sources */,
 				0ADF87F91D66AC8500E73526 /* main.m in Sources */,
 				0ADF88041D66B3E100E73526 /* UIView+YYAdd.m in Sources */,
 				0A142F8D1D702E03006D1640 /* LRProgress.m in Sources */,
+				0AA7EE411D770A4E00F43725 /* RegistVC.m in Sources */,
+				0AA7EE3F1D770A4E00F43725 /* LoginVC.m in Sources */,
 				0ADF88F81D6716A200E73526 /* FiveHomeVC.m in Sources */,
 				0ADF88FD1D6716B200E73526 /* FourthVC.m in Sources */,
 				0ADF88CE1D670AD500E73526 /* JCDKTabBarVC.m in Sources */,
@@ -1234,7 +1285,6 @@
 				0ADF88F31D67169000E73526 /* THomeVC.m in Sources */,
 				0ADF88311D66F22500E73526 /* ToolBarView.m in Sources */,
 				0A142EF01D6C4CEB006D1640 /* FXPageControl.m in Sources */,
-				0ADF89021D67360800E73526 /* LoginVC.m in Sources */,
 				C4F5E42C1D706BD7009E69D5 /* HeadView.m in Sources */,
 				0A9530171D73ECB100D5ED36 /* ThirdCollectionCell1.m in Sources */,
 				0A142EF81D6C6825006D1640 /* GBView.m in Sources */,
@@ -1249,6 +1299,7 @@
 				0A142F211D6D3832006D1640 /* FHIntroduceTabCell.m in Sources */,
 				C4B13C7E1D6A96F6007A5009 /* MyView.m in Sources */,
 				0ADF88301D66F22500E73526 /* AlertAndAction.m in Sources */,
+				0AA7EE451D770B0000F43725 /* EnterView.m in Sources */,
 				0A142F5F1D6EA5C0006D1640 /* BiFenTabCell.m in Sources */,
 				0A142EEF1D6C4CEB006D1640 /* BHInfiniteScrollView.m in Sources */,
 				0ADF88131D66C44900E73526 /* JCDKBaseVC.m in Sources */,
@@ -1357,14 +1408,17 @@
 			baseConfigurationReference = D97ED11B4E6F7B32FFE47593 /* Pods-JCDK.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: xin zhang (TV6L5QHQCW)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PREFIX_HEADER = $SRCROOT/JCDK/Resources/JCDK.pch;
 				IBSC_FLATTEN_NIBS = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/JCDK/xcdDefault/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = no.JCDK;
+				PRODUCT_BUNDLE_IDENTIFIER = com.youzhitou.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "d3072dbe-d9bf-4a85-8830-489d2eaa80cc";
 			};
 			name = Debug;
 		};
@@ -1373,14 +1427,17 @@
 			baseConfigurationReference = 063CFC01001B291C6AF7B514 /* Pods-JCDK.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: xin zhang (TV6L5QHQCW)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PREFIX_HEADER = $SRCROOT/JCDK/Resources/JCDK.pch;
 				IBSC_FLATTEN_NIBS = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/JCDK/xcdDefault/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = no.JCDK;
+				PRODUCT_BUNDLE_IDENTIFIER = com.youzhitou.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "d3072dbe-d9bf-4a85-8830-489d2eaa80cc";
 			};
 			name = Release;
 		};

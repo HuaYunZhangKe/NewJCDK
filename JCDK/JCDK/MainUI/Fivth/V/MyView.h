@@ -16,4 +16,5 @@
 @property(nonatomic,retain)JCDKBaseLabel *yinbiCount;
 @property(nonatomic,retain)UIButton *leftBtn;
 @property(nonatomic,retain)UIButton *rightBtn;
+@property (nonatomic, retain)UIButton *headViewBtn;
 @end
