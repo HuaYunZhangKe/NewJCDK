@@ -34,10 +34,13 @@
 //            if (self == firstVC)
 //            {
 //                self.navigationController.navigationBarHidden = YES;
+//                self.tabBarController.tabBar.hidden = YES;
 //            }
 //            else
 //            {
 //                self.navigationController.navigationBarHidden = NO;
+//                self.tabBarController.tabBar.hidden = YES;
+//
 //            }
 //    }
     self.navigationController.navigationBarHidden = YES;

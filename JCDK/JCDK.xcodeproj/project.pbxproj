@@ -34,6 +34,20 @@
 		0A142F5F1D6EA5C0006D1640 /* BiFenTabCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A142F5D1D6EA5C0006D1640 /* BiFenTabCell.m */; };
 		0A142F601D6EA5C0006D1640 /* BiFenTabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A142F5E1D6EA5C0006D1640 /* BiFenTabCell.xib */; };
 		0A142F8D1D702E03006D1640 /* LRProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A142F8C1D702E03006D1640 /* LRProgress.m */; };
+		0A9530121D71938200D5ED36 /* ThirdCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9530101D71938200D5ED36 /* ThirdCollectionCell.m */; };
+		0A9530131D71938200D5ED36 /* ThirdCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A9530111D71938200D5ED36 /* ThirdCollectionCell.xib */; };
+		0A9530171D73ECB100D5ED36 /* ThirdCollectionCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9530151D73ECB100D5ED36 /* ThirdCollectionCell1.m */; };
+		0A9530181D73ECB100D5ED36 /* ThirdCollectionCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A9530161D73ECB100D5ED36 /* ThirdCollectionCell1.xib */; };
+		0A95301C1D73ECBE00D5ED36 /* ThirdCollectionCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A95301A1D73ECBE00D5ED36 /* ThirdCollectionCell2.m */; };
+		0A95301D1D73ECBE00D5ED36 /* ThirdCollectionCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A95301B1D73ECBE00D5ED36 /* ThirdCollectionCell2.xib */; };
+		0A95302D1D73F16C00D5ED36 /* SaiQianLeftTabCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A95302B1D73F16C00D5ED36 /* SaiQianLeftTabCell.m */; };
+		0A95302E1D73F16C00D5ED36 /* SaiQianLeftTabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A95302C1D73F16C00D5ED36 /* SaiQianLeftTabCell.xib */; };
+		0A9530321D73F18400D5ED36 /* SaiQianRighttabCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9530301D73F18400D5ED36 /* SaiQianRighttabCell.m */; };
+		0A9530331D73F18400D5ED36 /* SaiQianRighttabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A9530311D73F18400D5ED36 /* SaiQianRighttabCell.xib */; };
+		0A9530391D7513F800D5ED36 /* ChuanGuanTabCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9530371D7513F800D5ED36 /* ChuanGuanTabCell.m */; };
+		0A95303A1D7513F800D5ED36 /* ChuanGuanTabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A9530381D7513F800D5ED36 /* ChuanGuanTabCell.xib */; };
+		0A95303E1D767E1600D5ED36 /* PaiHangTabCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A95303C1D767E1600D5ED36 /* PaiHangTabCell.m */; };
+		0A95303F1D767E1600D5ED36 /* PaiHangTabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A95303D1D767E1600D5ED36 /* PaiHangTabCell.xib */; };
 		0A9F0BB51D6B4C2E00B931BD /* MBUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9F0BB41D6B4C2E00B931BD /* MBUtil.m */; };
 		0ADF87F51D66AC8500E73526 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADF87EF1D66AC8500E73526 /* AppDelegate.m */; };
 		0ADF87F61D66AC8500E73526 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ADF87F01D66AC8500E73526 /* Assets.xcassets */; };
@@ -197,6 +211,27 @@
 		0A142F5E1D6EA5C0006D1640 /* BiFenTabCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BiFenTabCell.xib; sourceTree = "<group>"; };
 		0A142F8B1D702E03006D1640 /* LRProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRProgress.h; sourceTree = "<group>"; };
 		0A142F8C1D702E03006D1640 /* LRProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRProgress.m; sourceTree = "<group>"; };
+		0A95300F1D71938200D5ED36 /* ThirdCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdCollectionCell.h; sourceTree = "<group>"; };
+		0A9530101D71938200D5ED36 /* ThirdCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdCollectionCell.m; sourceTree = "<group>"; };
+		0A9530111D71938200D5ED36 /* ThirdCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThirdCollectionCell.xib; sourceTree = "<group>"; };
+		0A9530141D73ECB100D5ED36 /* ThirdCollectionCell1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdCollectionCell1.h; sourceTree = "<group>"; };
+		0A9530151D73ECB100D5ED36 /* ThirdCollectionCell1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdCollectionCell1.m; sourceTree = "<group>"; };
+		0A9530161D73ECB100D5ED36 /* ThirdCollectionCell1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThirdCollectionCell1.xib; sourceTree = "<group>"; };
+		0A9530191D73ECBE00D5ED36 /* ThirdCollectionCell2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdCollectionCell2.h; sourceTree = "<group>"; };
+		0A95301A1D73ECBE00D5ED36 /* ThirdCollectionCell2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdCollectionCell2.m; sourceTree = "<group>"; };
+		0A95301B1D73ECBE00D5ED36 /* ThirdCollectionCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThirdCollectionCell2.xib; sourceTree = "<group>"; };
+		0A95302A1D73F16C00D5ED36 /* SaiQianLeftTabCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaiQianLeftTabCell.h; sourceTree = "<group>"; };
+		0A95302B1D73F16C00D5ED36 /* SaiQianLeftTabCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaiQianLeftTabCell.m; sourceTree = "<group>"; };
+		0A95302C1D73F16C00D5ED36 /* SaiQianLeftTabCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SaiQianLeftTabCell.xib; sourceTree = "<group>"; };
+		0A95302F1D73F18400D5ED36 /* SaiQianRighttabCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaiQianRighttabCell.h; sourceTree = "<group>"; };
+		0A9530301D73F18400D5ED36 /* SaiQianRighttabCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaiQianRighttabCell.m; sourceTree = "<group>"; };
+		0A9530311D73F18400D5ED36 /* SaiQianRighttabCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SaiQianRighttabCell.xib; sourceTree = "<group>"; };
+		0A9530361D7513F800D5ED36 /* ChuanGuanTabCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChuanGuanTabCell.h; sourceTree = "<group>"; };
+		0A9530371D7513F800D5ED36 /* ChuanGuanTabCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChuanGuanTabCell.m; sourceTree = "<group>"; };
+		0A9530381D7513F800D5ED36 /* ChuanGuanTabCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChuanGuanTabCell.xib; sourceTree = "<group>"; };
+		0A95303B1D767E1600D5ED36 /* PaiHangTabCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaiHangTabCell.h; sourceTree = "<group>"; };
+		0A95303C1D767E1600D5ED36 /* PaiHangTabCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaiHangTabCell.m; sourceTree = "<group>"; };
+		0A95303D1D767E1600D5ED36 /* PaiHangTabCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaiHangTabCell.xib; sourceTree = "<group>"; };
 		0A9F0BB31D6B4C2E00B931BD /* MBUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBUtil.h; sourceTree = "<group>"; };
 		0A9F0BB41D6B4C2E00B931BD /* MBUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBUtil.m; sourceTree = "<group>"; };
 		0ADF87C21D66A44500E73526 /* JCDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JCDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -878,6 +913,27 @@
 		C4423F2F1D69C6C000B74C85 /* V */ = {
 			isa = PBXGroup;
 			children = (
+				0A95300F1D71938200D5ED36 /* ThirdCollectionCell.h */,
+				0A9530101D71938200D5ED36 /* ThirdCollectionCell.m */,
+				0A9530111D71938200D5ED36 /* ThirdCollectionCell.xib */,
+				0A9530141D73ECB100D5ED36 /* ThirdCollectionCell1.h */,
+				0A9530151D73ECB100D5ED36 /* ThirdCollectionCell1.m */,
+				0A9530161D73ECB100D5ED36 /* ThirdCollectionCell1.xib */,
+				0A9530191D73ECBE00D5ED36 /* ThirdCollectionCell2.h */,
+				0A95301A1D73ECBE00D5ED36 /* ThirdCollectionCell2.m */,
+				0A95301B1D73ECBE00D5ED36 /* ThirdCollectionCell2.xib */,
+				0A95302A1D73F16C00D5ED36 /* SaiQianLeftTabCell.h */,
+				0A95302B1D73F16C00D5ED36 /* SaiQianLeftTabCell.m */,
+				0A95302C1D73F16C00D5ED36 /* SaiQianLeftTabCell.xib */,
+				0A95302F1D73F18400D5ED36 /* SaiQianRighttabCell.h */,
+				0A9530301D73F18400D5ED36 /* SaiQianRighttabCell.m */,
+				0A9530311D73F18400D5ED36 /* SaiQianRighttabCell.xib */,
+				0A9530361D7513F800D5ED36 /* ChuanGuanTabCell.h */,
+				0A9530371D7513F800D5ED36 /* ChuanGuanTabCell.m */,
+				0A9530381D7513F800D5ED36 /* ChuanGuanTabCell.xib */,
+				0A95303B1D767E1600D5ED36 /* PaiHangTabCell.h */,
+				0A95303C1D767E1600D5ED36 /* PaiHangTabCell.m */,
+				0A95303D1D767E1600D5ED36 /* PaiHangTabCell.xib */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -1001,6 +1057,7 @@
 				0ADF88C71D6709FD00E73526 /* zanshang.png in Resources */,
 				0ADF888C1D6709FD00E73526 /* index_help@2x.png in Resources */,
 				0A142ED61D6C31C1006D1640 /* home-on.png in Resources */,
+				0A9530331D73F18400D5ED36 /* SaiQianRighttabCell.xib in Resources */,
 				0ADF88B11D6709FD00E73526 /* qsjj2.png in Resources */,
 				0ADF888A1D6709FD00E73526 /* index_basketball@2x.png in Resources */,
 				0ADF88EA1D67166E00E73526 /* FHomeVC.xib in Resources */,
@@ -1015,6 +1072,7 @@
 				0ADF88881D6709FD00E73526 /* detail_top_right.png in Resources */,
 				0A142ED91D6C31C1006D1640 /* recommend.png in Resources */,
 				0ADF88A21D6709FD00E73526 /* my10@2x.png in Resources */,
+				0A95302E1D73F16C00D5ED36 /* SaiQianLeftTabCell.xib in Resources */,
 				0ADF88911D6709FD00E73526 /* index_tuijian@2x.png in Resources */,
 				0ADF88971D6709FD00E73526 /* menu_ball_an.png in Resources */,
 				0ADF88AD1D6709FD00E73526 /* my8@2x.png in Resources */,
@@ -1023,6 +1081,7 @@
 				0ADF889E1D6709FD00E73526 /* menu_my_liang.png in Resources */,
 				0ADF889F1D6709FD00E73526 /* menu_tujian_an.png in Resources */,
 				0ADF88831D6709FD00E73526 /* bfzx_small.png in Resources */,
+				0A9530131D71938200D5ED36 /* ThirdCollectionCell.xib in Resources */,
 				0ADF88C21D6709FD00E73526 /* ture.png in Resources */,
 				0ADF88A61D6709FD00E73526 /* my14@2x.png in Resources */,
 				0ADF89031D67360800E73526 /* LoginVC.xib in Resources */,
@@ -1043,6 +1102,7 @@
 				0A142ED41D6C31C1006D1640 /* guess-on.png in Resources */,
 				0A142ED51D6C31C1006D1640 /* guess.png in Resources */,
 				0ADF88BE1D6709FD00E73526 /* sszx8.png in Resources */,
+				0A9530181D73ECB100D5ED36 /* ThirdCollectionCell1.xib in Resources */,
 				0ADF88A01D6709FD00E73526 /* menu_tujian_liang.png in Resources */,
 				0ADF888F1D6709FD00E73526 /* index_top_left.png in Resources */,
 				0ADF88C81D6709FD00E73526 /* zanxia.png in Resources */,
@@ -1062,12 +1122,15 @@
 				0ADF88EF1D67168200E73526 /* SHomeVC.xib in Resources */,
 				C4F3ACA91D6F0BE80089C699 /* TouZhuViewController.xib in Resources */,
 				0ADF88BA1D6709FD00E73526 /* sszx3.png in Resources */,
+				0A95303F1D767E1600D5ED36 /* PaiHangTabCell.xib in Resources */,
 				0ADF87F71D66AC8500E73526 /* LaunchScreen.storyboard in Resources */,
 				0A142F261D6D7BD5006D1640 /* FHIntroduceColletionCell.xib in Resources */,
 				0ADF88A91D6709FD00E73526 /* my4@2x.png in Resources */,
+				0A95303A1D7513F800D5ED36 /* ChuanGuanTabCell.xib in Resources */,
 				0ADF88C31D6709FD00E73526 /* wrongf_out.png in Resources */,
 				0ADF88AC1D6709FD00E73526 /* my7@2x.png in Resources */,
 				0ADF88811D6709FD00E73526 /* australia.png in Resources */,
+				0A95301D1D73ECBE00D5ED36 /* ThirdCollectionCell2.xib in Resources */,
 				0ADF889D1D6709FD00E73526 /* menu_my_an.png in Resources */,
 				0ADF88B61D6709FD00E73526 /* smalltu2.png in Resources */,
 				0ADF88321D66F22500E73526 /* ToolBarView.xib in Resources */,
@@ -1139,6 +1202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A95303E1D767E1600D5ED36 /* PaiHangTabCell.m in Sources */,
 				0A142F561D6EA189006D1640 /* SHCollectionCell.m in Sources */,
 				C4F3ACAC1D6F18830089C699 /* JinqitouzhuCollectionViewCell.m in Sources */,
 				0ADF88E91D67166E00E73526 /* FHomeVC.m in Sources */,
@@ -1161,8 +1225,10 @@
 				0A142EF51D6C5706006D1640 /* JCDKBaseTableView.m in Sources */,
 				0ADF88EE1D67168200E73526 /* SHomeVC.m in Sources */,
 				C43FC1F21D6B1C01002C6E42 /* FreeReciveViewController.m in Sources */,
+				0A9530321D73F18400D5ED36 /* SaiQianRighttabCell.m in Sources */,
 				C4B13C811D6ACEA9007A5009 /* JCDKBaseLabel.m in Sources */,
 				C43FC1F51D6B22BF002C6E42 /* FreeView.m in Sources */,
+				0A95301C1D73ECBE00D5ED36 /* ThirdCollectionCell2.m in Sources */,
 				C43FC1F81D6B25F9002C6E42 /* FreeTableViewCell.m in Sources */,
 				0A142EDE1D6C364B006D1640 /* FirstHHeaderView.m in Sources */,
 				0ADF88F31D67169000E73526 /* THomeVC.m in Sources */,
@@ -1170,11 +1236,15 @@
 				0A142EF01D6C4CEB006D1640 /* FXPageControl.m in Sources */,
 				0ADF89021D67360800E73526 /* LoginVC.m in Sources */,
 				C4F5E42C1D706BD7009E69D5 /* HeadView.m in Sources */,
+				0A9530171D73ECB100D5ED36 /* ThirdCollectionCell1.m in Sources */,
 				0A142EF81D6C6825006D1640 /* GBView.m in Sources */,
 				0A142F521D6DACC2006D1640 /* FHTableCell.m in Sources */,
 				C4F3ACAF1D6F1DCA0089C699 /* JinqiTableViewCell.m in Sources */,
 				0ADF89091D69608000E73526 /* JCDKBaseNaviVC.m in Sources */,
 				0ADF88341D66F22600E73526 /* ZKTextView.m in Sources */,
+				0A9530121D71938200D5ED36 /* ThirdCollectionCell.m in Sources */,
+				0A9530391D7513F800D5ED36 /* ChuanGuanTabCell.m in Sources */,
+				0A95302D1D73F16C00D5ED36 /* SaiQianLeftTabCell.m in Sources */,
 				0ADF88081D66B60900E73526 /* NSString+YSAdd.m in Sources */,
 				0A142F211D6D3832006D1640 /* FHIntroduceTabCell.m in Sources */,
 				C4B13C7E1D6A96F6007A5009 /* MyView.m in Sources */,

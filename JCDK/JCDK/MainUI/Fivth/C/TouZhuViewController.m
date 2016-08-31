@@ -20,6 +20,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     WeakSelf(wc);
+    self.view.frame = CGRectMake(0, 0, JCDK_Screen_WIDTH, JCDK_Screen_HEIGHT);
     NavigationView *navigationView = [[[NSBundle mainBundle] loadNibNamed:@"NavigationView" owner:self options:nil] objectAtIndex:4];
     navigationView.titleLabel4.text = @"投注记录";
     navigationView.buttonBlock4 = ^(NSInteger button)
