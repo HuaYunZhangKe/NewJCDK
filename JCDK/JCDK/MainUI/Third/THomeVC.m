@@ -87,6 +87,7 @@
     self.collectionView.collectionViewLayout = flowLayout;
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
+    self.collectionView.backgroundColor =kHexColor(0x171a1a);
     self.collectionView.pagingEnabled = YES;
  
 }
@@ -101,6 +102,7 @@
         [collectionView registerNib:[UINib nibWithNibName:@"ThirdCollectionCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:@"Third0"];
         ThirdCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Third0" forIndexPath:indexPath];
           [cell settingIndex0Nib];
+
         return cell;
     }
     else if (indexPath.row == 1)

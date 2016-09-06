@@ -48,6 +48,13 @@
 		0A95303A1D7513F800D5ED36 /* ChuanGuanTabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A9530381D7513F800D5ED36 /* ChuanGuanTabCell.xib */; };
 		0A95303E1D767E1600D5ED36 /* PaiHangTabCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A95303C1D767E1600D5ED36 /* PaiHangTabCell.m */; };
 		0A95303F1D767E1600D5ED36 /* PaiHangTabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A95303D1D767E1600D5ED36 /* PaiHangTabCell.xib */; };
+		0A95E3E01D7AE87800674EAD /* ScoreFliterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A95E3DF1D7AE87800674EAD /* ScoreFliterView.m */; };
+		0A95E3E21D7AE88F00674EAD /* ScoreFliterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A95E3E11D7AE88F00674EAD /* ScoreFliterView.xib */; };
+		0A95E3E51D7BB33F00674EAD /* ScoreFiterTabCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A95E3E41D7BB33F00674EAD /* ScoreFiterTabCell1.m */; };
+		0A95E3EE1D7BB39E00674EAD /* ScoreFitlerCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A95E3EC1D7BB39E00674EAD /* ScoreFitlerCollectionCell.m */; };
+		0A95E3EF1D7BB39E00674EAD /* ScoreFitlerCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A95E3ED1D7BB39E00674EAD /* ScoreFitlerCollectionCell.xib */; };
+		0A95E3F21D7BC5B800674EAD /* ScoreSectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A95E3F11D7BC5B800674EAD /* ScoreSectionView.m */; };
+		0A95E3F41D7BC5CF00674EAD /* ScoreSectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A95E3F31D7BC5CF00674EAD /* ScoreSectionView.xib */; };
 		0A9F0BB51D6B4C2E00B931BD /* MBUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9F0BB41D6B4C2E00B931BD /* MBUtil.m */; };
 		0AA7EE3D1D770A4E00F43725 /* ForgetPassWordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA7EE331D770A4E00F43725 /* ForgetPassWordVC.m */; };
 		0AA7EE3E1D770A4E00F43725 /* ForgetPassWordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AA7EE341D770A4E00F43725 /* ForgetPassWordVC.xib */; };
@@ -56,6 +63,10 @@
 		0AA7EE411D770A4E00F43725 /* RegistVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA7EE391D770A4E00F43725 /* RegistVC.m */; };
 		0AA7EE421D770A4E00F43725 /* RegistVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AA7EE3A1D770A4E00F43725 /* RegistVC.xib */; };
 		0AA7EE451D770B0000F43725 /* EnterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA7EE441D770B0000F43725 /* EnterView.m */; };
+		0AA7EE491D790D4200F43725 /* RegistVC1.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA7EE471D790D4200F43725 /* RegistVC1.m */; };
+		0AA7EE4A1D790D4200F43725 /* RegistVC1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AA7EE481D790D4200F43725 /* RegistVC1.xib */; };
+		0AA7EE4E1D79145900F43725 /* BMHttpHander.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA7EE4D1D79145900F43725 /* BMHttpHander.m */; };
+		0AA7EE511D7914CA00F43725 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA7EE501D7914CA00F43725 /* Reachability.m */; };
 		0ADF87F51D66AC8500E73526 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADF87EF1D66AC8500E73526 /* AppDelegate.m */; };
 		0ADF87F61D66AC8500E73526 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ADF87F01D66AC8500E73526 /* Assets.xcassets */; };
 		0ADF87F71D66AC8500E73526 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ADF87F11D66AC8500E73526 /* LaunchScreen.storyboard */; };
@@ -161,6 +172,11 @@
 		0ADF89061D6946D900E73526 /* UIImage+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADF89051D6946D900E73526 /* UIImage+Utils.m */; };
 		0ADF89091D69608000E73526 /* JCDKBaseNaviVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADF89081D69608000E73526 /* JCDKBaseNaviVC.m */; };
 		0ADF890B1D699C7100E73526 /* xiaowanzi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0ADF890A1D699C7100E73526 /* xiaowanzi.jpg */; };
+		0AE7D2BB1D7E7D500086FAED /* CanderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE7D2BA1D7E7D500086FAED /* CanderView.m */; };
+		0AE7D2C01D7E81B00086FAED /* DateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE7D2BF1D7E81B00086FAED /* DateView.m */; };
+		0AE7D2C31D7ECD620086FAED /* left.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE7D2C11D7ECD620086FAED /* left.png */; };
+		0AE7D2C41D7ECD620086FAED /* right.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE7D2C21D7ECD620086FAED /* right.png */; };
+		0AE7D2C71D7ED2320086FAED /* ClassUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE7D2C61D7ED2320086FAED /* ClassUtils.m */; };
 		C43FC1F21D6B1C01002C6E42 /* FreeReciveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C43FC1F11D6B1C01002C6E42 /* FreeReciveViewController.m */; };
 		C43FC1F51D6B22BF002C6E42 /* FreeView.m in Sources */ = {isa = PBXBuildFile; fileRef = C43FC1F41D6B22BF002C6E42 /* FreeView.m */; };
 		C43FC1F81D6B25F9002C6E42 /* FreeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C43FC1F71D6B25F9002C6E42 /* FreeTableViewCell.m */; };
@@ -237,6 +253,17 @@
 		0A95303B1D767E1600D5ED36 /* PaiHangTabCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaiHangTabCell.h; sourceTree = "<group>"; };
 		0A95303C1D767E1600D5ED36 /* PaiHangTabCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaiHangTabCell.m; sourceTree = "<group>"; };
 		0A95303D1D767E1600D5ED36 /* PaiHangTabCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaiHangTabCell.xib; sourceTree = "<group>"; };
+		0A95E3DE1D7AE87800674EAD /* ScoreFliterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreFliterView.h; sourceTree = "<group>"; };
+		0A95E3DF1D7AE87800674EAD /* ScoreFliterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreFliterView.m; sourceTree = "<group>"; };
+		0A95E3E11D7AE88F00674EAD /* ScoreFliterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScoreFliterView.xib; sourceTree = "<group>"; };
+		0A95E3E31D7BB33F00674EAD /* ScoreFiterTabCell1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreFiterTabCell1.h; sourceTree = "<group>"; };
+		0A95E3E41D7BB33F00674EAD /* ScoreFiterTabCell1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreFiterTabCell1.m; sourceTree = "<group>"; };
+		0A95E3EB1D7BB39E00674EAD /* ScoreFitlerCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreFitlerCollectionCell.h; sourceTree = "<group>"; };
+		0A95E3EC1D7BB39E00674EAD /* ScoreFitlerCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreFitlerCollectionCell.m; sourceTree = "<group>"; };
+		0A95E3ED1D7BB39E00674EAD /* ScoreFitlerCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScoreFitlerCollectionCell.xib; sourceTree = "<group>"; };
+		0A95E3F01D7BC5B800674EAD /* ScoreSectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreSectionView.h; sourceTree = "<group>"; };
+		0A95E3F11D7BC5B800674EAD /* ScoreSectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreSectionView.m; sourceTree = "<group>"; };
+		0A95E3F31D7BC5CF00674EAD /* ScoreSectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScoreSectionView.xib; sourceTree = "<group>"; };
 		0A9F0BB31D6B4C2E00B931BD /* MBUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBUtil.h; sourceTree = "<group>"; };
 		0A9F0BB41D6B4C2E00B931BD /* MBUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBUtil.m; sourceTree = "<group>"; };
 		0AA7EE321D770A4E00F43725 /* ForgetPassWordVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetPassWordVC.h; sourceTree = "<group>"; };
@@ -250,6 +277,13 @@
 		0AA7EE3A1D770A4E00F43725 /* RegistVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegistVC.xib; sourceTree = "<group>"; };
 		0AA7EE431D770B0000F43725 /* EnterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnterView.h; sourceTree = "<group>"; };
 		0AA7EE441D770B0000F43725 /* EnterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnterView.m; sourceTree = "<group>"; };
+		0AA7EE461D790D4200F43725 /* RegistVC1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistVC1.h; sourceTree = "<group>"; };
+		0AA7EE471D790D4200F43725 /* RegistVC1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistVC1.m; sourceTree = "<group>"; };
+		0AA7EE481D790D4200F43725 /* RegistVC1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegistVC1.xib; sourceTree = "<group>"; };
+		0AA7EE4C1D79145900F43725 /* BMHttpHander.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMHttpHander.h; sourceTree = "<group>"; };
+		0AA7EE4D1D79145900F43725 /* BMHttpHander.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMHttpHander.m; sourceTree = "<group>"; };
+		0AA7EE4F1D7914CA00F43725 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		0AA7EE501D7914CA00F43725 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		0ADF87C21D66A44500E73526 /* JCDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JCDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ADF87C61D66A44500E73526 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0ADF87EE1D66AC8500E73526 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -379,6 +413,14 @@
 		0ADF89071D69608000E73526 /* JCDKBaseNaviVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCDKBaseNaviVC.h; sourceTree = "<group>"; };
 		0ADF89081D69608000E73526 /* JCDKBaseNaviVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCDKBaseNaviVC.m; sourceTree = "<group>"; };
 		0ADF890A1D699C7100E73526 /* xiaowanzi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = xiaowanzi.jpg; sourceTree = "<group>"; };
+		0AE7D2B91D7E7D500086FAED /* CanderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CanderView.h; sourceTree = "<group>"; };
+		0AE7D2BA1D7E7D500086FAED /* CanderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanderView.m; sourceTree = "<group>"; };
+		0AE7D2BE1D7E81B00086FAED /* DateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateView.h; sourceTree = "<group>"; };
+		0AE7D2BF1D7E81B00086FAED /* DateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateView.m; sourceTree = "<group>"; };
+		0AE7D2C11D7ECD620086FAED /* left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left.png; sourceTree = "<group>"; };
+		0AE7D2C21D7ECD620086FAED /* right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right.png; sourceTree = "<group>"; };
+		0AE7D2C51D7ED2320086FAED /* ClassUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassUtils.h; sourceTree = "<group>"; };
+		0AE7D2C61D7ED2320086FAED /* ClassUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassUtils.m; sourceTree = "<group>"; };
 		8B4F8A09065328201474E94F /* libPods-JCDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JCDK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C43FC1F01D6B1C01002C6E42 /* FreeReciveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeReciveViewController.h; sourceTree = "<group>"; };
 		C43FC1F11D6B1C01002C6E42 /* FreeReciveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FreeReciveViewController.m; sourceTree = "<group>"; };
@@ -466,6 +508,9 @@
 				0AA7EE381D770A4E00F43725 /* RegistVC.h */,
 				0AA7EE391D770A4E00F43725 /* RegistVC.m */,
 				0AA7EE3A1D770A4E00F43725 /* RegistVC.xib */,
+				0AA7EE461D790D4200F43725 /* RegistVC1.h */,
+				0AA7EE471D790D4200F43725 /* RegistVC1.m */,
+				0AA7EE481D790D4200F43725 /* RegistVC1.xib */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -484,6 +529,17 @@
 				0AA7EE441D770B0000F43725 /* EnterView.m */,
 			);
 			path = V;
+			sourceTree = "<group>";
+		};
+		0AA7EE4B1D79145900F43725 /* WebService */ = {
+			isa = PBXGroup;
+			children = (
+				0AA7EE4F1D7914CA00F43725 /* Reachability.h */,
+				0AA7EE501D7914CA00F43725 /* Reachability.m */,
+				0AA7EE4C1D79145900F43725 /* BMHttpHander.h */,
+				0AA7EE4D1D79145900F43725 /* BMHttpHander.m */,
+			);
+			path = WebService;
 			sourceTree = "<group>";
 		};
 		0ADF87B91D66A44500E73526 = {
@@ -700,8 +756,11 @@
 		0ADF87EC1D66AC1A00E73526 /* UUIUtil */ = {
 			isa = PBXGroup;
 			children = (
+				0AA7EE4B1D79145900F43725 /* WebService */,
 				0ADF88051D66B60900E73526 /* Category */,
 				0ADF87FD1D66B2C200E73526 /* ZKBlocks.h */,
+				0AE7D2C51D7ED2320086FAED /* ClassUtils.h */,
+				0AE7D2C61D7ED2320086FAED /* ClassUtils.m */,
 			);
 			path = UUIUtil;
 			sourceTree = "<group>";
@@ -793,6 +852,8 @@
 		0ADF88351D6709FC00E73526 /* jcdk_images */ = {
 			isa = PBXGroup;
 			children = (
+				0AE7D2C11D7ECD620086FAED /* left.png */,
+				0AE7D2C21D7ECD620086FAED /* right.png */,
 				0ADF890A1D699C7100E73526 /* xiaowanzi.jpg */,
 				0ADF88361D6709FC00E73526 /* australia.png */,
 				0ADF88371D6709FC00E73526 /* bfzx_bottom.png */,
@@ -895,6 +956,21 @@
 				0A142F5C1D6EA5C0006D1640 /* BiFenTabCell.h */,
 				0A142F5D1D6EA5C0006D1640 /* BiFenTabCell.m */,
 				0A142F5E1D6EA5C0006D1640 /* BiFenTabCell.xib */,
+				0A95E3DE1D7AE87800674EAD /* ScoreFliterView.h */,
+				0A95E3DF1D7AE87800674EAD /* ScoreFliterView.m */,
+				0A95E3E11D7AE88F00674EAD /* ScoreFliterView.xib */,
+				0A95E3E31D7BB33F00674EAD /* ScoreFiterTabCell1.h */,
+				0A95E3E41D7BB33F00674EAD /* ScoreFiterTabCell1.m */,
+				0A95E3EB1D7BB39E00674EAD /* ScoreFitlerCollectionCell.h */,
+				0A95E3EC1D7BB39E00674EAD /* ScoreFitlerCollectionCell.m */,
+				0A95E3ED1D7BB39E00674EAD /* ScoreFitlerCollectionCell.xib */,
+				0A95E3F01D7BC5B800674EAD /* ScoreSectionView.h */,
+				0A95E3F11D7BC5B800674EAD /* ScoreSectionView.m */,
+				0A95E3F31D7BC5CF00674EAD /* ScoreSectionView.xib */,
+				0AE7D2B91D7E7D500086FAED /* CanderView.h */,
+				0AE7D2BA1D7E7D500086FAED /* CanderView.m */,
+				0AE7D2BE1D7E81B00086FAED /* DateView.h */,
+				0AE7D2BF1D7E81B00086FAED /* DateView.m */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -1094,12 +1170,17 @@
 				0ADF88961D6709FD00E73526 /* login_possword.png in Resources */,
 				0ADF889A1D6709FD00E73526 /* menu_befen_liang.png in Resources */,
 				0ADF88C91D6709FD00E73526 /* zhmx_jia.png in Resources */,
+				0AA7EE4A1D790D4200F43725 /* RegistVC1.xib in Resources */,
 				0ADF88861D6709FD00E73526 /* bstj_top_right2.png in Resources */,
+				0A95E3EF1D7BB39E00674EAD /* ScoreFitlerCollectionCell.xib in Resources */,
 				0ADF88B41D6709FD00E73526 /* set_left.png in Resources */,
 				0ADF88921D6709FD00E73526 /* jiantou_bottom@2x.png in Resources */,
 				0ADF88BC1D6709FD00E73526 /* sszx6.png in Resources */,
+				0A95E3E21D7AE88F00674EAD /* ScoreFliterView.xib in Resources */,
 				0ADF88BB1D6709FD00E73526 /* sszx4.png in Resources */,
 				0ADF88CB1D6709FD00E73526 /* zhmx_right.png in Resources */,
+				0AE7D2C31D7ECD620086FAED /* left.png in Resources */,
+				0AE7D2C41D7ECD620086FAED /* right.png in Resources */,
 				0ADF88941D6709FD00E73526 /* kabi.png in Resources */,
 				0ADF88CA1D6709FD00E73526 /* zhmx_jian.png in Resources */,
 				0ADF88C71D6709FD00E73526 /* zanshang.png in Resources */,
@@ -1138,6 +1219,7 @@
 				0A142EDA1D6C31C1006D1640 /* user-on.png in Resources */,
 				0ADF88FE1D6716B200E73526 /* FourthVC.xib in Resources */,
 				0ADF88B21D6709FD00E73526 /* rerturn@2x.png in Resources */,
+				0A95E3F41D7BC5CF00674EAD /* ScoreSectionView.xib in Resources */,
 				0ADF888D1D6709FD00E73526 /* index_liuyan.png in Resources */,
 				0A142ED21D6C31C1006D1640 /* core-on.png in Resources */,
 				0ADF88841D6709FD00E73526 /* bstj_add.png in Resources */,
@@ -1260,10 +1342,12 @@
 				0A9F0BB51D6B4C2E00B931BD /* MBUtil.m in Sources */,
 				0ADF88031D66B3E100E73526 /* UIColor+YYAdd.m in Sources */,
 				C4F3ACA81D6F0BE80089C699 /* TouZhuViewController.m in Sources */,
+				0AA7EE511D7914CA00F43725 /* Reachability.m in Sources */,
 				0AA7EE3D1D770A4E00F43725 /* ForgetPassWordVC.m in Sources */,
 				0ADF87F91D66AC8500E73526 /* main.m in Sources */,
 				0ADF88041D66B3E100E73526 /* UIView+YYAdd.m in Sources */,
 				0A142F8D1D702E03006D1640 /* LRProgress.m in Sources */,
+				0AE7D2BB1D7E7D500086FAED /* CanderView.m in Sources */,
 				0AA7EE411D770A4E00F43725 /* RegistVC.m in Sources */,
 				0AA7EE3F1D770A4E00F43725 /* LoginVC.m in Sources */,
 				0ADF88F81D6716A200E73526 /* FiveHomeVC.m in Sources */,
@@ -1272,12 +1356,14 @@
 				0ADF88331D66F22500E73526 /* ZKTextField.m in Sources */,
 				0ADF880B1D66B6B500E73526 /* NSData+YSAdd.m in Sources */,
 				0A142EF11D6C4CEB006D1640 /* BHInfiniteScrollViewCell.m in Sources */,
+				0A95E3F21D7BC5B800674EAD /* ScoreSectionView.m in Sources */,
 				0ADF88181D66C58E00E73526 /* NavigationView.m in Sources */,
 				0A142EF51D6C5706006D1640 /* JCDKBaseTableView.m in Sources */,
 				0ADF88EE1D67168200E73526 /* SHomeVC.m in Sources */,
 				C43FC1F21D6B1C01002C6E42 /* FreeReciveViewController.m in Sources */,
 				0A9530321D73F18400D5ED36 /* SaiQianRighttabCell.m in Sources */,
 				C4B13C811D6ACEA9007A5009 /* JCDKBaseLabel.m in Sources */,
+				0AA7EE491D790D4200F43725 /* RegistVC1.m in Sources */,
 				C43FC1F51D6B22BF002C6E42 /* FreeView.m in Sources */,
 				0A95301C1D73ECBE00D5ED36 /* ThirdCollectionCell2.m in Sources */,
 				C43FC1F81D6B25F9002C6E42 /* FreeTableViewCell.m in Sources */,
@@ -1285,13 +1371,17 @@
 				0ADF88F31D67169000E73526 /* THomeVC.m in Sources */,
 				0ADF88311D66F22500E73526 /* ToolBarView.m in Sources */,
 				0A142EF01D6C4CEB006D1640 /* FXPageControl.m in Sources */,
+				0A95E3EE1D7BB39E00674EAD /* ScoreFitlerCollectionCell.m in Sources */,
 				C4F5E42C1D706BD7009E69D5 /* HeadView.m in Sources */,
 				0A9530171D73ECB100D5ED36 /* ThirdCollectionCell1.m in Sources */,
 				0A142EF81D6C6825006D1640 /* GBView.m in Sources */,
 				0A142F521D6DACC2006D1640 /* FHTableCell.m in Sources */,
 				C4F3ACAF1D6F1DCA0089C699 /* JinqiTableViewCell.m in Sources */,
 				0ADF89091D69608000E73526 /* JCDKBaseNaviVC.m in Sources */,
+				0AE7D2C71D7ED2320086FAED /* ClassUtils.m in Sources */,
+				0AA7EE4E1D79145900F43725 /* BMHttpHander.m in Sources */,
 				0ADF88341D66F22600E73526 /* ZKTextView.m in Sources */,
+				0AE7D2C01D7E81B00086FAED /* DateView.m in Sources */,
 				0A9530121D71938200D5ED36 /* ThirdCollectionCell.m in Sources */,
 				0A9530391D7513F800D5ED36 /* ChuanGuanTabCell.m in Sources */,
 				0A95302D1D73F16C00D5ED36 /* SaiQianLeftTabCell.m in Sources */,
@@ -1302,6 +1392,8 @@
 				0AA7EE451D770B0000F43725 /* EnterView.m in Sources */,
 				0A142F5F1D6EA5C0006D1640 /* BiFenTabCell.m in Sources */,
 				0A142EEF1D6C4CEB006D1640 /* BHInfiniteScrollView.m in Sources */,
+				0A95E3E01D7AE87800674EAD /* ScoreFliterView.m in Sources */,
+				0A95E3E51D7BB33F00674EAD /* ScoreFiterTabCell1.m in Sources */,
 				0ADF88131D66C44900E73526 /* JCDKBaseVC.m in Sources */,
 				0ADF89061D6946D900E73526 /* UIImage+Utils.m in Sources */,
 			);

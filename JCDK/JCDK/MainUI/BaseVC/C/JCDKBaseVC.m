@@ -26,23 +26,23 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:YES];
-//    NSArray *viewControllers = [NSArray arrayWithArray:self.navigationController.viewControllers];
-//    if (viewControllers.count != 0)
-//    {
-//            UIViewController *firstVC = [self.navigationController.viewControllers objectAtIndex:0];
-//        
-//            if (self == firstVC)
-//            {
+    NSArray *viewControllers = [NSArray arrayWithArray:self.navigationController.viewControllers];
+    if (viewControllers.count != 0)
+    {
+            UIViewController *firstVC = [self.navigationController.viewControllers objectAtIndex:0];
+        
+            if (self == firstVC)
+            {
 //                self.navigationController.navigationBarHidden = YES;
-//                self.tabBarController.tabBar.hidden = YES;
-//            }
-//            else
-//            {
+                self.tabBarController.tabBar.hidden = NO;
+            }
+            else
+            {
 //                self.navigationController.navigationBarHidden = NO;
-//                self.tabBarController.tabBar.hidden = YES;
-//
-//            }
-//    }
+                self.tabBarController.tabBar.hidden = YES;
+
+            }
+    }
     self.navigationController.navigationBarHidden = YES;
 
 }

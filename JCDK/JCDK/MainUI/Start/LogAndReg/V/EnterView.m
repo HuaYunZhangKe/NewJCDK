@@ -14,11 +14,22 @@
 
 - (void)awakeFromNib
 {
+   //在viewdidload之前会提前布局
+}
+- (void)layoutSubviews
+{
+    //在viewdidload，以及viewwillappear之后调用（默认），如果layoutsubview，会被提前调用
+  
+}
+- (void)creatSubView
+{
+    [self layoutIfNeeded];
     self.backgroundColor = [UIColor clearColor];
     [self addSubview:self.backView];
     [self.backView addSubview:self.imageView];
     [self.backView addSubview:self.textField];
     [self.backView addSubview:self.placeHoder];
+
 }
 - (instancetype)init
 {
@@ -34,8 +45,8 @@
     if (!_backView)
     {
         NSLog(@"%f, %f", self.width,self.height);
-        _backView = [[UIView alloc] initWithFrame:CGRectMake(0
-                                                             , 0, JCDK_Screen_WIDTH - 16 * 2, 44)];
+//        self.width = JCDK_Screen_WIDTH - 16 * 2;
+        _backView = [[UIView alloc] initWithFrame:self.bounds];
         _backView.layer.cornerRadius = self.height / 2.0;
         _backView.backgroundColor =kHexColor(0x171a1a);
     }

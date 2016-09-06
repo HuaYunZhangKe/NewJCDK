@@ -21,6 +21,8 @@
 {
     self.tableView1.delegate = self;
     self.tableView1.dataSource = self;
+    self.tableView1.backgroundColor =kHexColor(0x171a1a);
+
     self.isExpanArr = [NSMutableArray arrayWithObjects:@"0", @"0", @"0",@"0",@"0",@"0",@"0",@"0",@"0",@"0",nil];
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView

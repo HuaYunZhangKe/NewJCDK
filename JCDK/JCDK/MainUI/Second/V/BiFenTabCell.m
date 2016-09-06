@@ -20,5 +20,24 @@
 
     // Configure the view for the selected state
 }
+- (IBAction)index1Btn:(UIButton *)sender
+{
+    if (sender.tag == 201)
+    {
+        
+    }
+    if (sender.tag == 202)
+    {
+        
+    }
+    if (sender.tag == 203)
+    {
+        
+    }
+    if (_button1Block)
+    {
+        _button1Block(sender.tag - 200);
+    }
 
+}
 @end

@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "ZKBlocks.h"
 @interface BiFenTabCell : UITableViewCell
+//index1
+@property (weak, nonatomic) IBOutlet UIButton *canderBtn;
+@property (weak, nonatomic) IBOutlet UIButton *frontStep;
+@property (weak, nonatomic) IBOutlet UIButton *nextStep;
+@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 
+@property (nonatomic, copy) YSBlockWithInteger button1Block;
 @end

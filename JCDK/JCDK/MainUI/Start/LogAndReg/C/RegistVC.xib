@@ -31,13 +31,14 @@
                             </constraints>
                         </imageView>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0BW-85-CHG" customClass="ZKTextField">
-                            <rect key="frame" x="46" y="10" width="500" height="28"/>
+                            <rect key="frame" x="42" y="10" width="504" height="28"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请输入手机号码/公众号" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OXq-jx-ZBF">
-                            <rect key="frame" x="46" y="10" width="500" height="28"/>
+                            <rect key="frame" x="50" y="10" width="496" height="28"/>
                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
@@ -51,8 +52,8 @@
                         <constraint firstItem="Twb-T6-OGC" firstAttribute="centerY" secondItem="bid-Cs-hJ6" secondAttribute="centerY" id="EcJ-pY-MZw"/>
                         <constraint firstItem="OXq-jx-ZBF" firstAttribute="top" secondItem="0BW-85-CHG" secondAttribute="top" id="HvW-AN-lng"/>
                         <constraint firstItem="0BW-85-CHG" firstAttribute="top" secondItem="bid-Cs-hJ6" secondAttribute="top" constant="10" id="J9R-HN-rxX"/>
-                        <constraint firstItem="0BW-85-CHG" firstAttribute="leading" secondItem="Twb-T6-OGC" secondAttribute="trailing" constant="10" id="Kg6-dO-Bp9"/>
-                        <constraint firstItem="OXq-jx-ZBF" firstAttribute="leading" secondItem="0BW-85-CHG" secondAttribute="leading" id="gwp-Sb-uPs"/>
+                        <constraint firstItem="0BW-85-CHG" firstAttribute="leading" secondItem="Twb-T6-OGC" secondAttribute="trailing" constant="6" id="Kg6-dO-Bp9"/>
+                        <constraint firstItem="OXq-jx-ZBF" firstAttribute="leading" secondItem="0BW-85-CHG" secondAttribute="leading" constant="8" id="gwp-Sb-uPs"/>
                         <constraint firstItem="OXq-jx-ZBF" firstAttribute="trailing" secondItem="0BW-85-CHG" secondAttribute="trailing" id="vrZ-ek-NlA"/>
                         <constraint firstItem="Twb-T6-OGC" firstAttribute="leading" secondItem="bid-Cs-hJ6" secondAttribute="leading" constant="22" id="y1d-IG-9JX"/>
                         <constraint firstItem="0BW-85-CHG" firstAttribute="centerY" secondItem="bid-Cs-hJ6" secondAttribute="centerY" id="zNB-wa-ce1"/>
@@ -65,7 +66,7 @@
                     </variation>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xu8-z3-JCJ">
-                    <rect key="frame" x="12" y="168" width="576" height="44"/>
+                    <rect key="frame" x="16" y="168" width="568" height="44"/>
                     <color key="backgroundColor" red="0.090196078430000007" green="0.1019607843" blue="0.1019607843" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="e5S-Re-fxn"/>
@@ -95,12 +96,12 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="xu8-z3-JCJ" secondAttribute="trailing" constant="12" id="DIJ-A0-mzY"/>
+                <constraint firstAttribute="trailing" secondItem="xu8-z3-JCJ" secondAttribute="trailing" constant="16" id="DIJ-A0-mzY"/>
                 <constraint firstItem="Mhi-7B-rOs" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="OzY-uT-zSo"/>
                 <constraint firstItem="bid-Cs-hJ6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="TIy-nW-0k0"/>
                 <constraint firstItem="Mhi-7B-rOs" firstAttribute="top" secondItem="xu8-z3-JCJ" secondAttribute="bottom" constant="30" id="dIl-7r-6RW"/>
                 <constraint firstItem="xu8-z3-JCJ" firstAttribute="top" secondItem="bid-Cs-hJ6" secondAttribute="bottom" constant="30" id="lIl-3h-bz1"/>
-                <constraint firstItem="xu8-z3-JCJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="12" id="n3z-0A-O54"/>
+                <constraint firstItem="xu8-z3-JCJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="n3z-0A-O54"/>
                 <constraint firstAttribute="trailing" secondItem="bid-Cs-hJ6" secondAttribute="trailing" constant="16" id="n85-09-zqw"/>
                 <constraint firstAttribute="trailing" secondItem="Mhi-7B-rOs" secondAttribute="trailing" constant="16" id="qgR-xi-hZL"/>
                 <constraint firstItem="bid-Cs-hJ6" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="94" id="vD8-x0-HcQ"/>

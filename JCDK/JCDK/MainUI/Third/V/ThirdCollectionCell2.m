@@ -29,6 +29,8 @@
     [self.backView2 addSubview:self.line2];
     self.tableView2.delegate = self;
     self.tableView2.dataSource = self;
+    self.tableView2.backgroundColor =kHexColor(0x171a1a);
+
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -55,6 +57,8 @@
     if (indexPath.row == 0)
     {
         PaiHangTabCell *cell = [[[NSBundle mainBundle] loadNibNamed:@"PaiHangTabCell" owner:self options:nil] objectAtIndex:0];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+
         return cell;
     }
     else
@@ -62,8 +66,9 @@
         PaiHangTabCell *cell = [tableView dequeueReusableCellWithIdentifier:@"paihang"];
         if (!cell)
         {
-                  cell = [[[NSBundle mainBundle] loadNibNamed:@"PaiHangTabCell" owner:self options:nil] objectAtIndex:1];
+          cell = [[[NSBundle mainBundle] loadNibNamed:@"PaiHangTabCell" owner:self options:nil] objectAtIndex:1];
         }
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     }
 }

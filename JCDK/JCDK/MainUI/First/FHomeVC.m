@@ -26,12 +26,16 @@ static NSString *itopic = @"ttopic";
     self.view.frame = CGRectMake(0, 0, JCDK_Screen_WIDTH, JCDK_Screen_HEIGHT);
     [self setnavigationBar];
     [self settingTableView];
-    
+
 }
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:YES];
     self.edgesForExtendedLayout = UIRectEdgeNone;
+}
+- (void)viewWillLayoutSubviews
+{
+    
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -58,8 +62,8 @@ static NSString *itopic = @"ttopic";
 - (void)settingTableView
 {
     self.tableView.tableHeaderView = self.headerView;
-    
     [self.tableView registerClass:[FHIntroduceTabCell class] forCellReuseIdentifier:itabInde];
+    self.tableView.backgroundColor =kHexColor(0x171a1a);
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
 
@@ -156,12 +160,14 @@ static NSString *itopic = @"ttopic";
         if (indexPath.row == 0)
         {
             FHTableCell *cell = [[[NSBundle mainBundle] loadNibNamed:@"FHTableCell" owner:self options:nil] objectAtIndex:0];
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
             return cell;
 
         }
         else
         {
             FHTableCell *cell = [[[NSBundle mainBundle] loadNibNamed:@"FHTableCell" owner:self options:nil] objectAtIndex:2];
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
             return cell;
 
         }
@@ -171,12 +177,15 @@ static NSString *itopic = @"ttopic";
         if (indexPath.row == 0)
         {
             FHTableCell *cell = [[[NSBundle mainBundle] loadNibNamed:@"FHTableCell" owner:self options:nil] objectAtIndex:1];
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+
             return cell;
             
         }
         else
         {
             FHTableCell *cell = [[[NSBundle mainBundle] loadNibNamed:@"FHTableCell" owner:self options:nil] objectAtIndex:3];
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
             return cell;
             
         }

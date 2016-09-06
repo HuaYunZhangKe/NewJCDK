@@ -24,8 +24,12 @@
     [self.backView0 addSubview:self.line0];
     self.leftTableView.delegate = self;
     self.leftTableView.dataSource = self;
+    self.leftTableView.backgroundColor =kHexColor(0x171a1a);
+
     self.rightTableView.delegate = self;
     self.rightTableView.dataSource = self;
+    self.rightTableView.backgroundColor =kHexColor(0x171a1a);
+
     
 }
 
@@ -50,6 +54,7 @@
     {
         [tableView registerNib:[UINib nibWithNibName:@"SaiQianLeftTabCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"left"];
         SaiQianLeftTabCell *cell = [tableView dequeueReusableCellWithIdentifier:@"left"];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
 
     }
@@ -57,6 +62,7 @@
     {
         [tableView registerNib:[UINib nibWithNibName:@"SaiQianRighttabCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"right"];
         SaiQianRighttabCell *cell = [tableView dequeueReusableCellWithIdentifier:@"right"];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
 
     }

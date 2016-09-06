@@ -15,5 +15,6 @@
 @property (nonatomic, retain)UILabel *placeHoder;
 @property (nonatomic, retain)NSString *imageStr;
 @property (nonatomic, retain)NSString *placeStr;
+- (void)creatSubView;
 
 @end

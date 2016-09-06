@@ -7,7 +7,8 @@
 //
 
 #import "RegistVC.h"
-
+#import "RegistVC1.h"
+#import "BMHttpHander.h"
 @interface RegistVC ()
 
 @end
@@ -20,6 +21,8 @@
     _obtainBtn.layer.cornerRadius = 20.0;
     _loginBtn.layer.cornerRadius = 20.0;
     _phoneView.layer.cornerRadius = 22.0;
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector (textFieldChange:) name:UITextFieldTextDidChangeNotification object:self.textField];
+
     [self settingNavigation];
 }
 
@@ -27,6 +30,20 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (void)textFieldChange:(NSNotification *)noti
+{
+    UITextField *textf = noti.object;
+    if (textf.text.length == 0)
+    {
+        self.placeHoder.hidden = NO;
+    }
+    else
+    {
+        self.placeHoder.hidden = YES;
+        
+    }
+}
+
 - (void)settingNavigation
 {
     WeakSelf(wc);
@@ -51,10 +68,65 @@
 }
 
 - (IBAction)obtainCode:(id)sender {
+    
+    if (self.textField.text.length == 0)
+    {
+        [self showTotast:@"请输入手机号"];
+        return;
+    }
+    [self getObtainCodeFromWeb];
+  
 }
 
 - (IBAction)loginBtn:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }
+#pragma  -mark webService
+- (void)getObtainCodeFromWeb
+{
+//    /index.php?g=app&m=user&a=sendmsg
+//    http://football.sh.hfcn.cc/index.php?g=app&m=user&a=sendmsg&type=0&mobile=15010870201
+    NSDictionary *paraDic = @{
+                              @"g":@"app",
+                              @"m":@"user",
+                              @"a":@"sendmsg",
+                              @"type":@(0),
+                              @"mobile":self.textField.text
+                              };
+    [BMHttpHander PostRequest1:K_Server_Main_URL WithParameters:paraDic WithSuccess:^(NSData * _Nullable data, NSURLResponse * _Nullable response) {
+        //        NSLog(@"%@", )
+        
+        id result = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+        NSString *status = result[@"status"];
+        NSLog(@"%@", result[@"status"]);
+        if ([status integerValue] == 1)
+        {
+            [self performSelectorOnMainThread:@selector(webRequestSuccess:) withObject:result waitUntilDone:NO];
+        }
+        else
+        {
+            [self performSelectorOnMainThread:@selector(showTotast:) withObject:@"返回status为0发送验证码失败" waitUntilDone:NO];
+        }
+        
+    } WithFail:^(NSData * _Nullable data, NSURLResponse * _Nullable response) {
+        [self performSelectorOnMainThread:@selector(showTotast:) withObject:@"网络请求失败" waitUntilDone:NO];
+        
+    }];
+
+}
+- (void)webRequestSuccess:(NSDictionary *)result
+{
+    RegistVC1 *vc = [[RegistVC1 alloc] initWithNibName:@"RegistVC1" bundle:nil];
+    vc.postDic = @{@"phone":self.textField.text,@"code":[NSString stringWithFormat:@"%@",result[@"num"]]};
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)showTotast:(NSString *)title
+{
+    [MBUtil showTotastView:self.view WithTitle:title];
+    
+}
+
+
 
 @end

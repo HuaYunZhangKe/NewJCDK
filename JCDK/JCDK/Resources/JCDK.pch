@@ -14,12 +14,18 @@
 #import "UIColor+YYAdd.h"
 #import "UIView+YYAdd.h"
 #import "JCDKBaseLabel.h"
+#import "MBUtil.h"
+#import "BMHttpHander.h"
+#import "AppDelegate.h"
+
 /*
  宏定义 －－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－ */
-#define K_Server_H5_URL @"http://uzhitou.cn/"
-#define K_Server_Main_URL @"http://app.uzhitou.cn/"
+
+//#define K_Server_H5_URL @"http://uzhitou.cn/"
+#define K_Server_Main_URL @"http://football.sh.hfcn.cc/index.php"
 #define JCDK_Screen_HEIGHT [UIScreen mainScreen].bounds.size.height
 #define JCDK_Screen_WIDTH [UIScreen mainScreen].bounds.size.width
+#define k_IOS_Version [[[UIDevice currentDevice] systemVersion] floatValue]
 //状态栏颜色
 #define kStatusBarColor [UIColor colorWithRGB:0x293033]
 //导航栏颜色
@@ -32,6 +38,10 @@
 #define kBlueColor [UIColor colorWithRGB:0x0900cc]
 #define kYellowColor [UIColor colorWithRGB:0xf2a400]
 #define kGreenColor [UIColor colorWithRGB:0x089600]
+#define kAppdelegate [UIApplication sharedApplication].delegate
+
+
+
 
 
 
