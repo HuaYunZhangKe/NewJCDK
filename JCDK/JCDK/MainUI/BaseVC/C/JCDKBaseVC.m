@@ -33,13 +33,13 @@
         
             if (self == firstVC)
             {
-//                self.navigationController.navigationBarHidden = YES;
-                self.tabBarController.tabBar.hidden = NO;
+//                self.tabBarController.tabBar.hidden = NO;
+                [self showTabbar];
             }
             else
             {
-//                self.navigationController.navigationBarHidden = NO;
-                self.tabBarController.tabBar.hidden = YES;
+//                self.tabBarController.tabBar.hidden = YES;
+                [self hiddenTabbar];
 
             }
     }
@@ -50,7 +50,24 @@
 {
     
 }
-
+- (void)hiddenTabbar
+{
+    [UIView animateWithDuration:0.35
+                     animations:^{
+                         CGRect tabFrame = self.tabBarController.tabBar.frame;
+                         tabFrame.origin.y = JCDK_Screen_HEIGHT;
+                         self.tabBarController.tabBar.frame = tabFrame;
+                     }];
+}
+- (void)showTabbar
+{
+    [UIView animateWithDuration:0.35
+                     animations:^{
+                         CGRect tabFrame = self.tabBarController.tabBar.frame;
+                         tabFrame.origin.y = JCDK_Screen_HEIGHT - 49;
+                         self.tabBarController.tabBar.frame = tabFrame;
+                     }];
+}
 /*
  1.设置状态栏的颜色
  */

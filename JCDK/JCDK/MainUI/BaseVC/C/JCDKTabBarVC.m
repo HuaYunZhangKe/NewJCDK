@@ -49,14 +49,18 @@
         CGFloat swidth = 20;
         CGFloat sheight = 20;
         UIImage *norPic = [[[UIImage imageNamed:itemsNormalPic[i] ] scaleImageToSize:CGSizeMake(nwidth, nheight) ] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-        [tabItem setImage:norPic];
         UIImage *selectedPic = [[[UIImage imageNamed:itemsSelectedPics[i]] scaleImageToSize:CGSizeMake(swidth, sheight) ]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        [tabItem setImage:norPic];
         [tabItem setSelectedImage:selectedPic];
         [tabItem setTitle:itemsTitle[i]];
+        NSDictionary* titleAttributes = @{NSFontAttributeName : [UIFont fontWithName:@"HelveticaNeue" size:10],NSForegroundColorAttributeName : [UIColor whiteColor]};
+        NSDictionary* titleAttributesPress = @{NSFontAttributeName : [UIFont fontWithName:@"HelveticaNeue" size:10],NSForegroundColorAttributeName : [UIColor whiteColor]};
+        [tabItem setTitleTextAttributes:titleAttributes forState:UIControlStateNormal];
+        [tabItem setTitleTextAttributes:titleAttributesPress forState:UIControlStateSelected];
+
         [tabItem setTitlePositionAdjustment:UIOffsetMake(0, - 3)];
         controller.tabBarItem = tabItem;
     }
-    [self setTabTitleAtti];
     [self setTabBarBackGroudColor];
     [self setViewControllers:naviArr animated:NO];
 

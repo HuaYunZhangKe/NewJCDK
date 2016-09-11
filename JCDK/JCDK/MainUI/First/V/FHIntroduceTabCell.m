@@ -8,6 +8,7 @@
 
 #import "FHIntroduceTabCell.h"
 #import "FHIntroduceColletionCell.h"
+
 @interface FHIntroduceTabCell ()<UICollectionViewDelegate, UICollectionViewDataSource,UIScrollViewDelegate>
 @property (nonatomic, retain)UIView *lineView;
 @property (nonatomic, retain)UIButton *hotBtn;//热门
@@ -139,7 +140,15 @@ static NSString *indef =@"cIntroduce";
     }
 
 }
-
+- (void)setShowDic:(NSMutableDictionary *)showDic
+{
+    _showDic = showDic;
+    self.bottonView.frame = CGRectMake(0, 41, JCDK_Screen_WIDTH, 154);
+    _cheight = 130;
+    [self.contentView addSubview:self.bottonView];
+    [self.bottonView addSubview:self.collectionView];
+    [self.collectionView reloadData];
+}
 - (void)setContentWithArray:(NSArray *)array
 {
     self.currentArr = [NSArray arrayWithArray:array];
@@ -170,40 +179,84 @@ static NSString *indef =@"cIntroduce";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     FHIntroduceColletionCell *item = [collectionView dequeueReusableCellWithReuseIdentifier:indef forIndexPath:indexPath];
- 
-
-    if (self.currentArr.count >= 7)
+    if (indexPath.section == 0)
     {
-        if (indexPath.row < 7)
+        NSMutableArray *tjArr = [self.showDic objectForKey:@"tj"];
+
+        if (indexPath.row == 7)
         {
-            item.name.text = self.currentArr[indexPath.row];
+            item.name.text = @"更多";
+            item.pic.image = [UIImage imageNamed:@"index_more.png"];
         }
         else
         {
-            item.name.text = @"更多";
- 
+            item.user = tjArr[indexPath.row];
         }
-        return item;
+    }
+    else if (indexPath.section == 1)
+    {
+        NSMutableArray *tjArr = [self.showDic objectForKey:@"hr"];
+        
+        if (indexPath.row == 7)
+        {
+            item.name.text = @"更多";
+            item.pic.image = [UIImage imageNamed:@"index_more.png"];
+
+        }
+        else
+        {
+            item.user = tjArr[indexPath.row];
+        }
 
     }
     else
     {
-        if (indexPath.row == self.currentArr.count)
+        NSMutableArray *tjArr = [self.showDic objectForKey:@"gz"];
+        
+        if (indexPath.row == 7)
         {
             item.name.text = @"更多";
-        }
-        else if(indexPath.row < self.currentArr.count)
-        {
-            item.name.text = self.currentArr[indexPath.row];
-
+            item.pic.image = [UIImage imageNamed:@"index_more.png"];
         }
         else
         {
-            item.name.text  =@"";
+            item.user = tjArr[indexPath.row];
         }
-        return item;
 
     }
+    return item;
+//    if (self.currentArr.count >= 7)
+//    {
+//        if (indexPath.row < 7)
+//        {
+//            item.name.text = self.currentArr[indexPath.row];
+//        }
+//        else
+//        {
+//            item.name.text = @"更多";
+// 
+//        }
+//        return item;
+//
+//    }
+//    else
+//    {
+//        if (indexPath.row == self.currentArr.count)
+//        {
+//            item.name.text = @"更多";
+//        }
+//        else if(indexPath.row < self.currentArr.count)
+//        {
+//            item.name.text = self.currentArr[indexPath.row];
+//
+//        }
+//        else
+//        {
+//            item.name.text  =@"";
+//        }
+//        return item;
+//
+//    }
   
 }
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section

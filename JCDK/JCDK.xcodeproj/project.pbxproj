@@ -172,6 +172,11 @@
 		0ADF89061D6946D900E73526 /* UIImage+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADF89051D6946D900E73526 /* UIImage+Utils.m */; };
 		0ADF89091D69608000E73526 /* JCDKBaseNaviVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADF89081D69608000E73526 /* JCDKBaseNaviVC.m */; };
 		0ADF890B1D699C7100E73526 /* xiaowanzi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0ADF890A1D699C7100E73526 /* xiaowanzi.jpg */; };
+		0AE04E3A1D83FEFE001E728E /* Posts.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE04E391D83FEFE001E728E /* Posts.m */; };
+		0AE04E3D1D84008E001E728E /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE04E3C1D84008E001E728E /* BaseModel.m */; };
+		0AE04E401D8400C9001E728E /* Slides.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE04E3F1D8400C9001E728E /* Slides.m */; };
+		0AE04E431D8400DE001E728E /* Users.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE04E421D8400DE001E728E /* Users.m */; };
+		0AE04E461D840106001E728E /* Matchs.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE04E451D840106001E728E /* Matchs.m */; };
 		0AE7D2BB1D7E7D500086FAED /* CanderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE7D2BA1D7E7D500086FAED /* CanderView.m */; };
 		0AE7D2C01D7E81B00086FAED /* DateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE7D2BF1D7E81B00086FAED /* DateView.m */; };
 		0AE7D2C31D7ECD620086FAED /* left.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE7D2C11D7ECD620086FAED /* left.png */; };
@@ -413,6 +418,16 @@
 		0ADF89071D69608000E73526 /* JCDKBaseNaviVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCDKBaseNaviVC.h; sourceTree = "<group>"; };
 		0ADF89081D69608000E73526 /* JCDKBaseNaviVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCDKBaseNaviVC.m; sourceTree = "<group>"; };
 		0ADF890A1D699C7100E73526 /* xiaowanzi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = xiaowanzi.jpg; sourceTree = "<group>"; };
+		0AE04E381D83FEFE001E728E /* Posts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Posts.h; sourceTree = "<group>"; };
+		0AE04E391D83FEFE001E728E /* Posts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Posts.m; sourceTree = "<group>"; };
+		0AE04E3B1D84008E001E728E /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
+		0AE04E3C1D84008E001E728E /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
+		0AE04E3E1D8400C9001E728E /* Slides.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Slides.h; sourceTree = "<group>"; };
+		0AE04E3F1D8400C9001E728E /* Slides.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Slides.m; sourceTree = "<group>"; };
+		0AE04E411D8400DE001E728E /* Users.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Users.h; sourceTree = "<group>"; };
+		0AE04E421D8400DE001E728E /* Users.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Users.m; sourceTree = "<group>"; };
+		0AE04E441D840106001E728E /* Matchs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Matchs.h; sourceTree = "<group>"; };
+		0AE04E451D840106001E728E /* Matchs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Matchs.m; sourceTree = "<group>"; };
 		0AE7D2B91D7E7D500086FAED /* CanderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CanderView.h; sourceTree = "<group>"; };
 		0AE7D2BA1D7E7D500086FAED /* CanderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanderView.m; sourceTree = "<group>"; };
 		0AE7D2BE1D7E81B00086FAED /* DateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateView.h; sourceTree = "<group>"; };
@@ -993,6 +1008,16 @@
 		C4423F2B1D69C3C000B74C85 /* M */ = {
 			isa = PBXGroup;
 			children = (
+				0AE04E3B1D84008E001E728E /* BaseModel.h */,
+				0AE04E3C1D84008E001E728E /* BaseModel.m */,
+				0AE04E381D83FEFE001E728E /* Posts.h */,
+				0AE04E391D83FEFE001E728E /* Posts.m */,
+				0AE04E3E1D8400C9001E728E /* Slides.h */,
+				0AE04E3F1D8400C9001E728E /* Slides.m */,
+				0AE04E411D8400DE001E728E /* Users.h */,
+				0AE04E421D8400DE001E728E /* Users.m */,
+				0AE04E441D840106001E728E /* Matchs.h */,
+				0AE04E451D840106001E728E /* Matchs.m */,
 			);
 			path = M;
 			sourceTree = "<group>";
@@ -1334,6 +1359,8 @@
 			files = (
 				0A95303E1D767E1600D5ED36 /* PaiHangTabCell.m in Sources */,
 				0A142F561D6EA189006D1640 /* SHCollectionCell.m in Sources */,
+				0AE04E401D8400C9001E728E /* Slides.m in Sources */,
+				0AE04E461D840106001E728E /* Matchs.m in Sources */,
 				C4F3ACAC1D6F18830089C699 /* JinqitouzhuCollectionViewCell.m in Sources */,
 				0ADF88E91D67166E00E73526 /* FHomeVC.m in Sources */,
 				0A142F251D6D7BD5006D1640 /* FHIntroduceColletionCell.m in Sources */,
@@ -1343,6 +1370,7 @@
 				0ADF88031D66B3E100E73526 /* UIColor+YYAdd.m in Sources */,
 				C4F3ACA81D6F0BE80089C699 /* TouZhuViewController.m in Sources */,
 				0AA7EE511D7914CA00F43725 /* Reachability.m in Sources */,
+				0AE04E431D8400DE001E728E /* Users.m in Sources */,
 				0AA7EE3D1D770A4E00F43725 /* ForgetPassWordVC.m in Sources */,
 				0ADF87F91D66AC8500E73526 /* main.m in Sources */,
 				0ADF88041D66B3E100E73526 /* UIView+YYAdd.m in Sources */,
@@ -1351,6 +1379,7 @@
 				0AA7EE411D770A4E00F43725 /* RegistVC.m in Sources */,
 				0AA7EE3F1D770A4E00F43725 /* LoginVC.m in Sources */,
 				0ADF88F81D6716A200E73526 /* FiveHomeVC.m in Sources */,
+				0AE04E3A1D83FEFE001E728E /* Posts.m in Sources */,
 				0ADF88FD1D6716B200E73526 /* FourthVC.m in Sources */,
 				0ADF88CE1D670AD500E73526 /* JCDKTabBarVC.m in Sources */,
 				0ADF88331D66F22500E73526 /* ZKTextField.m in Sources */,
@@ -1367,6 +1396,7 @@
 				C43FC1F51D6B22BF002C6E42 /* FreeView.m in Sources */,
 				0A95301C1D73ECBE00D5ED36 /* ThirdCollectionCell2.m in Sources */,
 				C43FC1F81D6B25F9002C6E42 /* FreeTableViewCell.m in Sources */,
+				0AE04E3D1D84008E001E728E /* BaseModel.m in Sources */,
 				0A142EDE1D6C364B006D1640 /* FirstHHeaderView.m in Sources */,
 				0ADF88F31D67169000E73526 /* THomeVC.m in Sources */,
 				0ADF88311D66F22500E73526 /* ToolBarView.m in Sources */,

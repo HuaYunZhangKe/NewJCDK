@@ -7,7 +7,7 @@
 //
 
 #import "FirstHHeaderView.h"
-
+#import "Slides.h"
 @implementation FirstHHeaderView
 
 - (void)awakeFromNib
@@ -16,34 +16,34 @@
     [self layoutIfNeeded];
 }
 
-- (void)setHeaderView
+- (void)setHeaderViewWithArray:(NSMutableArray *)array
 {
-    [self setBHView];
+    [self setBHViewWithArray:array];
     [self settingbgView];
-    NSArray *array = @[self.footView,self.baseketBallView,self.introduView,self.helpView];
-    for (int i = 0; i < array.count; i ++)
+    NSArray *vArray = @[self.footView,self.baseketBallView,self.introduView,self.helpView];
+    for (int i = 0; i < vArray.count; i ++)
     {
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)];
-        [array[i] addGestureRecognizer:tap];
+        [vArray[i] addGestureRecognizer:tap];
     }
     
 }
 
-- (void)setBHView
+- (void)setBHViewWithArray:(NSMutableArray *)array
 {
     //开源轮播
-    NSArray* urlsArray = @[
-                           @"http://img.pconline.com.cn/images/upload/upc/tx/wallpaper/1602/26/c0/18646722_1456498424671_800x600.jpg",
-                           @"http://img.pconline.com.cn/images/upload/upc/tx/wallpaper/1602/26/c0/18646649_1456498410838_800x600.jpg",
-                           @"http://img.pconline.com.cn/images/upload/upc/tx/wallpaper/1602/26/c0/18646706_1456498430419_800x600.jpg",
-                           @"http://img.pconline.com.cn/images/upload/upc/tx/wallpaper/1602/26/c0/18646723_1456498427059_800x600.jpg",
-                           @"http://img.pconline.com.cn/images/upload/upc/tx/wallpaper/1602/26/c0/18646705_1456498422529_800x600.jpg"
-                           ];
+    NSMutableArray *tempArr = [NSMutableArray new];
+    for (int i = 0; i < array.count ; i ++ )
+    {
+        Slides *slide = array[i];
+        [tempArr addObject:slide.slide_pic];
+    }
+    NSArray* urlsArray = [NSArray arrayWithArray:tempArr];
     // Do any additional setup after loading the view.
     BHInfiniteScrollView* infinitePageView1 = [BHInfiniteScrollView
-                                               infiniteScrollViewWithFrame:self.adView.bounds Delegate:self ImagesArray:urlsArray];
-    infinitePageView1.dotSize = 10;
-    infinitePageView1.pageControlAlignmentOffset = CGSizeMake(0, 20);
+                                               infiniteScrollViewWithFrame:CGRectMake(0, 0, JCDK_Screen_WIDTH, self.adView.height) Delegate:self ImagesArray:urlsArray];
+    infinitePageView1.dotSize = 5;
+    infinitePageView1.pageControlAlignmentOffset = CGSizeMake(0, 10);
 //    infinitePageView1.titleView.textColor = [UIColor whiteColor];
 //    infinitePageView1.titleView.margin = 30;
     infinitePageView1.scrollDirection  = BHInfiniteScrollViewScrollDirectionHorizontal;

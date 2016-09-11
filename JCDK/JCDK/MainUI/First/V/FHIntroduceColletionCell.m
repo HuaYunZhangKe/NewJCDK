@@ -7,7 +7,7 @@
 //
 
 #import "FHIntroduceColletionCell.h"
-
+#import "UIImageView+WebCache.h"
 @implementation FHIntroduceColletionCell
 
 - (void)awakeFromNib {
@@ -17,6 +17,11 @@
     _bridge.layer.cornerRadius = 3.5;
     _bridge.layer.masksToBounds = YES;
     _bridge.backgroundColor = kYellowColor;
+//    _bridge.hidden = YES;
 }
-
+- (void)setUser:(Users *)user
+{
+    [_pic sd_setImageWithURL:[NSURL URLWithString:user.avatar] placeholderImage:kPlaceHoderImage];
+    _name.text = user.user_nicename;
+}
 @end

@@ -9,6 +9,7 @@
 #import "MBUtil.h"
 @implementation MBUtil
 static MBProgressHUD *hud;
+static MBProgressHUD *hudR;
 
 +(void)showTotastView:(UIView *)View WithTitle:(NSString *)title;
 {
@@ -29,5 +30,27 @@ static MBProgressHUD *hud;
         [hud hide:YES afterDelay:1.0];
 
     }
+}
++(void)showHudView:(UIView *)View WithTitle:(NSString *)title;
+{
+    if (hudR)
+    {
+        hudR = nil;
+        hudR = [MBProgressHUD showHUDAddedTo:View animated:YES];
+        hudR.labelText = title;
+        hudR.mode = MBProgressHUDModeIndeterminate;
+        
+    }
+    else
+    {
+        hudR = [MBProgressHUD showHUDAddedTo:View animated:YES];
+        hudR.labelText = title;
+        hudR.mode = MBProgressHUDModeIndeterminate;
+        
+    }
+}
++(void)hideHud
+{
+    [hudR hide:YES];
 }
 @end

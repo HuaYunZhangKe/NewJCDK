@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "Matchs.h"
+#import "Users.h"
+#import "Posts.h"
 @interface FHTableCell : UITableViewCell
 //index0
 
@@ -25,10 +27,14 @@
 @property (weak, nonatomic) IBOutlet UIButton *zhibBtno;
 @property (weak, nonatomic) IBOutlet UIButton *jiepanBtn;
 @property (weak, nonatomic) IBOutlet UILabel *joinLabel;
-//index2
+@property (nonatomic, retain)Matchs *macth;
+
+//index3
 @property (weak, nonatomic) IBOutlet UIImageView *headPic;
 @property (weak, nonatomic) IBOutlet UILabel *subTitle;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *zan;
 @property (weak, nonatomic) IBOutlet UILabel *commit;
+@property (weak, nonatomic) IBOutlet UILabel *fromLabel;
+@property (nonatomic, retain)Posts *post;
 @end

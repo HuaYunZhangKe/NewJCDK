@@ -12,5 +12,4 @@
 @interface FHomeVC : JCDKBaseVC
 @property (weak, nonatomic) IBOutlet JCDKBaseTableView *tableView;
 @property (retain, nonatomic) FirstHHeaderView *headerView;
-
 @end

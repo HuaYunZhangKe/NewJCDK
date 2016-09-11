@@ -39,7 +39,7 @@
 #define kYellowColor [UIColor colorWithRGB:0xf2a400]
 #define kGreenColor [UIColor colorWithRGB:0x089600]
 #define kAppdelegate [UIApplication sharedApplication].delegate
-
+#define kPlaceHoderImage [UIImage imageNamed:@""]
 
 
 

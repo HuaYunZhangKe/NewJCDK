@@ -10,8 +10,18 @@
 #import "NavigationView.h"
 #import "FHIntroduceTabCell.h"
 #import "FHTableCell.h"
+#import "Posts.h"
+#import "Slides.h"
+#import "Users.h"
+#import "Matchs.h"
+#import "MBUtil.h"
+
 
 @interface FHomeVC ()<UITableViewDelegate, UITableViewDataSource>
+@property (nonatomic, retain)NSMutableArray *topicArr;
+@property (nonatomic, retain)NSMutableArray *slidesArr;
+@property (nonatomic, retain)NSMutableDictionary *usersDic;//专家推荐字典
+@property (nonatomic, retain)NSMutableArray *matchArr;
 
 @end
 static NSString *itabInde = @"tintroduce";
@@ -25,7 +35,7 @@ static NSString *itopic = @"ttopic";
     [super viewDidLoad];
     self.view.frame = CGRectMake(0, 0, JCDK_Screen_WIDTH, JCDK_Screen_HEIGHT);
     [self setnavigationBar];
-    [self settingTableView];
+    [self FHomeListRequestFromWeb];
 
 }
 - (void)viewWillAppear:(BOOL)animated
@@ -77,9 +87,42 @@ static NSString *itopic = @"ttopic";
         _headerView = [[[NSBundle mainBundle] loadNibNamed:@"FirstHHeaderView" owner:self options:nil] objectAtIndex:0];
         _headerView.frame = CGRectMake(0, 0, self.view.width, 263);
         _headerView.layer.masksToBounds = YES;
-        [_headerView setHeaderView];
+        [_headerView setHeaderViewWithArray:self.slidesArr];
     }
     return _headerView;
+}
+- (NSMutableArray *)topicArr
+{
+    if (!_topicArr)
+    {
+        _topicArr = [NSMutableArray new];
+    }
+    return _topicArr;
+}
+
+- (NSMutableArray *)slidesArr
+{
+    if (!_slidesArr)
+    {
+        _slidesArr = [NSMutableArray new];
+    }
+    return _slidesArr;
+}
+- (NSMutableDictionary *)usersDic
+{
+    if (!_usersDic)
+    {
+        _usersDic = [NSMutableDictionary new];
+    }
+    return _usersDic;
+}
+- (NSMutableArray *)matchArr
+{
+    if (!_matchArr)
+    {
+        _matchArr = [NSMutableArray new];
+    }
+    return _matchArr;
 }
 #pragma mark - tableview datasource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -151,7 +194,8 @@ static NSString *itopic = @"ttopic";
     {
         FHIntroduceTabCell *cell = [[FHIntroduceTabCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:itabInde];
         cell.backgroundColor = [UIColor redColor];
-        [cell setContentWithArray:@[@"a", @"b",@"c",@"d",@"e",@"f",@"g",@"h"]];
+//        [cell setContentWithArray:@[@"a", @"b",@"c",@"d",@"e",@"f",@"g",@"h"]];
+        cell.showDic = self.usersDic;
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     }
@@ -168,6 +212,7 @@ static NSString *itopic = @"ttopic";
         {
             FHTableCell *cell = [[[NSBundle mainBundle] loadNibNamed:@"FHTableCell" owner:self options:nil] objectAtIndex:2];
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            cell.macth = self.matchArr[indexPath.row - 1];
             return cell;
 
         }
@@ -186,6 +231,7 @@ static NSString *itopic = @"ttopic";
         {
             FHTableCell *cell = [[[NSBundle mainBundle] loadNibNamed:@"FHTableCell" owner:self options:nil] objectAtIndex:3];
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            cell.post = self.topicArr[indexPath.row - 1];
             return cell;
             
         }
@@ -193,4 +239,101 @@ static NSString *itopic = @"ttopic";
     }
 
 }
+#pragma mark - web service
+- (void)FHomeListRequestFromWeb
+{
+    [self showHud:@"读取中"];
+    //    /index.php?g=app&m=user&a=login
+    NSDictionary *paraDic = @{
+                              @"g":@"app",
+                              @"m":@"index",
+                              @"a":@"index",
+                                 };
+    [BMHttpHander PostRequest1:K_Server_Main_URL WithParameters:paraDic WithSuccess:^(NSData * _Nullable data, NSURLResponse * _Nullable response) {
+        //        NSLog(@"%@", )
+        
+        id result = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+        NSLog(@"%@", result[@"status"]);
+        NSString *status = result[@"status"];
+        if ([status integerValue] == 1)
+        {
+            
+            [self performSelectorOnMainThread:@selector(webRequestSuccess:) withObject:result waitUntilDone:NO];
+//            [self performSelectorOnMainThread:@selector(showTotast:) withObject:@"登录成功" waitUntilDone:NO];
+        }
+        else
+        {
+            [self performSelectorOnMainThread:@selector(showTotast:) withObject:nil waitUntilDone:NO];
+        }
+      [self performSelectorOnMainThread:@selector(hiddeHud) withObject:result[@"error"] waitUntilDone:NO];
+        
+    } WithFail:^(NSData * _Nullable data, NSURLResponse * _Nullable response) {
+        [self performSelectorOnMainThread:@selector(hiddeHud) withObject:nil waitUntilDone:NO];
+        [self performSelectorOnMainThread:@selector(showTotast:) withObject:@"网络请求失败" waitUntilDone:NO];
+        
+    }];
+    
+}
+- (void)webRequestSuccess:(NSDictionary *)result
+{
+    NSArray *postTempArr = result[@"posts"];
+    NSArray *slidesTempArr = result[@"slides"];
+    NSArray *tjTempArr = result[@"users"][@"tuijian"];
+    NSArray *hrTempArr = result[@"users"][@"daren"];
+    NSArray *gzTempArr = result[@"users"][@"guanzhu"];
+    NSMutableArray *tjArr = [NSMutableArray new];
+    NSMutableArray *hrArr = [NSMutableArray new];
+    NSMutableArray *gzArr = [NSMutableArray new];
+    NSArray *matchsTempArr = result[@"matchs"];
+    for (NSDictionary *dic in postTempArr)
+    {
+        Posts *post = [[Posts alloc] initWithDictionary:dic];
+        [self.topicArr addObject:post];
+    }
+    for (NSDictionary *dic in slidesTempArr)
+    {
+        Slides *post = [[Slides alloc] initWithDictionary:dic];
+        [self.slidesArr addObject:post];
+    }
+    for (NSDictionary *dic in matchsTempArr)
+    {
+        Matchs *post = [[Matchs alloc] initWithDictionary:dic];
+        [self.matchArr addObject:post];
+    }
+    for (NSDictionary *dic in tjTempArr)
+    {
+        Users *post = [[Users alloc] initWithDictionary:dic];
+        [tjArr addObject:post];
+    }
+    for (NSDictionary *dic in hrTempArr)
+    {
+        Users *post = [[Users alloc] initWithDictionary:dic];
+        [hrArr addObject:post];
+    }
+    for (NSDictionary *dic in gzTempArr)
+    {
+        Users *post = [[Users alloc] initWithDictionary:dic];
+        [gzArr addObject:post];
+    }
+
+    [self.usersDic setObject:tjArr forKey:@"tj"];
+    [self.usersDic setObject:hrArr forKey:@"hr"];
+    [self.usersDic setObject:gzArr forKey:@"gz"];
+    [self settingTableView];
+}
+- (void)showHud:(NSString *)title
+{
+    [MBUtil showHudView:self.view WithTitle:title];
+}
+- (void)hiddeHud
+{
+    [MBUtil hideHud];
+}
+- (void)showTotast:(NSString *)title
+{
+    [MBUtil showTotastView:self.view WithTitle:title];
+    
+}
+
+
 @end
