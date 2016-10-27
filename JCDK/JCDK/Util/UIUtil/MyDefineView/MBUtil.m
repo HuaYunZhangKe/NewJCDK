@@ -49,8 +49,8 @@ static MBProgressHUD *hudR;
         
     }
 }
-+(void)hideHud
++(void)hideHud:(UIView *)view
 {
-    [hudR hide:YES];
+    [MBProgressHUD hideHUDForView:view animated:YES];
 }
 @end

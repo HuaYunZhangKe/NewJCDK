@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChangeNickNameVC">
+            <connections>
+                <outlet property="textfield" destination="dXi-GC-Frf" id="X9T-fc-ABK"/>
+                <outlet property="titleLabel" destination="q6h-Mf-lzv" id="jq6-ti-uZC"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iZw-pi-HJ9">
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="昵称" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q6h-Mf-lzv">
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dXi-GC-Frf">
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="dXi-GC-Frf" secondAttribute="bottom" id="1LZ-44-cpT"/>
+                        <constraint firstAttribute="height" constant="50" id="3tw-dj-vnK"/>
+                        <constraint firstItem="q6h-Mf-lzv" firstAttribute="top" secondItem="iZw-pi-HJ9" secondAttribute="top" id="8rF-18-9gz"/>
+                        <constraint firstItem="dXi-GC-Frf" firstAttribute="top" secondItem="iZw-pi-HJ9" secondAttribute="top" id="IW0-8z-bjw"/>
+                        <constraint firstAttribute="trailing" secondItem="dXi-GC-Frf" secondAttribute="trailing" id="OIt-uE-JWy"/>
+                        <constraint firstItem="dXi-GC-Frf" firstAttribute="leading" secondItem="q6h-Mf-lzv" secondAttribute="trailing" constant="10" id="WgZ-e5-pgn"/>
+                        <constraint firstAttribute="bottom" secondItem="q6h-Mf-lzv" secondAttribute="bottom" id="ZbL-4F-1Ub"/>
+                        <constraint firstItem="q6h-Mf-lzv" firstAttribute="leading" secondItem="iZw-pi-HJ9" secondAttribute="leading" constant="15" id="oZO-FO-g5L"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.12549019607843137" green="0.14509803921568626" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="iZw-pi-HJ9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="0L7-Th-XHb"/>
+                <constraint firstItem="iZw-pi-HJ9" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="74" id="6XX-Ct-bBJ"/>
+                <constraint firstAttribute="trailing" secondItem="iZw-pi-HJ9" secondAttribute="trailing" id="t3f-xP-rPh"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

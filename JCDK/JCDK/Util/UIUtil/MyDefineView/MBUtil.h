@@ -11,7 +11,7 @@
 @interface MBUtil : NSObject
 +(void)showTotastView:(UIView *)View WithTitle:(NSString *)title;
 +(void)showHudView:(UIView *)View WithTitle:(NSString *)title;
-+(void)hideHud;
++(void)hideHud:(UIView *)view;
 
 
 

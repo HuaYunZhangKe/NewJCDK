@@ -310,15 +310,15 @@ static NSString *itopic = @"ttopic";
         Users *post = [[Users alloc] initWithDictionary:dic];
         [hrArr addObject:post];
     }
-    for (NSDictionary *dic in gzTempArr)
-    {
-        Users *post = [[Users alloc] initWithDictionary:dic];
-        [gzArr addObject:post];
-    }
+//    for (NSDictionary *dic in gzTempArr)
+//    {
+//        Users *post = [[Users alloc] initWithDictionary:dic];
+//        [gzArr addObject:post];
+//    }
 
     [self.usersDic setObject:tjArr forKey:@"tj"];
     [self.usersDic setObject:hrArr forKey:@"hr"];
-    [self.usersDic setObject:gzArr forKey:@"gz"];
+//    [self.usersDic setObject:gzArr forKey:@"gz"];
     [self settingTableView];
 }
 - (void)showHud:(NSString *)title
@@ -327,7 +327,7 @@ static NSString *itopic = @"ttopic";
 }
 - (void)hiddeHud
 {
-    [MBUtil hideHud];
+    [MBUtil hideHud:self.view];
 }
 - (void)showTotast:(NSString *)title
 {

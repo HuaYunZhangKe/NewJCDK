@@ -12,6 +12,11 @@
 #import "FreeReciveViewController.h"
 #import "TouZhuViewController.h"
 #import "LoginVC.h"
+#import "SelfInfoVC.h"
+#import "SettingVC.h"
+#import "AccountVC.h"
+#import "BuyIntroduceVC.h"
+#import "MyIntrduceVC.h"
 @interface FiveHomeVC ()<UITableViewDataSource,UITableViewDelegate>
 @property(nonatomic,retain)MyView *myView;
 @property(nonatomic,retain)NSArray *dataArr;
@@ -49,8 +54,11 @@
 }
 - (void)headViewBtnClick:(UIButton *)sender
 {
-    LoginVC *loginVC = [[LoginVC alloc] initWithNibName:@"LoginVC" bundle:nil];
-    [self.navigationController pushViewController:loginVC animated:YES];
+//    LoginVC *loginVC = [[LoginVC alloc] initWithNibName:@"LoginVC" bundle:nil];
+//    [self.navigationController pushViewController:loginVC animated:YES];
+    SelfInfoVC *vc = [[SelfInfoVC alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+
 }
 #pragma mark - tableView dataSource
 
@@ -84,7 +92,7 @@
         if(indexPath.row == 1)
         {
             cell.detailTextLabel.text = @"收入0.00";
-                   }
+        }
     }
     if(indexPath.section == 1)
     {
@@ -120,6 +128,22 @@
     {
         TouZhuViewController *touzhu =[[TouZhuViewController alloc] initWithNibName:@"TouZhuViewController" bundle:nil];
         [self.navigationController pushViewController:touzhu animated:YES];
+    }if(indexPath.section == 3 &&indexPath.row == 0)
+    {
+        SettingVC *vc =[[SettingVC alloc] initWithNibName:@"SettingVC" bundle:nil];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if (indexPath.section == 1 && indexPath.row == 0)
+    {
+        AccountVC *vc = [[AccountVC alloc] initWithNibName:@"AccountVC" bundle:nil];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if (indexPath.section == 0 && indexPath.row == 0)
+    {
+        BuyIntroduceVC *vc = [[BuyIntroduceVC alloc] initWithNibName:@"BuyIntroduceVC" bundle:nil];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if (indexPath.section == 0 && indexPath.row == 1)
+    {
+        MyIntrduceVC *vc = [[MyIntrduceVC alloc] initWithNibName:@"MyIntrduceVC" bundle:nil];
+        [self.navigationController pushViewController:vc animated:YES];
     }
 }
 

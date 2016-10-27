@@ -9,6 +9,7 @@
 #import "LoginVC.h"
 #import "NavigationView.h"
 #import "RegistVC.h"
+#import "JCYNetCenter.h"
 @interface LoginVC ()
 
 @end
@@ -95,28 +96,34 @@
                               @"username": self.userName.textField.text,
                               @"password":self.password.textField.text
                               };
-    [BMHttpHander GetRequest:K_Server_Main_URL WithParameters:paraDic WithSuccess:^(NSData * _Nullable data, NSURLResponse * _Nullable response) {
-        //        NSLog(@"%@", )
+    [JCYNetCenter GET:K_Server_Main_URL parameters:paraDic success:^(NSDictionary *jsonObject)
+    {
         
-        id result = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-        NSLog(@"%@", result[@"status"]);
-        NSString *status = result[@"status"];
-        if ([status integerValue] == 1)
-        {
-            
-            [self performSelectorOnMainThread:@selector(webRequestSuccess:) withObject:result waitUntilDone:NO];
-                        [self performSelectorOnMainThread:@selector(showTotast:) withObject:@"登录成功" waitUntilDone:NO];
-        }
-        else
-        {
-            [self performSelectorOnMainThread:@selector(showTotast:) withObject:result[@"error"] waitUntilDone:NO];
-        }
-        
-        
-    } WithFail:^(NSData * _Nullable data, NSURLResponse * _Nullable response) {
-        [self performSelectorOnMainThread:@selector(showTotast:) withObject:@"网络请求失败" waitUntilDone:NO];
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
         
     }];
+    //    [BMHttpHander PostRequest1:K_Server_Main_URL WithParameters:paraDic WithSuccess:^(NSData * _Nullable data, NSURLResponse * _Nullable response) {
+//        //        NSLog(@"%@", )
+//        
+//        id result = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+//        NSLog(@"%@", result[@"status"]);
+//        NSString *status = result[@"status"];
+//        if ([status integerValue] == 1)
+//        {
+//            
+//            [self performSelectorOnMainThread:@selector(webRequestSuccess:) withObject:result waitUntilDone:NO];
+//                        [self performSelectorOnMainThread:@selector(showTotast:) withObject:@"登录成功" waitUntilDone:NO];
+//        }
+//        else
+//        {
+//            [self performSelectorOnMainThread:@selector(showTotast:) withObject:result[@"error"] waitUntilDone:NO];
+//        }
+//        
+//        
+//    } WithFail:^(NSData * _Nullable data, NSURLResponse * _Nullable response) {
+//        [self performSelectorOnMainThread:@selector(showTotast:) withObject:@"网络请求失败" waitUntilDone:NO];
+//        
+//    }];
     
 }
 - (void)webRequestSuccess:(NSDictionary *)result

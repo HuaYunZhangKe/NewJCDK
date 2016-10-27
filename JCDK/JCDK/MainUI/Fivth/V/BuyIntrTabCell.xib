@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="BuyIntrTabCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="320" height="119"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="初级专家" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Feb-mP-gj7">
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="英超" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WoI-cb-Rpl">
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.1333333333" green="0.56862745100000001" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="思达 VS 海于格松" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="712-Ar-VZ7">
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="高3 0.65" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HzP-on-63j">
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="umO-nn-3FB" userLabel="line">
+                        <color key="backgroundColor" red="0.027450980390000001" green="0.1019607843" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="daV-5j-gNM"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15010870201" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Bd-kN-sNg">
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.94901960780000005" green="0.64313725489999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" red="0.12549019610000001" green="0.1450980392" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstItem="WoI-cb-Rpl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="3G8-Vf-3du"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="umO-nn-3FB" secondAttribute="bottom" id="9EY-bI-ujC"/>
+                    <constraint firstItem="Feb-mP-gj7" firstAttribute="top" secondItem="7Bd-kN-sNg" secondAttribute="top" id="9gO-2J-dlI"/>
+                    <constraint firstItem="HzP-on-63j" firstAttribute="top" secondItem="712-Ar-VZ7" secondAttribute="bottom" constant="20" id="FDl-D6-gpI"/>
+                    <constraint firstItem="712-Ar-VZ7" firstAttribute="centerY" secondItem="WoI-cb-Rpl" secondAttribute="centerY" id="GWi-KW-J2L"/>
+                    <constraint firstItem="7Bd-kN-sNg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="56" id="HWs-hi-xIW"/>
+                    <constraint firstItem="712-Ar-VZ7" firstAttribute="leading" secondItem="7Bd-kN-sNg" secondAttribute="leading" id="KF6-as-4h3"/>
+                    <constraint firstItem="7Bd-kN-sNg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="7" id="S75-C7-eEr"/>
+                    <constraint firstItem="WoI-cb-Rpl" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="VN3-DK-sOy"/>
+                    <constraint firstAttribute="trailing" secondItem="umO-nn-3FB" secondAttribute="trailing" id="lVa-1z-eGY"/>
+                    <constraint firstItem="umO-nn-3FB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="p76-LN-n8i"/>
+                    <constraint firstItem="HzP-on-63j" firstAttribute="leading" secondItem="7Bd-kN-sNg" secondAttribute="leading" id="uDW-cj-2SG"/>
+                    <constraint firstItem="Feb-mP-gj7" firstAttribute="leading" secondItem="7Bd-kN-sNg" secondAttribute="trailing" constant="2" id="y8J-jp-dBK"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="bSaiLabel" destination="WoI-cb-Rpl" id="k4Z-PL-pWy"/>
+                <outlet property="content" destination="HzP-on-63j" id="WIW-gt-jUA"/>
+                <outlet property="type" destination="Feb-mP-gj7" id="FMJ-UX-umT"/>
+                <outlet property="vs" destination="712-Ar-VZ7" id="01s-76-FGw"/>
+                <outlet property="zjName" destination="7Bd-kN-sNg" id="0tV-EZ-2TI"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

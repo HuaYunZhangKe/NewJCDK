@@ -11,6 +11,13 @@
 #import "NavigationView.h"
 @interface TouZhuViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UIScrollViewDelegate>
 @property (nonatomic, retain)UIView *scrollLine;
+@property (nonatomic, retain)NSMutableArray *jq_tArr;
+@property (nonatomic, retain)NSMutableArray *jq_cArr;
+@property (nonatomic, retain)NSMutableArray *n_Arr;
+@property (nonatomic, retain)NSMutableArray *h_Arr;
+
+
+
 @end
 
 @implementation TouZhuViewController
@@ -19,6 +26,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.jq_tArr = [NSMutableArray new];
     WeakSelf(wc);
     self.view.frame = CGRectMake(0, 0, JCDK_Screen_WIDTH, JCDK_Screen_HEIGHT);
     NavigationView *navigationView = [[[NSBundle mainBundle] loadNibNamed:@"NavigationView" owner:self options:nil] objectAtIndex:4];
@@ -29,8 +37,6 @@
     };
     navigationView.frame = CGRectMake(0, 0, JCDK_Screen_WIDTH, 64);
     [self.view addSubview:navigationView];
-
-    
     [self.bgView addSubview:self.scrollLine];
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
@@ -44,6 +50,63 @@
     [self.collectionView registerClass:[JinqitouzhuCollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
    
 }
+
+
+- (void)accountInfoFromWEb:(NSInteger )type AndGroup:(NSInteger )group
+{
+    //    * @example  http://api.myike.com.cn/?m=api&v=locallife.mod&id=10&token=BgETMCIwH19fXVELWlwHVQNEWQ4PUVVVEVoMDAhTBBBcWlsIVgNGV1wMBBNyPzAdAl9dE0NbWFgBAgFCW14&debug=1 查看
+    
+    
+    
+    
+    NSString *token = [[NSUserDefaults standardUserDefaults] objectForKey:@"token"];
+    if (token.length == 0)
+    {
+        token = @"";
+    }
+    NSDictionary *paraDic = @{
+                              @"userid"   :@"1",
+                              @"Type"     :@(type),
+                              @"Group"    :@(group)
+                              };
+    
+    
+    [BMHttpHander PostRequest:[NSString stringWithFormat:@"%@?g=app&m=user&a=betlist",K_Server_Main_URL] WithParameters:paraDic WithSuccess:^(NSData * _Nullable data, NSURLResponse * _Nullable response) {
+        id result = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+        NSString *status = result[@"status"];
+        [result setObject:[NSString stringWithFormat:@"%ld_%ld",(long)type,group] forKey:@"type"];
+        if ([status integerValue] == 1)
+        {
+            [self performSelectorOnMainThread:@selector(webRequestSuccess:) withObject:result waitUntilDone:NO];
+        }
+        else
+        {
+            [self showTotast:result[@"error"]];
+        }
+        
+    } WithFail:^(NSData * _Nullable data, NSURLResponse * _Nullable response) {
+        [self performSelectorOnMainThread:@selector(showTotast:) withObject:@"网络请求失败" waitUntilDone:NO];
+        
+    }];
+    
+}
+
+
+- (void)webRequestSuccess:(NSDictionary *)result
+{
+    NSString *type = result[@"type"];
+    if ([type isEqualToString:@"0_0"])
+    {
+        
+    }
+}
+- (void)showTotast:(NSString *)title
+{
+    
+    [MBUtil showTotastView:kAppdelegate.window WithTitle:title];
+    
+}
+
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     return 3;

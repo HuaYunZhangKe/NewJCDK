@@ -43,6 +43,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel4;
 @property (weak, nonatomic) IBOutlet UIButton *leftBtn4;
 @property (nonatomic, copy)YSBlockWithInteger buttonBlock4;
+@property (weak, nonatomic) IBOutlet UIButton *saveBtn;
+
 #pragma mark -function
 - (void)setNib0;
 - (void)setNib1;

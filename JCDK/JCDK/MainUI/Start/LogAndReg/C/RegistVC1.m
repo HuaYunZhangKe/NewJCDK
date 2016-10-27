@@ -138,7 +138,7 @@
                               @"mobile": self.currentDic[@"phone"],
                               @"password":self.password.textField.text
                               };
-    [BMHttpHander PostRequest:K_Server_Main_URL WithParameters:paraDic WithSuccess:^(NSData * _Nullable data, NSURLResponse * _Nullable response) {
+    [BMHttpHander GetRequest:K_Server_Main_URL WithParameters:paraDic WithSuccess:^(NSData * _Nullable data, NSURLResponse * _Nullable response) {
         //        NSLog(@"%@", )
         
         id result = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];

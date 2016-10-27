@@ -12,7 +12,7 @@
 #import "ThirdCollectionCell.h"
 #import "ThirdCollectionCell1.h"
 #import "ThirdCollectionCell2.h"
-
+#import "ThirdCWebCell.h"
 @interface THomeVC ()<UICollectionViewDelegate, UICollectionViewDataSource,UIScrollViewDelegate>
 @property (nonatomic, retain)UIView *scrollLine;
 
@@ -26,7 +26,7 @@
     self.view.frame = CGRectMake(0, 0, JCDK_Screen_WIDTH, JCDK_Screen_HEIGHT);
     [self setnavigationBar];
     [self settingCollectionView];
-    [self settingbgView];
+    //[self settingbgView];
     [self.switchView addSubview:self.scrollLine];
 }
 - (void)setnavigationBar
@@ -97,6 +97,7 @@
 }
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    /*
     if (indexPath.row == 0)
     {
         [collectionView registerNib:[UINib nibWithNibName:@"ThirdCollectionCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:@"Third0"];
@@ -120,6 +121,25 @@
 //        [cell settingIndex2Nib];
         return cell;
     }
+     */
+    [collectionView registerNib:[UINib nibWithNibName:@"ThirdCWebCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:@"Third0"];
+    ThirdCWebCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Third0" forIndexPath:indexPath];
+    if (indexPath.row == 0)
+    {
+        cell.urlStr = @"http://114.55.227.5/index.php?g=app&m=match&a=match";
+    }
+    else if (indexPath.row == 1)
+    {
+        cell.urlStr = @"http://114.55.227.5/index.php?g=app&m=match&a=index";
+
+    }
+    else
+    {
+        cell.urlStr = @"http://114.55.227.5/index.php?g=app&m=match&a=listorder";
+ 
+    }
+    return cell;
+
 }
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
