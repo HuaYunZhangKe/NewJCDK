@@ -7,21 +7,33 @@
 //
 
 #import "MyView.h"
-
+#import <UIImageView+WebCache.h>
 @interface MyView ()
 
 @end
 @implementation MyView
 
 
-- (instancetype)initWithFrame:(CGRect)frame
+- (instancetype)initWithFrame:(CGRect)frame AndDIc:(NSDictionary *)dic
 {
     self = [super initWithFrame:frame];
     if (self) {
+        self.infodic = [NSDictionary dictionaryWithDictionary:dic];
         [self creatView];
     }
     return self;
 }
+//- (void)setInfodic:(NSDictionary *)infodic
+//{
+//    _nameLabel.text = self.infodic[@"user_nicename"];
+//    _kabiCount.text = self.infodic[@"coin"];
+//    _yinbiCount.text = self.infodic[@"balance"];
+//  //
+//
+//
+//
+//}
+
 -(void)creatView
 {
     self.tableView = [[ UITableView alloc] initWithFrame:CGRectMake(0, 0, JCDK_Screen_WIDTH, JCDK_Screen_HEIGHT ) style:UITableViewStylePlain];
@@ -39,9 +51,11 @@
     [headView addSubview:_headImg];
     _headImg.backgroundColor = [UIColor redColor];
     _headImg.layer.cornerRadius = 24;
+    [self.headImg sd_setImageWithURL:[NSURL URLWithString:self.infodic[@"avator"]] placeholderImage:kPlaceHoderImage];
+
     self.nameLabel = [[JCDKBaseLabel alloc] initWithFrame:CGRectMake(_headImg.right + 10, _headImg.top, self.frame.size.width, 15)];
     [headView addSubview:_nameLabel];
-    _nameLabel.text = @"宝宝熊 (会员号:123456)";
+    _nameLabel.text = self.infodic[@"user_nicename"];
     _nameLabel.font = [UIFont systemFontOfSize:15];
     UILabel *label = [[JCDKBaseLabel alloc] initWithFrame:CGRectMake(_nameLabel.left, _nameLabel.bottom +20,40, 13)];
     [headView addSubview:label];
@@ -54,7 +68,7 @@
     
     self.kabiCount= [[ JCDKBaseLabel alloc] initWithFrame:CGRectMake(kImg.right +10, kImg.top, 100, kImg.height)];
     [headView addSubview:_kabiCount];
-    _kabiCount.text = @"10000";
+    _kabiCount.text = self.infodic[@"coin"];
     _kabiCount.font = [UIFont systemFontOfSize:15];
 
    UILabel *yin = [[JCDKBaseLabel alloc] initWithFrame:CGRectMake(_kabiCount.right + 10, _kabiCount.top, label.width, label.height)];
@@ -69,7 +83,7 @@
     yImg.image = [UIImage imageNamed:@"yin"];
     self.yinbiCount = [[JCDKBaseLabel alloc] initWithFrame:CGRectMake(yImg.right + 10, yImg.top, 100, yImg.height)];
     [headView addSubview:_yinbiCount];
-    _yinbiCount.text = @"111";
+    _yinbiCount.text = self.infodic[@"balance"];
     _yinbiCount.font = [UIFont systemFontOfSize:15];
 
     self.leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];

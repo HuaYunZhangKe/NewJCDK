@@ -12,6 +12,7 @@
 //0
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel1;
 @property (weak, nonatomic) IBOutlet UIImageView *pic1;
+@property (nonatomic ,retain)NSString *sex;
 
 //1
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel2;

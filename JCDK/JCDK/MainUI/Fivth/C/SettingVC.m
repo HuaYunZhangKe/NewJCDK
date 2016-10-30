@@ -8,6 +8,9 @@
 
 #import "SettingVC.h"
 #import "NavigationView.h"
+#import "LoginVC.h"
+#import "AppDelegate.h"
+#import "RegistVC.h"
 @interface SettingVC ()<UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic ,retain)NSArray *dataArr;
 @end
@@ -138,7 +141,7 @@
 {
     if (indexPath.section == self.dataArr.count)
     {
-        return 70;
+        return 60;
     }
     else
     {
@@ -150,6 +153,18 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (indexPath.row == 0 && indexPath.section == 0)
+    {
+        RegistVC *vc = [[RegistVC alloc] initWithNibName:@"RegistVC" bundle:nil];
+        vc.fromWhere = 2;
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    if (indexPath.section == self.dataArr.count)
+     {
+         LoginVC *vc =  [[LoginVC alloc] initWithNibName:@"LoginVC" bundle:nil];
+         [[NSUserDefaults standardUserDefaults] setObject:@"0" forKey:@"isLogin"];
+         [self.navigationController pushViewController:vc animated:YES];
+              }
 }
 
 

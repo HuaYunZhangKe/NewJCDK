@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "TZmodel.h"
 @interface TouZhuTabCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *label1_1;
 @property (weak, nonatomic) IBOutlet UILabel *label1_2;
@@ -20,7 +20,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *label4_2;
 @property (weak, nonatomic) IBOutlet UILabel *label5_1;
-
+@property (nonatomic ,retain)NSDictionary *dic;
 
 
 @end

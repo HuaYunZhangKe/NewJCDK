@@ -9,13 +9,18 @@
 #import "TouZhuViewController.h"
 #import "JinqitouzhuCollectionViewCell.h"
 #import "NavigationView.h"
+#import "TZmodel.h"
 @interface TouZhuViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UIScrollViewDelegate>
 @property (nonatomic, retain)UIView *scrollLine;
 @property (nonatomic, retain)NSMutableArray *jq_tArr;
 @property (nonatomic, retain)NSMutableArray *jq_cArr;
-@property (nonatomic, retain)NSMutableArray *n_Arr;
-@property (nonatomic, retain)NSMutableArray *h_Arr;
+@property (nonatomic, retain)NSMutableArray *n_tArr;
+@property (nonatomic, retain)NSMutableArray *n_cArr;
 
+@property (nonatomic, retain)NSMutableArray *h_tArr;
+@property (nonatomic, retain)NSMutableArray *h_cArr;
+
+@property (nonatomic ,assign)NSInteger index;
 
 
 @end
@@ -26,6 +31,25 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.index = 1;
+    self.jq_tArr = [NSMutableArray new];
+    self.jq_cArr = [NSMutableArray new];
+    self.n_tArr = [NSMutableArray new];
+    self.n_cArr = [NSMutableArray new];
+    self.h_tArr = [NSMutableArray new];
+    self.h_cArr = [NSMutableArray new];
+
+    [self historyInfoFromWEb:0 AndGroup:0];//近期按时间
+    [self historyInfoFromWEb:0 AndGroup:1];//近期按场次
+    [self historyInfoFromWEb:1 AndGroup:0];//未结
+    [self historyInfoFromWEb:1 AndGroup:1];//未结
+
+    [self historyInfoFromWEb:2 AndGroup:0];//历史
+    [self historyInfoFromWEb:2 AndGroup:1];//历史
+
+
+
+
     self.jq_tArr = [NSMutableArray new];
     WeakSelf(wc);
     self.view.frame = CGRectMake(0, 0, JCDK_Screen_WIDTH, JCDK_Screen_HEIGHT);
@@ -52,7 +76,7 @@
 }
 
 
-- (void)accountInfoFromWEb:(NSInteger )type AndGroup:(NSInteger )group
+- (void)historyInfoFromWEb:(NSInteger )type AndGroup:(NSInteger )group
 {
     //    * @example  http://api.myike.com.cn/?m=api&v=locallife.mod&id=10&token=BgETMCIwH19fXVELWlwHVQNEWQ4PUVVVEVoMDAhTBBBcWlsIVgNGV1wMBBNyPzAdAl9dE0NbWFgBAgFCW14&debug=1 查看
     
@@ -97,8 +121,57 @@
     NSString *type = result[@"type"];
     if ([type isEqualToString:@"0_0"])
     {
-        
+        NSArray *list = [NSArray arrayWithArray:result[@"list"]];
+        for (NSDictionary *dic in list)
+        {
+            [self.jq_tArr addObject:dic];
+
+        }
     }
+    if ([type isEqualToString:@"0_1"])
+    {
+        NSArray *list = [NSArray arrayWithArray:result[@"list"]];
+        for (NSDictionary *dic in list)
+        {
+            [self.jq_cArr addObject:dic];
+            
+        }
+    }
+    if ([type isEqualToString:@"1_0"])
+    {
+        NSArray *list = [NSArray arrayWithArray:result[@"list"]];
+        for (NSDictionary *dic in list)
+        {
+            [self.n_tArr addObject:dic];
+            
+        }
+    }
+    if ([type isEqualToString:@"1_1"])
+    {
+        NSArray *list = [NSArray arrayWithArray:result[@"list"]];
+        for (NSDictionary *dic in list)
+        {
+            [self.n_cArr addObject:dic];
+            
+        }
+    }
+    if ([type isEqualToString:@"2_0"])
+    {
+        NSArray *list = [NSArray arrayWithArray:result[@"list"]];
+        for (NSDictionary *dic in list)
+        {
+            [self.h_tArr addObject:dic];
+        }
+    }
+    if ([type isEqualToString:@"2_1"])
+    {
+        NSArray *list = [NSArray arrayWithArray:result[@"list"]];
+        for (NSDictionary *dic in list)
+        {
+            [self.h_cArr addObject:dic];
+        }
+    }
+
 }
 - (void)showTotast:(NSString *)title
 {
@@ -113,22 +186,30 @@
 }
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     if (indexPath.row == 0)
     {
         JinqitouzhuCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
+        cell.type = 1;
+        cell.showDic = @{@"t":self.jq_tArr,@"c":self.jq_cArr};
        
         return cell;
     }
     else if (indexPath.row == 1)
     {
         JinqitouzhuCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
-     
+        cell.type = 2;
+        cell.showDic = @{@"t":self.n_tArr,@"c":self.n_cArr};
+
         return cell;
         
     }
     else  
     {
         JinqitouzhuCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
+        cell.type = 2;
+        cell.showDic = @{@"t":self.h_tArr,@"c":self.h_cArr};
+
         return cell;
         
     }
@@ -162,14 +243,18 @@
 }
 - (IBAction)firstBtn:(UIButton *)sender
 {
+    self.index = 1;
     [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:0] atScrollPosition:UICollectionViewScrollPositionLeft animated:YES];
 }
 - (IBAction)sectionBtn:(UIButton *)sender
 {
+    self.index = 2;
+
      [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:1 inSection:0] atScrollPosition:UICollectionViewScrollPositionLeft animated:YES];
 }
 - (IBAction)thirdBtn:(UIButton *)sender
 {
+    self.index = 3;
      [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:2 inSection:0] atScrollPosition:UICollectionViewScrollPositionLeft animated:YES];
 }
 - (UIView *)scrollLine

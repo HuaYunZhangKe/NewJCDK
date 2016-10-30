@@ -11,4 +11,6 @@
 @interface JinqitouzhuCollectionViewCell : UICollectionViewCell
 @property(nonatomic,retain)UITableView *tableView;
 @property(nonatomic,retain)UISegmentedControl *segment;
+@property (nonatomic, retain)NSDictionary *showDic;
+@property (nonatomic, assign)NSInteger type;
 @end

@@ -34,6 +34,12 @@
 		0A142F5F1D6EA5C0006D1640 /* BiFenTabCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A142F5D1D6EA5C0006D1640 /* BiFenTabCell.m */; };
 		0A142F601D6EA5C0006D1640 /* BiFenTabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A142F5E1D6EA5C0006D1640 /* BiFenTabCell.xib */; };
 		0A142F8D1D702E03006D1640 /* LRProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A142F8C1D702E03006D1640 /* LRProgress.m */; };
+		0A203E431DC601D30028A24B /* ErcodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A203E411DC601D30028A24B /* ErcodeVC.m */; };
+		0A203E441DC601D30028A24B /* ErcodeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A203E421DC601D30028A24B /* ErcodeVC.xib */; };
+		0A203E4B1DC602140028A24B /* MycollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A203E461DC602140028A24B /* MycollectionCell.m */; };
+		0A203E4C1DC602140028A24B /* MycollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A203E471DC602140028A24B /* MycollectionCell.xib */; };
+		0A203E4D1DC602140028A24B /* MycollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A203E491DC602140028A24B /* MycollectionVC.m */; };
+		0A203E4E1DC602140028A24B /* MycollectionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A203E4A1DC602140028A24B /* MycollectionVC.xib */; };
 		0A23F6131D90CD2100CDDF41 /* ThirdCWebCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A23F6111D90CD2100CDDF41 /* ThirdCWebCell.m */; };
 		0A23F6141D90CD2100CDDF41 /* ThirdCWebCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A23F6121D90CD2100CDDF41 /* ThirdCWebCell.xib */; };
 		0A2579441DB901680060195C /* checkbox_seleted.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A2579421DB901680060195C /* checkbox_seleted.png */; };
@@ -64,6 +70,9 @@
 		0A2579851DBCB5890060195C /* MyIntrTabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A2579831DBCB5890060195C /* MyIntrTabCell.xib */; };
 		0A2579891DBCD3220060195C /* TouZhuTabCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2579871DBCD3220060195C /* TouZhuTabCell.m */; };
 		0A25798A1DBCD3220060195C /* TouZhuTabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A2579881DBCD3220060195C /* TouZhuTabCell.xib */; };
+		0A6B59481DC5ABAC000ABB07 /* NewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A6B59471DC5ABAC000ABB07 /* NewsModel.m */; };
+		0A6B594C1DC5B085000ABB07 /* MysuggestionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A6B594A1DC5B085000ABB07 /* MysuggestionVC.m */; };
+		0A6B594D1DC5B085000ABB07 /* MysuggestionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A6B594B1DC5B085000ABB07 /* MysuggestionVC.xib */; };
 		0A9530121D71938200D5ED36 /* ThirdCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9530101D71938200D5ED36 /* ThirdCollectionCell.m */; };
 		0A9530131D71938200D5ED36 /* ThirdCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A9530111D71938200D5ED36 /* ThirdCollectionCell.xib */; };
 		0A9530171D73ECB100D5ED36 /* ThirdCollectionCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9530151D73ECB100D5ED36 /* ThirdCollectionCell1.m */; };
@@ -113,6 +122,13 @@
 		0AC5A3911DB533F000DDB2E6 /* InfoCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AC5A38F1DB533F000DDB2E6 /* InfoCell1.xib */; };
 		0AC5A3951DB538AA00DDB2E6 /* ChangeSignVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC5A3931DB538AA00DDB2E6 /* ChangeSignVC.m */; };
 		0AC5A3961DB538AA00DDB2E6 /* ChangeSignVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AC5A3941DB538AA00DDB2E6 /* ChangeSignVC.xib */; };
+		0AC792FB1DC2483500F8E2CF /* TZmodel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC792FA1DC2483500F8E2CF /* TZmodel.m */; };
+		0AC792FF1DC25C5100F8E2CF /* MyFocusVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC792FD1DC25C5100F8E2CF /* MyFocusVC.m */; };
+		0AC793001DC25C5100F8E2CF /* MyFocusVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AC792FE1DC25C5100F8E2CF /* MyFocusVC.xib */; };
+		0AC793041DC25D9B00F8E2CF /* FocusTabCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC793021DC25D9B00F8E2CF /* FocusTabCell.m */; };
+		0AC793051DC25D9B00F8E2CF /* FocusTabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AC793031DC25D9B00F8E2CF /* FocusTabCell.xib */; };
+		0AC793091DC25FC600F8E2CF /* MyNewsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC793071DC25FC600F8E2CF /* MyNewsVC.m */; };
+		0AC7930A1DC25FC600F8E2CF /* MyNewsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AC793081DC25FC600F8E2CF /* MyNewsVC.xib */; };
 		0ADF87F51D66AC8500E73526 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADF87EF1D66AC8500E73526 /* AppDelegate.m */; };
 		0ADF87F61D66AC8500E73526 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ADF87F01D66AC8500E73526 /* Assets.xcassets */; };
 		0ADF87F71D66AC8500E73526 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ADF87F11D66AC8500E73526 /* LaunchScreen.storyboard */; };
@@ -283,6 +299,15 @@
 		0A142F5E1D6EA5C0006D1640 /* BiFenTabCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BiFenTabCell.xib; sourceTree = "<group>"; };
 		0A142F8B1D702E03006D1640 /* LRProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRProgress.h; sourceTree = "<group>"; };
 		0A142F8C1D702E03006D1640 /* LRProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRProgress.m; sourceTree = "<group>"; };
+		0A203E401DC601D30028A24B /* ErcodeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErcodeVC.h; sourceTree = "<group>"; };
+		0A203E411DC601D30028A24B /* ErcodeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ErcodeVC.m; sourceTree = "<group>"; };
+		0A203E421DC601D30028A24B /* ErcodeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ErcodeVC.xib; sourceTree = "<group>"; };
+		0A203E451DC602140028A24B /* MycollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MycollectionCell.h; sourceTree = "<group>"; };
+		0A203E461DC602140028A24B /* MycollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MycollectionCell.m; sourceTree = "<group>"; };
+		0A203E471DC602140028A24B /* MycollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MycollectionCell.xib; sourceTree = "<group>"; };
+		0A203E481DC602140028A24B /* MycollectionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MycollectionVC.h; sourceTree = "<group>"; };
+		0A203E491DC602140028A24B /* MycollectionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MycollectionVC.m; sourceTree = "<group>"; };
+		0A203E4A1DC602140028A24B /* MycollectionVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MycollectionVC.xib; sourceTree = "<group>"; };
 		0A23F6101D90CD2100CDDF41 /* ThirdCWebCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdCWebCell.h; sourceTree = "<group>"; };
 		0A23F6111D90CD2100CDDF41 /* ThirdCWebCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdCWebCell.m; sourceTree = "<group>"; };
 		0A23F6121D90CD2100CDDF41 /* ThirdCWebCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThirdCWebCell.xib; sourceTree = "<group>"; };
@@ -330,6 +355,11 @@
 		0A2579861DBCD3220060195C /* TouZhuTabCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouZhuTabCell.h; sourceTree = "<group>"; };
 		0A2579871DBCD3220060195C /* TouZhuTabCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouZhuTabCell.m; sourceTree = "<group>"; };
 		0A2579881DBCD3220060195C /* TouZhuTabCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TouZhuTabCell.xib; sourceTree = "<group>"; };
+		0A6B59461DC5ABAC000ABB07 /* NewsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewsModel.h; path = JCDK/MainUI/Fivth/C/NewsModel.h; sourceTree = SOURCE_ROOT; };
+		0A6B59471DC5ABAC000ABB07 /* NewsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewsModel.m; path = JCDK/MainUI/Fivth/C/NewsModel.m; sourceTree = SOURCE_ROOT; };
+		0A6B59491DC5B085000ABB07 /* MysuggestionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MysuggestionVC.h; sourceTree = "<group>"; };
+		0A6B594A1DC5B085000ABB07 /* MysuggestionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MysuggestionVC.m; sourceTree = "<group>"; };
+		0A6B594B1DC5B085000ABB07 /* MysuggestionVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MysuggestionVC.xib; sourceTree = "<group>"; };
 		0A95300F1D71938200D5ED36 /* ThirdCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdCollectionCell.h; sourceTree = "<group>"; };
 		0A9530101D71938200D5ED36 /* ThirdCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdCollectionCell.m; sourceTree = "<group>"; };
 		0A9530111D71938200D5ED36 /* ThirdCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThirdCollectionCell.xib; sourceTree = "<group>"; };
@@ -408,6 +438,17 @@
 		0AC5A3921DB538AA00DDB2E6 /* ChangeSignVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeSignVC.h; sourceTree = "<group>"; };
 		0AC5A3931DB538AA00DDB2E6 /* ChangeSignVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeSignVC.m; sourceTree = "<group>"; };
 		0AC5A3941DB538AA00DDB2E6 /* ChangeSignVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChangeSignVC.xib; sourceTree = "<group>"; };
+		0AC792F91DC2483500F8E2CF /* TZmodel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TZmodel.h; path = JCDK/MainUI/Fivth/TZmodel.h; sourceTree = SOURCE_ROOT; };
+		0AC792FA1DC2483500F8E2CF /* TZmodel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TZmodel.m; path = JCDK/MainUI/Fivth/TZmodel.m; sourceTree = SOURCE_ROOT; };
+		0AC792FC1DC25C5100F8E2CF /* MyFocusVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyFocusVC.h; sourceTree = "<group>"; };
+		0AC792FD1DC25C5100F8E2CF /* MyFocusVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyFocusVC.m; sourceTree = "<group>"; };
+		0AC792FE1DC25C5100F8E2CF /* MyFocusVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyFocusVC.xib; sourceTree = "<group>"; };
+		0AC793011DC25D9B00F8E2CF /* FocusTabCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FocusTabCell.h; sourceTree = "<group>"; };
+		0AC793021DC25D9B00F8E2CF /* FocusTabCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FocusTabCell.m; sourceTree = "<group>"; };
+		0AC793031DC25D9B00F8E2CF /* FocusTabCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FocusTabCell.xib; sourceTree = "<group>"; };
+		0AC793061DC25FC600F8E2CF /* MyNewsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyNewsVC.h; sourceTree = "<group>"; };
+		0AC793071DC25FC600F8E2CF /* MyNewsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyNewsVC.m; sourceTree = "<group>"; };
+		0AC793081DC25FC600F8E2CF /* MyNewsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyNewsVC.xib; sourceTree = "<group>"; };
 		0ADF87C21D66A44500E73526 /* JCDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JCDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ADF87C61D66A44500E73526 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0ADF87EE1D66AC8500E73526 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -1265,6 +1306,18 @@
 		C4B13C791D6A96DC007A5009 /* C */ = {
 			isa = PBXGroup;
 			children = (
+				0A203E451DC602140028A24B /* MycollectionCell.h */,
+				0A203E461DC602140028A24B /* MycollectionCell.m */,
+				0A203E471DC602140028A24B /* MycollectionCell.xib */,
+				0A203E481DC602140028A24B /* MycollectionVC.h */,
+				0A203E491DC602140028A24B /* MycollectionVC.m */,
+				0A203E4A1DC602140028A24B /* MycollectionVC.xib */,
+				0A203E401DC601D30028A24B /* ErcodeVC.h */,
+				0A203E411DC601D30028A24B /* ErcodeVC.m */,
+				0A203E421DC601D30028A24B /* ErcodeVC.xib */,
+				0A6B59491DC5B085000ABB07 /* MysuggestionVC.h */,
+				0A6B594A1DC5B085000ABB07 /* MysuggestionVC.m */,
+				0A6B594B1DC5B085000ABB07 /* MysuggestionVC.xib */,
 				C43FC1F01D6B1C01002C6E42 /* FreeReciveViewController.h */,
 				C43FC1F11D6B1C01002C6E42 /* FreeReciveViewController.m */,
 				C4F3ACA51D6F0BE80089C699 /* TouZhuViewController.h */,
@@ -1282,6 +1335,12 @@
 				0A2579791DBCACF40060195C /* MyIntrduceVC.h */,
 				0A25797A1DBCACF40060195C /* MyIntrduceVC.m */,
 				0A25797B1DBCACF40060195C /* MyIntrduceVC.xib */,
+				0AC792FC1DC25C5100F8E2CF /* MyFocusVC.h */,
+				0AC792FD1DC25C5100F8E2CF /* MyFocusVC.m */,
+				0AC792FE1DC25C5100F8E2CF /* MyFocusVC.xib */,
+				0AC793061DC25FC600F8E2CF /* MyNewsVC.h */,
+				0AC793071DC25FC600F8E2CF /* MyNewsVC.m */,
+				0AC793081DC25FC600F8E2CF /* MyNewsVC.xib */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -1289,12 +1348,16 @@
 		C4B13C7A1D6A96DC007A5009 /* M */ = {
 			isa = PBXGroup;
 			children = (
+				0AC792F91DC2483500F8E2CF /* TZmodel.h */,
+				0AC792FA1DC2483500F8E2CF /* TZmodel.m */,
 				0A2579731DBC8DB80060195C /* AccountModel.h */,
 				0A2579741DBC8DB80060195C /* AccountModel.m */,
 				0A2579761DBC9B5D0060195C /* IntroduceModel.h */,
 				0A2579771DBC9B5D0060195C /* IntroduceModel.m */,
 				0A25797E1DBCB4A00060195C /* MyIntroModel.h */,
 				0A25797F1DBCB4A00060195C /* MyIntroModel.m */,
+				0A6B59461DC5ABAC000ABB07 /* NewsModel.h */,
+				0A6B59471DC5ABAC000ABB07 /* NewsModel.m */,
 			);
 			path = M;
 			sourceTree = "<group>";
@@ -1326,6 +1389,9 @@
 				0A2579861DBCD3220060195C /* TouZhuTabCell.h */,
 				0A2579871DBCD3220060195C /* TouZhuTabCell.m */,
 				0A2579881DBCD3220060195C /* TouZhuTabCell.xib */,
+				0AC793011DC25D9B00F8E2CF /* FocusTabCell.h */,
+				0AC793021DC25D9B00F8E2CF /* FocusTabCell.m */,
+				0AC793031DC25D9B00F8E2CF /* FocusTabCell.xib */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -1401,6 +1467,7 @@
 				0ADF88F41D67169000E73526 /* THomeVC.xib in Resources */,
 				0ADF889B1D6709FD00E73526 /* menu_index_an.png in Resources */,
 				0ADF88961D6709FD00E73526 /* login_possword.png in Resources */,
+				0A203E4C1DC602140028A24B /* MycollectionCell.xib in Resources */,
 				0ADF889A1D6709FD00E73526 /* menu_befen_liang.png in Resources */,
 				0ADF88C91D6709FD00E73526 /* zhmx_jia.png in Resources */,
 				0AA7EE4A1D790D4200F43725 /* RegistVC1.xib in Resources */,
@@ -1409,6 +1476,7 @@
 				0A95E3EF1D7BB39E00674EAD /* ScoreFitlerCollectionCell.xib in Resources */,
 				0ADF88B41D6709FD00E73526 /* set_left.png in Resources */,
 				0ADF88921D6709FD00E73526 /* jiantou_bottom@2x.png in Resources */,
+				0AC793051DC25D9B00F8E2CF /* FocusTabCell.xib in Resources */,
 				0ADF88BC1D6709FD00E73526 /* sszx6.png in Resources */,
 				0A95E3E21D7AE88F00674EAD /* ScoreFliterView.xib in Resources */,
 				0ADF88BB1D6709FD00E73526 /* sszx4.png in Resources */,
@@ -1429,6 +1497,7 @@
 				0ADF88931D6709FD00E73526 /* jiantou_left.png in Resources */,
 				0ADF888E1D6709FD00E73526 /* index_more.png in Resources */,
 				0A142EDB1D6C31C1006D1640 /* user.png in Resources */,
+				0AC7930A1DC25FC600F8E2CF /* MyNewsVC.xib in Resources */,
 				0ADF88B51D6709FD00E73526 /* set_right.png in Resources */,
 				0ADF88BD1D6709FD00E73526 /* sszx7.png in Resources */,
 				0AC4D5FD1DB3D86000500C35 /* ZhuaJiaTabCellTableViewCell.xib in Resources */,
@@ -1444,6 +1513,7 @@
 				0ADF88971D6709FD00E73526 /* menu_ball_an.png in Resources */,
 				0A2579501DB924DD0060195C /* ChangeNickNameVC.xib in Resources */,
 				0ADF88AD1D6709FD00E73526 /* my8@2x.png in Resources */,
+				0AC793001DC25C5100F8E2CF /* MyFocusVC.xib in Resources */,
 				0AA7EE401D770A4E00F43725 /* LoginVC.xib in Resources */,
 				0ADF88821D6709FD00E73526 /* bfzx_bottom.png in Resources */,
 				0A142ED31D6C31C1006D1640 /* core.png in Resources */,
@@ -1452,6 +1522,7 @@
 				0ADF88831D6709FD00E73526 /* bfzx_small.png in Resources */,
 				0AC5A3961DB538AA00DDB2E6 /* ChangeSignVC.xib in Resources */,
 				0A9530131D71938200D5ED36 /* ThirdCollectionCell.xib in Resources */,
+				0A203E441DC601D30028A24B /* ErcodeVC.xib in Resources */,
 				0ADF88C21D6709FD00E73526 /* ture.png in Resources */,
 				0ADF88A61D6709FD00E73526 /* my14@2x.png in Resources */,
 				0ADF88F91D6716A200E73526 /* FiveHomeVC.xib in Resources */,
@@ -1462,6 +1533,7 @@
 				0A95E3F41D7BC5CF00674EAD /* ScoreSectionView.xib in Resources */,
 				0ADF888D1D6709FD00E73526 /* index_liuyan.png in Resources */,
 				0A142ED21D6C31C1006D1640 /* core-on.png in Resources */,
+				0A6B594D1DC5B085000ABB07 /* MysuggestionVC.xib in Resources */,
 				0A25795F1DB9BEB10060195C /* BuyIntrTabCell.xib in Resources */,
 				0ADF88841D6709FD00E73526 /* bstj_add.png in Resources */,
 				0ADF88BF1D6709FD00E73526 /* sszx_search.png in Resources */,
@@ -1517,6 +1589,7 @@
 				0A2579551DB92AB10060195C /* SettingVC.xib in Resources */,
 				0A25797D1DBCACF40060195C /* MyIntrduceVC.xib in Resources */,
 				0AC5A3891DB5319200DDB2E6 /* SelfInfoVC.xib in Resources */,
+				0A203E4E1DC602140028A24B /* MycollectionVC.xib in Resources */,
 				0AC5A3831DB52B0E00DDB2E6 /* star_yellow.png in Resources */,
 				0ADF88A31D6709FD00E73526 /* my11@2x.png in Resources */,
 				0ADF88A41D6709FD00E73526 /* my12@2x.png in Resources */,
@@ -1584,6 +1657,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A203E4D1DC602140028A24B /* MycollectionVC.m in Sources */,
 				0A95303E1D767E1600D5ED36 /* PaiHangTabCell.m in Sources */,
 				0A142F561D6EA189006D1640 /* SHCollectionCell.m in Sources */,
 				0A25796F1DBC7E0C0060195C /* IKEBaseTableViewCell.m in Sources */,
@@ -1595,6 +1669,7 @@
 				0A142F251D6D7BD5006D1640 /* FHIntroduceColletionCell.m in Sources */,
 				0A142EF21D6C4CEB006D1640 /* BHInfiniteScrollViewTitleView.m in Sources */,
 				0ADF87F51D66AC8500E73526 /* AppDelegate.m in Sources */,
+				0AC792FF1DC25C5100F8E2CF /* MyFocusVC.m in Sources */,
 				0A9F0BB51D6B4C2E00B931BD /* MBUtil.m in Sources */,
 				0AC4D5FC1DB3D86000500C35 /* ZhuaJiaTabCellTableViewCell.m in Sources */,
 				0A25797C1DBCACF40060195C /* MyIntrduceVC.m in Sources */,
@@ -1620,6 +1695,7 @@
 				0ADF88331D66F22500E73526 /* ZKTextField.m in Sources */,
 				0AC4D6061DB3E07B00500C35 /* ZhuaJiaDVC.m in Sources */,
 				0ADF880B1D66B6B500E73526 /* NSData+YSAdd.m in Sources */,
+				0AC793041DC25D9B00F8E2CF /* FocusTabCell.m in Sources */,
 				0A142EF11D6C4CEB006D1640 /* BHInfiniteScrollViewCell.m in Sources */,
 				0A95E3F21D7BC5B800674EAD /* ScoreSectionView.m in Sources */,
 				0A2579541DB92AB10060195C /* SettingVC.m in Sources */,
@@ -1640,6 +1716,7 @@
 				0A95301C1D73ECBE00D5ED36 /* ThirdCollectionCell2.m in Sources */,
 				C43FC1F81D6B25F9002C6E42 /* FreeTableViewCell.m in Sources */,
 				0AE04E3D1D84008E001E728E /* BaseModel.m in Sources */,
+				0A203E431DC601D30028A24B /* ErcodeVC.m in Sources */,
 				0A23F6131D90CD2100CDDF41 /* ThirdCWebCell.m in Sources */,
 				0A142EDE1D6C364B006D1640 /* FirstHHeaderView.m in Sources */,
 				0ADF88F31D67169000E73526 /* THomeVC.m in Sources */,
@@ -1657,8 +1734,10 @@
 				0A2579631DBC750D0060195C /* AccountVC.m in Sources */,
 				0AE7D2C71D7ED2320086FAED /* ClassUtils.m in Sources */,
 				0A25796C1DBC7B580060195C /* UUtils.m in Sources */,
+				0AC792FB1DC2483500F8E2CF /* TZmodel.m in Sources */,
 				0AC5A3901DB533F000DDB2E6 /* InfoCell1.m in Sources */,
 				0AA7EE4E1D79145900F43725 /* BMHttpHander.m in Sources */,
+				0A203E4B1DC602140028A24B /* MycollectionCell.m in Sources */,
 				0ADF88341D66F22600E73526 /* ZKTextView.m in Sources */,
 				0A2579591DB9BE660060195C /* BuyIntroduceVC.m in Sources */,
 				0AE7D2C01D7E81B00086FAED /* DateView.m in Sources */,
@@ -1670,8 +1749,10 @@
 				C4B13C7E1D6A96F6007A5009 /* MyView.m in Sources */,
 				0ADF88301D66F22500E73526 /* AlertAndAction.m in Sources */,
 				0AA7EE451D770B0000F43725 /* EnterView.m in Sources */,
+				0AC793091DC25FC600F8E2CF /* MyNewsVC.m in Sources */,
 				0A2579801DBCB4A00060195C /* MyIntroModel.m in Sources */,
 				0A142F5F1D6EA5C0006D1640 /* BiFenTabCell.m in Sources */,
+				0A6B594C1DC5B085000ABB07 /* MysuggestionVC.m in Sources */,
 				0A142EEF1D6C4CEB006D1640 /* BHInfiniteScrollView.m in Sources */,
 				0AC5A3951DB538AA00DDB2E6 /* ChangeSignVC.m in Sources */,
 				0A95E3E01D7AE87800674EAD /* ScoreFliterView.m in Sources */,
@@ -1679,6 +1760,7 @@
 				0A95E3E51D7BB33F00674EAD /* ScoreFiterTabCell1.m in Sources */,
 				0ADF88131D66C44900E73526 /* JCDKBaseVC.m in Sources */,
 				0ADF89061D6946D900E73526 /* UIImage+Utils.m in Sources */,
+				0A6B59481DC5ABAC000ABB07 /* NewsModel.m in Sources */,
 				0AC4D5E71DB3CA1500500C35 /* LHAFNetworkTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

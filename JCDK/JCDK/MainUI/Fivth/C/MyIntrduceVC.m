@@ -27,6 +27,8 @@
 
 - (void)viewDidLoad
 {
+    [super viewDidLoad];
+
     self.currentBtn = self.jcBtn;
     self.index = 1;
     self.jcArr = [NSMutableArray new];
@@ -37,16 +39,16 @@
     self.view.frame = CGRectMake(0, 0, JCDK_Screen_WIDTH, JCDK_Screen_HEIGHT);
     NavigationView *navigationView = [[[NSBundle mainBundle] loadNibNamed:@"NavigationView" owner:self options:nil] objectAtIndex:4];
     navigationView.titleLabel4.text = @"我的推荐";
+    navigationView.frame = CGRectMake(0, 0, JCDK_Screen_WIDTH, 64);
     navigationView.buttonBlock4 = ^(NSInteger button)
     {
         [wc.navigationController popViewControllerAnimated:NO];
     };
     [self.view addSubview:navigationView];
+    [self.view addSubview:self.tableView];
     self.lineView = [[UIView alloc] initWithFrame:CGRectMake(0, self.switchView.height - 2, JCDK_Screen_WIDTH / 3.0, 2)];
     self.lineView.backgroundColor = kYellowColor;
     [self.switchView addSubview:self.lineView];
-    [self.view addSubview:self.tableView];
-    [super viewDidLoad];
  }
 
 - (void)didReceiveMemoryWarning
@@ -70,7 +72,7 @@
 {
     if (!_tableView)
     {
-        _tableView = [[IKEBaseTableView alloc] initWithFrame:CGRectMake(0, 64, JCDK_Screen_WIDTH, JCDK_Screen_HEIGHT - 64) style:UITableViewStylePlain];
+        _tableView = [[IKEBaseTableView alloc] initWithFrame:CGRectMake(0, 64 + 90, JCDK_Screen_WIDTH, JCDK_Screen_HEIGHT - 64 - 90) style:UITableViewStylePlain];
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.backgroundColor = kAppColor;

@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TZmodel.h"
 
 @interface JinqiTableViewCell : UITableViewCell
 @property(nonatomic,retain)JCDKBaseLabel *name;
 @property(nonatomic,retain)JCDKBaseLabel *vsLabel;
 @property(nonatomic,retain)UIButton *arrow;
+@property (nonatomic ,retain)NSDictionary *dic;
 @end

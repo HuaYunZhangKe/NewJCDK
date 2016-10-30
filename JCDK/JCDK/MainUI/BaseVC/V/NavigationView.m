@@ -13,7 +13,9 @@
 
 - (void)awakeFromNib
 {
-    
+    [super awakeFromNib];
+    [self.leftBtn0 addTarget:self action:@selector(left0BtnClick) forControlEvents:UIControlEventTouchUpInside];
+     [self.rightBtn0 addTarget:self action:@selector(left0BtnClick) forControlEvents:UIControlEventTouchUpInside];
 }
 - (void)setNib0
 {
@@ -40,16 +42,34 @@
     
 }
 #pragma mark - IBAction
+
+
+
+
+
+- (IBAction)left:(id)sender {
+    if (_buttonBlock0) {
+        _buttonBlock0(1);
+    }
+}
+- (IBAction)right:(id)sender {
+    if (_buttonBlock0) {
+        _buttonBlock0(2);
+    }
+}
+
 //index0
-- (IBAction)left0BtnClick:(id)sender
+- (void)left0BtnClick:(UIButton *)sender
 {
+    
     if (_buttonBlock0)
     {
         _buttonBlock0(1);
     }
 }
-- (IBAction)right0BtnClick:(id)sender
+- (void)right0BtnClick:(UIButton *)sender
 {
+    
     if (_buttonBlock0)
     {
         _buttonBlock0(2);

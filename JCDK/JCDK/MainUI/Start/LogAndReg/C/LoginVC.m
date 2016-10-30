@@ -86,55 +86,87 @@
     vc.fromWhere = 2;
     [self.navigationController pushViewController:vc animated:YES];
 }
+
+
 - (void)sendLoginRequestToWeb
 {
     //    /index.php?g=app&m=user&a=login
     NSDictionary *paraDic = @{
-                              @"g":@"app",
-                              @"m":@"user",
-                              @"a":@"login",
                               @"username": self.userName.textField.text,
                               @"password":self.password.textField.text
                               };
-    [JCYNetCenter GET:K_Server_Main_URL parameters:paraDic success:^(NSDictionary *jsonObject)
-    {
+    
+    [BMHttpHander PostRequest:[NSString stringWithFormat:@"%@?g=app&m=user&a=login",K_Server_Main_URL] WithParameters:paraDic WithSuccess:^(NSData * _Nullable data, NSURLResponse * _Nullable response) {
+        id result = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+        NSString *status = result[@"status"];
+        if ([status integerValue] == 1)
+        {
+            [self performSelectorOnMainThread:@selector(webRequestSuccess:) withObject:result waitUntilDone:NO];
+        }
+        else
+        {
+            [self showTotast:result[@"error"]];
+        }
         
-    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
+    } WithFail:^(NSData * _Nullable data, NSURLResponse * _Nullable response) {
+        [self performSelectorOnMainThread:@selector(showTotast:) withObject:@"网络请求失败" waitUntilDone:NO];
         
     }];
-    //    [BMHttpHander PostRequest1:K_Server_Main_URL WithParameters:paraDic WithSuccess:^(NSData * _Nullable data, NSURLResponse * _Nullable response) {
-//        //        NSLog(@"%@", )
-//        
-//        id result = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-//        NSLog(@"%@", result[@"status"]);
-//        NSString *status = result[@"status"];
-//        if ([status integerValue] == 1)
-//        {
-//            
-//            [self performSelectorOnMainThread:@selector(webRequestSuccess:) withObject:result waitUntilDone:NO];
-//                        [self performSelectorOnMainThread:@selector(showTotast:) withObject:@"登录成功" waitUntilDone:NO];
-//        }
-//        else
-//        {
-//            [self performSelectorOnMainThread:@selector(showTotast:) withObject:result[@"error"] waitUntilDone:NO];
-//        }
-//        
-//        
-//    } WithFail:^(NSData * _Nullable data, NSURLResponse * _Nullable response) {
-//        [self performSelectorOnMainThread:@selector(showTotast:) withObject:@"网络请求失败" waitUntilDone:NO];
-//        
-//    }];
+    
     
 }
 - (void)webRequestSuccess:(NSDictionary *)result
 {
+    NSString *type = result[@"type"];
+    NSDictionary *dic = [NSDictionary dictionaryWithDictionary:result[@"user"]];
+    NSMutableDictionary *infoDic = [NSMutableDictionary new];
+    [infoDic setObject:dic[@"user_nicename"] forKey:@"user_nicename"];
+    [infoDic setObject:dic[@"user_login"] forKey:@"user_login"];
+    [infoDic setObject:dic[@"id"] forKey:@"id"];
+    NSString *intro;
+    NSLog(@"%@",dic[@"introduction"]);
+    if ([dic[@"introduction"] isEqual:[NSNull null]])
+    {
+        intro = @"";
+    }
+    else
+    {
+        intro = dic[@"introduction"];
+
+    }
+    NSString *avator;
+    if ([dic[@"avatar"] isEqual:[NSNull null]])
+    {
+        avator = @"";
+    }
+    else
+    {
+        avator = dic[@"avatar"];
+        
+    }
+    [infoDic setObject:avator forKey:@"avator"];
+    [infoDic setObject:intro forKey:@"introduction"];
+    [infoDic setObject:dic[@"coin"] forKey:@"coin"];
+    [infoDic setObject:dic[@"balance"] forKey:@"balance"];
+    [infoDic setObject:dic[@"sex"] forKey:@"sex"];
+
+
+
+    [[NSUserDefaults standardUserDefaults] setObject:@"1" forKey:@"isLogin"];
+    [[NSUserDefaults standardUserDefaults] setObject:infoDic forKey:@"userInfo"];
+
+    [self showTotast:@"登录成功"];
+    [self.navigationController popToRootViewControllerAnimated:YES];
+    
+}
+- (void)showTotast:(NSString *)title
+{
+    
+    [MBUtil showTotastView:kAppdelegate.window WithTitle:title];
     
 }
 
-- (void)showTotast:(NSString *)title
-{
-    [MBUtil showTotastView:self.view WithTitle:title];
-    
-}
+
+
 
 @end

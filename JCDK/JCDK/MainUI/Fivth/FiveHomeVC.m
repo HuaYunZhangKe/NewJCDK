@@ -17,15 +17,21 @@
 #import "AccountVC.h"
 #import "BuyIntroduceVC.h"
 #import "MyIntrduceVC.h"
+#import "MyNewsVC.h"
+#import "MysuggestionVC.h"
+#import "ErcodeVC.h"
+#import "MycollectionVC.h"
 @interface FiveHomeVC ()<UITableViewDataSource,UITableViewDelegate>
 @property(nonatomic,retain)MyView *myView;
 @property(nonatomic,retain)NSArray *dataArr;
 @property(nonatomic,retain)NSArray *imgArr;
+@property (nonatomic, retain)NSDictionary *infoDic;
 @end
 
 @implementation FiveHomeVC
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.infoDic = [NSDictionary dictionaryWithDictionary:[[NSUserDefaults standardUserDefaults] objectForKey:@"userInfo"]];
     self.view.frame = CGRectMake(0, 0, JCDK_Screen_WIDTH, JCDK_Screen_HEIGHT);
     NavigationView *navigationView = [[[NSBundle mainBundle] loadNibNamed:@"NavigationView" owner:self options:nil] objectAtIndex:3];
     navigationView.frame = CGRectMake(0, 0, JCDK_Screen_WIDTH, 64);
@@ -54,10 +60,19 @@
 }
 - (void)headViewBtnClick:(UIButton *)sender
 {
-//    LoginVC *loginVC = [[LoginVC alloc] initWithNibName:@"LoginVC" bundle:nil];
-//    [self.navigationController pushViewController:loginVC animated:YES];
-    SelfInfoVC *vc = [[SelfInfoVC alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
+    NSString *islogin = [[NSUserDefaults standardUserDefaults] objectForKey:@"isLogin"];
+    if ([islogin integerValue] == 1)
+    {
+        SelfInfoVC *vc = [[SelfInfoVC alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    else
+    {
+            LoginVC *loginVC = [[LoginVC alloc] initWithNibName:@"LoginVC" bundle:nil];
+            [self.navigationController pushViewController:loginVC animated:YES];
+
+    }
+  
 
 }
 #pragma mark - tableView dataSource
@@ -144,6 +159,22 @@
     {
         MyIntrduceVC *vc = [[MyIntrduceVC alloc] initWithNibName:@"MyIntrduceVC" bundle:nil];
         [self.navigationController pushViewController:vc animated:YES];
+    }else if (indexPath.section == 2 && indexPath.row == 0)
+    {
+        MyNewsVC *vc = [[MyNewsVC alloc] initWithNibName:@"MyNewsVC" bundle:nil];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if (indexPath.section == 2 && indexPath.row == 2)
+    {
+        MysuggestionVC *vc = [[MysuggestionVC alloc] initWithNibName:@"MysuggestionVC" bundle:nil];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if (indexPath.section == 1 && indexPath.row == 2)
+    {
+        ErcodeVC *invite = [[ErcodeVC alloc] initWithNibName:@"ErcodeVC" bundle:nil];
+        [self.navigationController pushViewController:invite animated:YES];
+    }else if (indexPath.section == 2 && indexPath.row == 1)
+    {
+        MycollectionVC *invite = [[MycollectionVC alloc] initWithNibName:@"MycollectionVC" bundle:nil];
+        [self.navigationController pushViewController:invite animated:YES];
     }
 }
 
@@ -152,7 +183,7 @@
 {
     if(!_dataArr)
     {
-        _dataArr = @[@[@"已购推荐",@"我的推荐",@"我的关注",@"投注记录"],@[@"账户明细",@"免费领取金币",@"赠送好友",@"我的邀请",@"排行设置"],@[@"我的消息",@"我的帖子",@"我的收藏",@"意见反馈"],@[@"更多设置"]];
+        _dataArr = @[@[@"已购推荐",@"我的推荐",@"我的关注",@"投注记录"],@[@"账户明细",@"免费领取金币",@"我的邀请"],@[@"我的消息",@"我的收藏",@"意见反馈"],@[@"更多设置"]];
     }
     return _dataArr;
     
@@ -161,7 +192,7 @@
 {
     if(!_imgArr)
     {
-        _imgArr = @[@[@"my1",@"my2",@"my3",@"my4"],@[@"my5",@"my6",@"my7",@"my8",@"my9"],@[@"my10",@"my11",@"my12",@"my13"],@[@"my14"]];
+        _imgArr = @[@[@"my1",@"my2",@"my3",@"my4"],@[@"my5",@"my6",@"my8"],@[@"my10",@"my12",@"my13"],@[@"my14"]];
         
     }
     return _imgArr;
@@ -170,7 +201,7 @@
 {
     if (!_myView)
     {
-        self.myView = [[MyView alloc] initWithFrame:CGRectMake(0, 64, JCDK_Screen_WIDTH, JCDK_Screen_HEIGHT  )];
+        _myView = [[MyView alloc] initWithFrame:CGRectMake(0, 64, JCDK_Screen_WIDTH, JCDK_Screen_HEIGHT  ) AndDIc:self.infoDic];
         _myView.tableView.dataSource = self;
         _myView.tableView.delegate = self;
         _myView.tableView.separatorColor = kHexColor(0x1f2425);

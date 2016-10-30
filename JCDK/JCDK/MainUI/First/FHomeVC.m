@@ -15,7 +15,7 @@
 #import "Users.h"
 #import "Matchs.h"
 #import "MBUtil.h"
-
+#import "MyNewsVC.h"
 
 @interface FHomeVC ()<UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, retain)NSMutableArray *topicArr;
@@ -34,7 +34,6 @@ static NSString *itopic = @"ttopic";
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.frame = CGRectMake(0, 0, JCDK_Screen_WIDTH, JCDK_Screen_HEIGHT);
-    [self setnavigationBar];
     [self FHomeListRequestFromWeb];
 
 }
@@ -64,6 +63,8 @@ static NSString *itopic = @"ttopic";
         if (button == 2)
         {
             //右边按钮点击
+            MyNewsVC *news = [[MyNewsVC alloc] initWithNibName:@"MyNewsVC" bundle:nil];
+            [self.navigationController pushViewController:news animated:YES];
         }
     };
     [self.view addSubview:navigationView];
@@ -85,7 +86,7 @@ static NSString *itopic = @"ttopic";
     if (!_headerView)
     {
         _headerView = [[[NSBundle mainBundle] loadNibNamed:@"FirstHHeaderView" owner:self options:nil] objectAtIndex:0];
-        _headerView.frame = CGRectMake(0, 0, self.view.width, 263);
+        _headerView.frame = CGRectMake(0, 64, self.view.width, 263);
         _headerView.layer.masksToBounds = YES;
         [_headerView setHeaderViewWithArray:self.slidesArr];
     }
@@ -320,6 +321,8 @@ static NSString *itopic = @"ttopic";
     [self.usersDic setObject:hrArr forKey:@"hr"];
 //    [self.usersDic setObject:gzArr forKey:@"gz"];
     [self settingTableView];
+    [self setnavigationBar];
+
 }
 - (void)showHud:(NSString *)title
 {

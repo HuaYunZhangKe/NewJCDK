@@ -99,13 +99,10 @@
     //    /index.php?g=app&m=user&a=sendmsg
     //    http://football.sh.hfcn.cc/index.php?g=app&m=user&a=sendmsg&type=0&mobile=15010870201
     NSDictionary *paraDic = @{
-                              @"g":@"app",
-                              @"m":@"user",
-                              @"a":@"sendmsg",
                               @"type":@(0),
                               @"mobile": self.currentDic[@"phone"]
                               };
-    [BMHttpHander PostRequest1:K_Server_Main_URL WithParameters:paraDic WithSuccess:^(NSData * _Nullable data, NSURLResponse * _Nullable response) {
+    [BMHttpHander PostRequest1:[NSString stringWithFormat:@"%@??g=app&m=user&a=sendmsg",K_Server_Main_URL] WithParameters:paraDic WithSuccess:^(NSData * _Nullable data, NSURLResponse * _Nullable response) {
         //        NSLog(@"%@", )
         
         id result = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];

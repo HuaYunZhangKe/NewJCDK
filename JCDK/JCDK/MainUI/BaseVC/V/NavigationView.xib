@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -44,9 +44,6 @@
                                     <exclude reference="hm1-9u-tmQ"/>
                                 </mask>
                             </variation>
-                            <connections>
-                                <action selector="left0BtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="OHJ-yh-ofJ"/>
-                            </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="竞彩大咖" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y7M-8f-sY1">
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
@@ -72,9 +69,6 @@
                                     <exclude reference="wCw-fc-Yf5"/>
                                 </mask>
                             </variation>
-                            <connections>
-                                <action selector="right0BtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="9qr-yt-U9f"/>
-                            </connections>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FPf-Fe-MO7" userLabel="line">
                             <color key="backgroundColor" red="0.2196078431372549" green="0.23137254901960785" blue="0.23921568627450979" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -82,6 +76,22 @@
                                 <constraint firstAttribute="height" constant="1" id="5pw-1c-EHN"/>
                             </constraints>
                         </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pb2-Lm-h2g">
+                            <constraints>
+                                <constraint firstAttribute="width" constant="100" id="8KF-4h-GXS"/>
+                            </constraints>
+                            <connections>
+                                <action selector="left:" destination="iN0-l3-epB" eventType="touchUpInside" id="7hH-2L-T1P"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ksy-bV-DfN">
+                            <constraints>
+                                <constraint firstAttribute="width" constant="100" id="l6d-nr-e4p"/>
+                            </constraints>
+                            <connections>
+                                <action selector="right:" destination="iN0-l3-epB" eventType="touchUpInside" id="vfm-ox-kbG"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" red="0.18823529411764706" green="0.20392156862745098" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
@@ -89,17 +99,23 @@
                         <constraint firstItem="Q6x-fD-hsy" firstAttribute="leading" secondItem="hAj-7b-CpN" secondAttribute="leading" id="2ob-fV-Ndg"/>
                         <constraint firstItem="FPf-Fe-MO7" firstAttribute="leading" secondItem="Q6x-fD-hsy" secondAttribute="trailing" id="3H2-bp-t6b"/>
                         <constraint firstAttribute="trailing" secondItem="KJz-0C-z8l" secondAttribute="trailing" constant="8" id="EQy-sh-bXR"/>
+                        <constraint firstAttribute="trailing" secondItem="ksy-bV-DfN" secondAttribute="trailing" id="Ezm-Ca-8Vt"/>
                         <constraint firstItem="FPf-Fe-MO7" firstAttribute="top" secondItem="hAj-7b-CpN" secondAttribute="top" id="FHz-DQ-skI"/>
                         <constraint firstAttribute="trailing" secondItem="KJz-0C-z8l" secondAttribute="trailing" id="Gqo-zf-hht"/>
+                        <constraint firstAttribute="bottom" secondItem="pb2-Lm-h2g" secondAttribute="bottom" id="HjN-ok-bch"/>
+                        <constraint firstItem="ksy-bV-DfN" firstAttribute="top" secondItem="FPf-Fe-MO7" secondAttribute="bottom" id="IR6-Lp-Lpq"/>
+                        <constraint firstItem="pb2-Lm-h2g" firstAttribute="leading" secondItem="hAj-7b-CpN" secondAttribute="leading" id="L2h-eW-gBz"/>
                         <constraint firstItem="Q6x-fD-hsy" firstAttribute="top" secondItem="hAj-7b-CpN" secondAttribute="top" id="N8r-Yr-6ct"/>
                         <constraint firstItem="Q6x-fD-hsy" firstAttribute="top" secondItem="hAj-7b-CpN" secondAttribute="top" id="Oi9-oB-aTf"/>
                         <constraint firstAttribute="height" constant="44" id="cEb-v1-jHm"/>
                         <constraint firstItem="KJz-0C-z8l" firstAttribute="top" secondItem="hAj-7b-CpN" secondAttribute="top" id="cUb-Em-KRE"/>
                         <constraint firstAttribute="bottom" secondItem="FPf-Fe-MO7" secondAttribute="bottom" id="cgZ-2N-5GJ"/>
                         <constraint firstItem="KJz-0C-z8l" firstAttribute="top" secondItem="hAj-7b-CpN" secondAttribute="top" id="e1t-wA-rrR"/>
+                        <constraint firstItem="pb2-Lm-h2g" firstAttribute="top" secondItem="FPf-Fe-MO7" secondAttribute="bottom" id="fq5-Ul-iyo"/>
                         <constraint firstItem="y7M-8f-sY1" firstAttribute="centerX" secondItem="hAj-7b-CpN" secondAttribute="centerX" id="h2n-bQ-oJu"/>
                         <constraint firstAttribute="trailing" secondItem="FPf-Fe-MO7" secondAttribute="trailing" id="lAq-wR-157"/>
                         <constraint firstItem="y7M-8f-sY1" firstAttribute="centerY" secondItem="hAj-7b-CpN" secondAttribute="centerY" id="md2-Ad-5gV"/>
+                        <constraint firstAttribute="bottom" secondItem="ksy-bV-DfN" secondAttribute="bottom" id="mv4-nZ-zIr"/>
                         <constraint firstAttribute="trailing" secondItem="KJz-0C-z8l" secondAttribute="trailing" id="pRY-BR-eEV"/>
                         <constraint firstItem="KJz-0C-z8l" firstAttribute="top" secondItem="hAj-7b-CpN" secondAttribute="top" id="wdL-em-cAd"/>
                         <constraint firstItem="Q6x-fD-hsy" firstAttribute="leading" secondItem="hAj-7b-CpN" secondAttribute="leading" constant="12" id="ylt-Yk-T0f"/>
@@ -109,13 +125,13 @@
                         <mask key="constraints">
                             <exclude reference="3H2-bp-t6b"/>
                             <exclude reference="cgZ-2N-5GJ"/>
+                            <exclude reference="2ob-fV-Ndg"/>
+                            <exclude reference="Oi9-oB-aTf"/>
                             <exclude reference="Gqo-zf-hht"/>
                             <exclude reference="cUb-Em-KRE"/>
                             <exclude reference="pRY-BR-eEV"/>
                             <exclude reference="wdL-em-cAd"/>
                             <exclude reference="zpb-16-nQF"/>
-                            <exclude reference="2ob-fV-Ndg"/>
-                            <exclude reference="Oi9-oB-aTf"/>
                         </mask>
                     </variation>
                 </view>

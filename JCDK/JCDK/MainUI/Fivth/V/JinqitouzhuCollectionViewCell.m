@@ -9,9 +9,11 @@
 #import "JinqitouzhuCollectionViewCell.h"
 #import "JinqiTableViewCell.h"
 #import "HeadView.h"
+#import "TouZhuTabCell.h"
 @interface JinqitouzhuCollectionViewCell ()<UITableViewDataSource,UITableViewDelegate>
 @property(nonatomic,retain)HeadView *headView;
 @property(nonatomic,retain)NSMutableArray *arr;
+@property (nonatomic ,assign)NSInteger index;
 @end
 @implementation JinqitouzhuCollectionViewCell
 -(instancetype)initWithFrame:(CGRect)frame
@@ -19,15 +21,18 @@
     self= [super initWithFrame:frame];
     if (self) {
         [self  creatView];
-        self.arr = [NSMutableArray array];
+        self.index = 1;
         
-        [self.arr addObject:@"0"];
-        [self.arr addObject:@"0"];
-        [self.arr addObject:@"0"];
-        [self.arr addObject:@"0"];
-
     }
     return self;
+}
+- (void)setShowDic:(NSDictionary *)showDic
+{
+    _showDic = showDic;
+}
+- (void)setType:(NSInteger)type
+{
+    _type = type;
 }
 -(void)creatView
 {
@@ -66,52 +71,86 @@
 }
 -(NSInteger )numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 4;
+    if (self.index == 1)
+    {
+        NSArray *secArr = [NSArray arrayWithArray:self.showDic[@"t"]];
+        return secArr.count;
+    }
+    else
+    {
+        NSArray *secArr = [NSArray arrayWithArray:self.showDic[@"c"]];
+        return secArr.count;
+
+    }
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{  if([_arr[section] isEqualToString:@"1"])
 {
-    return 1;
-}
-    if ([_arr[section]isEqualToString:@"0"]) {
-        return 0;
-    }
-    return 0;
-
+    return 2;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if(_segment.selectedSegmentIndex == 0)
+    if (indexPath.row == 0)
     {
-    JinqiTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    cell.backgroundColor = kHexColor(0x2a2e32);
-    cell.name.text = @"中超";
-    cell.vsLabel.text = @"北京国 VS 重庆力";
-//    cell.selectionStyle = UITableViewCellSelectionStyleNone;
-//    [cell.arrow addTarget:self action:@selector(arrowClick:) forControlEvents:UIControlEventTouchUpInside];
-       return cell;
+        JinqiTableViewCell *cell = [[JinqiTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"jq"];
+        if (self.index == 1)
+        {
+            NSArray *secArr = [NSArray arrayWithArray:self.showDic[@"t"]];
+            
+            cell.dic = secArr[indexPath.section];
+            
+        }
+        else
+        {
+            NSArray *secArr = [NSArray arrayWithArray:self.showDic[@"c"]];
+            
+            cell.dic = secArr[indexPath.section];
+            
+        }
+
+               return cell;
+
     }
-    else{
-        JinqiTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-        cell.backgroundColor = kHexColor(0x2a2e32);
-        cell.name.text = @"中超222";
-        cell.vsLabel.text = @"北京国 VS 重庆力";
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-//        [cell.arrow addTarget:self action:@selector(arrowClick:) forControlEvents:UIControlEventTouchUpInside];
+    else
+    {
+        TouZhuTabCell *cell = [[[NSBundle mainBundle] loadNibNamed:@"TouZhuTabCell" owner:self options:nil] objectAtIndex:0];
+        if (self.index == 1)
+        {
+            NSArray *secArr = [NSArray arrayWithArray:self.showDic[@"t"]];
+            
+            cell.dic = secArr[indexPath.section];
+        }
+        else
+        {
+            NSArray *secArr = [NSArray arrayWithArray:self.showDic[@"c"]];
+            
+            cell.dic = secArr[indexPath.section];
+            
+        }
+
         return cell;
     }
+    
+    
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 35;
+    if (indexPath.row == 0)
+    {
+        return 35;
+
+    }
+    else
+    {
+        return 160;
+    }
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return 35;
+    return 0;
 }
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    self.headView = [[HeadView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, 35)];
+    self.headView = [[HeadView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, 0)];
     self.headView.backgroundColor =kHexColor(0x2a2e32);
     _headView. name.text = @"中超222";
     _headView.vsLabel.text = @"北京国 VS 重庆力";
@@ -146,11 +185,13 @@
 {
     if(seg.selectedSegmentIndex == 1)
     {
+        self.index = 1;
         [_tableView reloadData];
     }
     else
         
     {
+        self.index = 2;
         [_tableView reloadData];
     }
 }

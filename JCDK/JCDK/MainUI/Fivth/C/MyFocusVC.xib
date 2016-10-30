@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyFocusVC">
+            <connections>
+                <outlet property="button1" destination="7Wv-p3-0CX" id="MU8-3W-jFZ"/>
+                <outlet property="button2" destination="OrV-CJ-yEz" id="PDC-9U-nZJ"/>
+                <outlet property="tableView" destination="wLx-mQ-BV6" id="JkH-03-0bE"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bdv-Il-Ap2">
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Wv-p3-0CX">
+                            <state key="normal" title="我的关注">
+                                <color key="titleColor" red="0.94901960780000005" green="0.64313725489999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OrV-CJ-yEz">
+                            <state key="normal" title="我的粉丝">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.16470588235294117" green="0.1803921568627451" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="1OA-Yl-3Bc"/>
+                        <constraint firstAttribute="bottom" secondItem="7Wv-p3-0CX" secondAttribute="bottom" id="6AU-1s-AI9"/>
+                        <constraint firstItem="7Wv-p3-0CX" firstAttribute="leading" secondItem="Bdv-Il-Ap2" secondAttribute="leading" id="Av9-S0-4Y1"/>
+                        <constraint firstAttribute="trailing" secondItem="OrV-CJ-yEz" secondAttribute="trailing" id="FDi-m4-Ed0"/>
+                        <constraint firstItem="7Wv-p3-0CX" firstAttribute="top" secondItem="Bdv-Il-Ap2" secondAttribute="top" id="NvJ-nV-3rm"/>
+                        <constraint firstAttribute="bottom" secondItem="OrV-CJ-yEz" secondAttribute="bottom" id="UgF-zj-fSu"/>
+                        <constraint firstItem="OrV-CJ-yEz" firstAttribute="width" secondItem="7Wv-p3-0CX" secondAttribute="width" id="X9S-Hx-pid"/>
+                        <constraint firstItem="OrV-CJ-yEz" firstAttribute="top" secondItem="Bdv-Il-Ap2" secondAttribute="top" id="hFs-uH-wOn"/>
+                        <constraint firstItem="OrV-CJ-yEz" firstAttribute="leading" secondItem="7Wv-p3-0CX" secondAttribute="trailing" id="lCp-9A-odr"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wLx-mQ-BV6">
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Bdv-Il-Ap2" secondAttribute="trailing" id="7ty-Ij-NzY"/>
+                <constraint firstItem="wLx-mQ-BV6" firstAttribute="top" secondItem="Bdv-Il-Ap2" secondAttribute="bottom" id="SN2-KL-tmn"/>
+                <constraint firstItem="Bdv-Il-Ap2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="XBK-4W-Rem"/>
+                <constraint firstItem="Bdv-Il-Ap2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="XbS-Xv-e48"/>
+                <constraint firstAttribute="trailing" secondItem="wLx-mQ-BV6" secondAttribute="trailing" id="ccV-0F-KVx"/>
+                <constraint firstItem="wLx-mQ-BV6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="fml-Fs-6Tl"/>
+                <constraint firstAttribute="bottom" secondItem="wLx-mQ-BV6" secondAttribute="bottom" id="ncr-1w-cbw"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
