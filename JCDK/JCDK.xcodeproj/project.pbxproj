@@ -244,6 +244,7 @@
 		0AE7D2C31D7ECD620086FAED /* left.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE7D2C11D7ECD620086FAED /* left.png */; };
 		0AE7D2C41D7ECD620086FAED /* right.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE7D2C21D7ECD620086FAED /* right.png */; };
 		0AE7D2C71D7ED2320086FAED /* ClassUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE7D2C61D7ED2320086FAED /* ClassUtils.m */; };
+		0AF196A91DD9DDFE00B4BCB2 /* CollectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF196A81DD9DDFE00B4BCB2 /* CollectionModel.m */; };
 		C43FC1F21D6B1C01002C6E42 /* FreeReciveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C43FC1F11D6B1C01002C6E42 /* FreeReciveViewController.m */; };
 		C43FC1F51D6B22BF002C6E42 /* FreeView.m in Sources */ = {isa = PBXBuildFile; fileRef = C43FC1F41D6B22BF002C6E42 /* FreeView.m */; };
 		C43FC1F81D6B25F9002C6E42 /* FreeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C43FC1F71D6B25F9002C6E42 /* FreeTableViewCell.m */; };
@@ -596,6 +597,8 @@
 		0AE7D2C21D7ECD620086FAED /* right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right.png; sourceTree = "<group>"; };
 		0AE7D2C51D7ED2320086FAED /* ClassUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassUtils.h; sourceTree = "<group>"; };
 		0AE7D2C61D7ED2320086FAED /* ClassUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassUtils.m; sourceTree = "<group>"; };
+		0AF196A71DD9DDFE00B4BCB2 /* CollectionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CollectionModel.h; path = JCDK/MainUI/Fivth/CollectionModel.h; sourceTree = SOURCE_ROOT; };
+		0AF196A81DD9DDFE00B4BCB2 /* CollectionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CollectionModel.m; path = JCDK/MainUI/Fivth/CollectionModel.m; sourceTree = SOURCE_ROOT; };
 		8B4F8A09065328201474E94F /* libPods-JCDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JCDK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C43FC1F01D6B1C01002C6E42 /* FreeReciveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeReciveViewController.h; sourceTree = "<group>"; };
 		C43FC1F11D6B1C01002C6E42 /* FreeReciveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FreeReciveViewController.m; sourceTree = "<group>"; };
@@ -1358,6 +1361,8 @@
 				0A25797F1DBCB4A00060195C /* MyIntroModel.m */,
 				0A6B59461DC5ABAC000ABB07 /* NewsModel.h */,
 				0A6B59471DC5ABAC000ABB07 /* NewsModel.m */,
+				0AF196A71DD9DDFE00B4BCB2 /* CollectionModel.h */,
+				0AF196A81DD9DDFE00B4BCB2 /* CollectionModel.m */,
 			);
 			path = M;
 			sourceTree = "<group>";
@@ -1692,6 +1697,7 @@
 				0AE04E3A1D83FEFE001E728E /* Posts.m in Sources */,
 				0ADF88FD1D6716B200E73526 /* FourthVC.m in Sources */,
 				0ADF88CE1D670AD500E73526 /* JCDKTabBarVC.m in Sources */,
+				0AF196A91DD9DDFE00B4BCB2 /* CollectionModel.m in Sources */,
 				0ADF88331D66F22500E73526 /* ZKTextField.m in Sources */,
 				0AC4D6061DB3E07B00500C35 /* ZhuaJiaDVC.m in Sources */,
 				0ADF880B1D66B6B500E73526 /* NSData+YSAdd.m in Sources */,

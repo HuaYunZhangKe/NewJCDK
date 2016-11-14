@@ -14,7 +14,11 @@
     [super awakeFromNib];
     // Initialization code
 }
-
+- (void)setCollect:(CollectionModel *)collect
+{
+    _titleLabel.text = collect.Title;
+    _timeLabel.text = collect.Createtime;
+}
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 

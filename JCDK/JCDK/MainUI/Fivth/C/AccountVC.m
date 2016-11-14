@@ -114,7 +114,9 @@
     //    * @example  http://api.myike.com.cn/?m=api&v=locallife.mod&id=10&token=BgETMCIwH19fXVELWlwHVQNEWQ4PUVVVEVoMDAhTBBBcWlsIVgNGV1wMBBNyPzAdAl9dE0NbWFgBAgFCW14&debug=1 查看
     
     
-    
+    NSDictionary *userDic = [[NSUserDefaults standardUserDefaults] objectForKey:@"userInfo"];
+    NSString *userid = userDic[@"id"];
+ 
     
     NSString *token = [[NSUserDefaults standardUserDefaults] objectForKey:@"token"];
     if (token.length == 0)
@@ -122,7 +124,7 @@
         token = @"";
     }
     NSDictionary *paraDic = @{
-                              @"userid"   :@"1",
+                              @"userid"   :userid,
                               @"type"     :@(type),
                              };
     
