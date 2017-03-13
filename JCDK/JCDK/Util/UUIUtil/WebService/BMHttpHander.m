@@ -31,7 +31,7 @@
     if (urlStr.length == 0 || parameters.count == 0)
     {
         NSLog(@"url为空或者参数为空");
-        return nil;
+//        return nil;
     }
     //将输入参数拼接到http://api.pingspread.com后
     NSString *urlString = urlStr;

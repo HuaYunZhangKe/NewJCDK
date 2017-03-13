@@ -134,12 +134,7 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     NSLog(@"点击 %ld-%ld",indexPath.section,indexPath.row);
-    if(indexPath.section == 1 && indexPath.row == 1)
-    {
-        FreeReciveViewController *free = [FreeReciveViewController new];
-        [self.navigationController pushViewController:free animated:YES];
-        
-    }if(indexPath.section == 0 &&indexPath.row == 3)
+  if(indexPath.section == 0 &&indexPath.row == 3)
     {
         TouZhuViewController *touzhu =[[TouZhuViewController alloc] initWithNibName:@"TouZhuViewController" bundle:nil];
         [self.navigationController pushViewController:touzhu animated:YES];
@@ -167,7 +162,7 @@
     {
         MysuggestionVC *vc = [[MysuggestionVC alloc] initWithNibName:@"MysuggestionVC" bundle:nil];
         [self.navigationController pushViewController:vc animated:YES];
-    }else if (indexPath.section == 1 && indexPath.row == 2)
+    }else if (indexPath.section == 1 && indexPath.row == 1)
     {
         ErcodeVC *invite = [[ErcodeVC alloc] initWithNibName:@"ErcodeVC" bundle:nil];
         [self.navigationController pushViewController:invite animated:YES];
@@ -183,7 +178,7 @@
 {
     if(!_dataArr)
     {
-        _dataArr = @[@[@"已购推荐",@"我的推荐",@"我的关注",@"投注记录"],@[@"账户明细",@"免费领取金币",@"我的邀请"],@[@"我的消息",@"我的收藏",@"意见反馈"],@[@"更多设置"]];
+        _dataArr = @[@[@"已购推荐",@"我的推荐",@"我的关注",@"投注记录"],@[@"账户明细",@"我的邀请"],@[@"我的消息",@"我的收藏",@"意见反馈"],@[@"更多设置"]];
     }
     return _dataArr;
     

@@ -11,4 +11,5 @@
 @interface OrderWebViewVC : JCDKBaseVC
 @property (nonatomic ,retain)UIWebView *webView;
 @property (nonatomic, retain)NSString *urlStr;
+@property (nonatomic ,retain)NSString *naviTitle;
 @end

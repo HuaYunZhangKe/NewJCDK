@@ -16,12 +16,21 @@
 #import "Matchs.h"
 #import "MBUtil.h"
 #import "MyNewsVC.h"
+#import "FNewsModel.h"
 
+#import "ZiXunDetailVC.h"
+#import "JCDK-Swift.h"
+#import "OrderWebViewVC.h"
+#import "ZhuaJiaDVC.h"
+#import "LoginVC.h"
+#import "IntroListVC.h"
+#import "AboutUsVC.h"
 @interface FHomeVC ()<UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, retain)NSMutableArray *topicArr;
 @property (nonatomic, retain)NSMutableArray *slidesArr;
 @property (nonatomic, retain)NSMutableDictionary *usersDic;//专家推荐字典
 @property (nonatomic, retain)NSMutableArray *matchArr;
+@property (nonatomic ,retain)NSMutableArray *newsArr;
 
 @end
 static NSString *itabInde = @"tintroduce";
@@ -34,7 +43,9 @@ static NSString *itopic = @"ttopic";
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.frame = CGRectMake(0, 0, JCDK_Screen_WIDTH, JCDK_Screen_HEIGHT);
+    self.newsArr = [NSMutableArray new];
     [self FHomeListRequestFromWeb];
+    [self NewsInfoFromWEb:1];
 
 }
 - (void)viewWillAppear:(BOOL)animated
@@ -59,12 +70,26 @@ static NSString *itopic = @"ttopic";
         if (button == 1)
         {
             //左边按钮点击
+            AboutUsVC *vc = [[AboutUsVC alloc] initWithNibName:@"AboutUsVC" bundle:nil];
+            [self.navigationController pushViewController:vc animated:YES];
+            
         }
         if (button == 2)
         {
             //右边按钮点击
-            MyNewsVC *news = [[MyNewsVC alloc] initWithNibName:@"MyNewsVC" bundle:nil];
-            [self.navigationController pushViewController:news animated:YES];
+
+            NSDictionary *infodic = [NSDictionary dictionaryWithDictionary:[[NSUserDefaults standardUserDefaults] objectForKey:@"userInfo"]];
+            if (infodic.count != 0)
+            {
+                MyNewsVC *news = [[MyNewsVC alloc] initWithNibName:@"MyNewsVC" bundle:nil];
+                [self.navigationController pushViewController:news animated:YES];
+
+            }
+            else
+            {
+                LoginVC *vc  = [[LoginVC alloc] initWithNibName:@"LoginVC" bundle:nil];
+                [self.navigationController pushViewController:vc animated:YES];
+            }
         }
     };
     [self.view addSubview:navigationView];
@@ -94,19 +119,21 @@ static NSString *itopic = @"ttopic";
             if (index == 1)
             {
                 //足球
-                [wc.tabBarController setSelectedIndex:2];
+                ZhuaJiaDVC *vc = [[ZhuaJiaDVC alloc] initWithNibName:@"ZhuaJiaDVC" bundle:nil];
+                [wc.navigationController pushViewController:vc animated:YES];
 
             }
             if (index == 2)
             {
                 //篮球
-                [wc showTotast:@"新功能开发中尽请期待"];
+                IntroListVC *vc = [[IntroListVC alloc] initWithNibName:@"IntroListVC" bundle:nil];
+                [wc.navigationController pushViewController:vc animated:YES];
 
             }
             if (index == 3)
             {
                 //推荐
-                [wc.tabBarController setSelectedIndex:3];
+                [wc.tabBarController setSelectedIndex:2];
             }
             if (index == 4)
             {
@@ -166,11 +193,11 @@ static NSString *itopic = @"ttopic";
     }
     else if (section == 1)
     {
-        return 4;
+        return 1 + self.matchArr.count;
     }
     else
     {
-        return 4;
+        return 1 + self.topicArr.count;
 
     }
 }
@@ -193,7 +220,7 @@ static NSString *itopic = @"ttopic";
         }
         else
         {
-            return 98;
+            return 50;
         }
     }
     else
@@ -224,6 +251,22 @@ static NSString *itopic = @"ttopic";
         cell.backgroundColor = [UIColor redColor];
 //        [cell setContentWithArray:@[@"a", @"b",@"c",@"d",@"e",@"f",@"g",@"h"]];
         cell.showDic = self.usersDic;
+        cell.stringBlock = ^(NSString *str)
+        {
+            OrderWebViewVC *vc = [[OrderWebViewVC alloc] init];
+            vc.naviTitle = @"专家详情";
+            NSDictionary *userDic = [[NSUserDefaults standardUserDefaults] objectForKey:@"userInfo"];
+            NSString *userid = userDic[@"id"];
+            if (userid.length == 0)
+            {
+                LoginVC *vc = [[LoginVC alloc] initWithNibName:@"LoginVC" bundle:nil];
+                [self.navigationController pushViewController:vc animated:YES];
+                return ;
+            }
+            NSString *urlStr = [NSString stringWithFormat:@"%@?g=app&m=rec&a=expert&userid=%@&uid=%@",K_Server_Main_URL,str,userid];
+            vc.urlStr = urlStr;
+            [self.navigationController pushViewController:vc animated:YES];
+        };
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     }
@@ -238,7 +281,7 @@ static NSString *itopic = @"ttopic";
         }
         else
         {
-            FHTableCell *cell = [[[NSBundle mainBundle] loadNibNamed:@"FHTableCell" owner:self options:nil] objectAtIndex:2];
+            FHTableCell *cell = [[[NSBundle mainBundle] loadNibNamed:@"FHTableCell" owner:self options:nil] objectAtIndex:4];
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
             cell.macth = self.matchArr[indexPath.row - 1];
             return cell;
@@ -248,9 +291,9 @@ static NSString *itopic = @"ttopic";
     {
         if (indexPath.row == 0)
         {
-            FHTableCell *cell = [[[NSBundle mainBundle] loadNibNamed:@"FHTableCell" owner:self options:nil] objectAtIndex:1];
+            FHTableCell *cell = [[[NSBundle mainBundle] loadNibNamed:@"FHTableCell" owner:self options:nil] objectAtIndex:0];
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
-
+           cell.leftTitle0.text = @"热门资讯";
             return cell;
             
         }
@@ -262,9 +305,26 @@ static NSString *itopic = @"ttopic";
             return cell;
             
         }
-
     }
 
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    if (indexPath.section == 1)
+    {
+        SaiShiDetailVC *vc = [[SaiShiDetailVC alloc] initWithNibName:@"SaiShiDetailVC" bundle:nil];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    else
+    {
+        ZiXunDetailVC *vc = [[ZiXunDetailVC alloc] initWithNibName:@"ZiXunDetailVC" bundle:nil];
+        Posts *post = self.topicArr[indexPath.row - 1];
+        vc.nid = post.pid;
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+   
 }
 #pragma mark - web service
 - (void)FHomeListRequestFromWeb
@@ -276,7 +336,7 @@ static NSString *itopic = @"ttopic";
                               @"m":@"index",
                               @"a":@"index",
                                  };
-    [BMHttpHander PostRequest1:K_Server_Main_URL WithParameters:paraDic WithSuccess:^(NSData * _Nullable data, NSURLResponse * _Nullable response) {
+    [BMHttpHander GetRequest:K_Server_Main_URL WithParameters:paraDic WithSuccess:^(NSData * _Nullable data, NSURLResponse * _Nullable response) {
         //        NSLog(@"%@", )
         
         id result = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
@@ -308,9 +368,9 @@ static NSString *itopic = @"ttopic";
     
     NSDictionary *userDic = [[NSUserDefaults standardUserDefaults] objectForKey:@"userInfo"];
     NSString *userid = userDic[@"id"];
-    
+ 
     NSDictionary *paraDic = @{
-                              @"page"     :@"1",
+                              @"page"     :@(1),
                               };
     
     
@@ -388,7 +448,13 @@ static NSString *itopic = @"ttopic";
 
     }
     if ([type isEqualToString:@"news"]) {
-        
+        NSArray *newsArr = [NSArray arrayWithArray:result[@"list"]];
+        for (NSDictionary *dic in newsArr)
+        {
+            FNewsModel *news = [[FNewsModel alloc] initWithDictionary:dic];
+            [self.newsArr addObject:news];
+
+        }
     }
 
 }

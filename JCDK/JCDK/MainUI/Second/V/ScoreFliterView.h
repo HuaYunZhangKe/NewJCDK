@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "JCDKBaseTableView.h"
+#import "ZKBlocks.h"
 @interface ScoreFliterView : UIView
 @property (weak, nonatomic) IBOutlet UIView *topView;
 
@@ -23,9 +24,13 @@
 @property (weak, nonatomic) IBOutlet UIButton *sureBtn;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet JCDKBaseTableView *tableView;
-
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *sliderViewHeight;
 @property (nonatomic, retain)UIView *line;
-- (void)show;
+@property (nonatomic ,copy)YSBlockWithInteger bottomBlock;
+/*//instant_cate 为即时  over_cate 为赛果  next_cate为赛程  ""为关注
+ PostDic初即时意外都需要时间键值对
+*/
+- (void)showViewWithScoreType:(NSString *)scoreType PostDic:(NSMutableDictionary *)dic;
 - (void)dismiss;
 
 @end

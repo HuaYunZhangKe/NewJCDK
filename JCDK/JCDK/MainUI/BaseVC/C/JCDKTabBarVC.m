@@ -32,13 +32,13 @@
 - (void)setTabbar
 {
  
-    NSArray *naviArr = @[self.firstNaviVC, self.secondNaviVC, self.thirdNaviVC, self.fourthNaviVC, self.fivthNaviVC];
+    NSArray *naviArr = @[self.firstNaviVC, self.secondNaviVC,self.fourthNaviVC, self.fivthNaviVC];
 //    NSArray *itemsNormalPic = @[@"menu_index_an.png", @"menu_befen_an.png", @"menu_ball_an.png", @"menu_tujian_an.png", @"menu_my_an.png"];
 //    NSArray *itemsSelectedPics = @[@"menu_index_liliang.png", @"menu_befen_liang.png",@"menu_ball_liang.png" , @"menu_tujian_liang.png", @"menu_my_liang.png"];
-    NSArray *itemsNormalPic = @[@"home.png", @"core.png", @"guess.png", @"recommend.png", @"user.png"];
-    NSArray *itemsSelectedPics = @[@"home-on.png", @"core-on.png",@"guess-on.png" , @"recommend-on.png", @"user-on.png"];
+    NSArray *itemsNormalPic = @[@"home.png", @"core.png",@"recommend.png", @"user.png"];
+    NSArray *itemsSelectedPics = @[@"home_on.png", @"core_on.png",@"recommend_on.png", @"user_on.png"];
 
-    NSArray *itemsTitle = @[@"首页",@"比分",@"猜球",@"推荐",@"我的"];
+    NSArray *itemsTitle = @[@"首页",@"比分",@"推荐",@"我的"];
     for(int i = 0;i<naviArr.count;i++)
     {
         UIViewController *controller = naviArr[i];

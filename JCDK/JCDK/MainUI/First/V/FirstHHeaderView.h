@@ -24,7 +24,7 @@
 
 @property (nonatomic, copy)YSBlockWithInteger topTapBlock;
 @property (nonatomic, copy)YSBlockWithInteger middleTapBlock;
-
+@property (nonatomic ,retain)NSMutableArray *winArr;
 - (void)setHeaderViewWithArray:(NSMutableArray *)array;
 
 @end

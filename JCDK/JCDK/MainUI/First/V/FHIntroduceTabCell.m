@@ -101,7 +101,7 @@ static NSString *indef =@"cIntroduce";
 //        flowlayout.itemSize = CGSizeMake(JCDK_Screen_WIDTH / 4.0, 65);
 //        flowlayout.minimumLineSpacing = 1;
 //        flowlayout.minimumInteritemSpacing = 1;
-        flowlayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+        flowlayout.scrollDirection = UICollectionViewScrollDirectionVertical;
         _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 12,JCDK_Screen_WIDTH , self.cheight) collectionViewLayout:flowlayout];
         _collectionView.backgroundColor = [UIColor colorWithRGB:0x202828];
         [self.collectionView registerNib:[UINib nibWithNibName:@"FHIntroduceColletionCell" bundle:nil] forCellWithReuseIdentifier:indef];
@@ -272,6 +272,38 @@ static NSString *indef =@"cIntroduce";
     
     
     return  CGSizeMake(JCDK_Screen_WIDTH / 4.0 , 65);
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (_stringBlock)
+    {
+        Users *use;
+        if (indexPath.section == 0)
+        {
+            NSMutableArray *tjArr1 = [self.showDic objectForKey:@"tj"];
+            use = tjArr1[indexPath.row];
+
+        }
+        else if (indexPath.section == 1)
+        {
+            NSMutableArray *tjArr2 = [self.showDic objectForKey:@"hr"];
+            use = tjArr2[indexPath.row];
+
+
+        }
+        else
+        {
+            NSMutableArray *tjArr3 = [self.showDic objectForKey:@"gz"];
+            use = tjArr3[indexPath.row];
+
+
+        }
+        _stringBlock(use.uid);
+
+
+
+    }
 }
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {

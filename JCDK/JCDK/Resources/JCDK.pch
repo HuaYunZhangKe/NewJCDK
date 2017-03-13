@@ -20,6 +20,8 @@
 
 /*
  宏定义 －－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－ */
+#define k_Unit [UIScreen mainScreen].bounds.size.width / 750.0   //UI设计宽度750.0 高度不变
+
 //#define K_Server_H5_URL @"http://uzhitou.cn/"
 #define K_Server_Main_URL @"http://114.55.227.5/index.php"
 #define JCDK_Screen_HEIGHT [UIScreen mainScreen].bounds.size.height
@@ -28,6 +30,9 @@
 //状态栏颜色
 #define kStatusBarColor [UIColor colorWithRGB:0x293033]
 //导航栏颜色
+#define kBlackColor [UIColor colorWithRGB:0x3c3c3c]
+#define kFont(font) [UIFont systemFontOfSize:font]
+
 #define kNavigationBarColor [UIColor colorWithRGB:0x303438]
 #define kAppColor [UIColor colorWithRGB:0x2f3439]
 #define kNavTitleColor [UIColor colorWithRGB:0xffffff]
@@ -40,6 +45,17 @@
 #define kAppdelegate [UIApplication sharedApplication].delegate
 #define kPlaceHoderImage [UIImage imageNamed:@"xiaowanzi.png"]
 
+//三方账号接入
+#define UM_appkey @"580dc7db7666133e7a00167b"
+
+#define QQ_AppID @"1105710253"
+#define QQ_APPKey @"2mMHnuBUTxrM9rzZ"
+
+#define WX_AppID @"wx6e0f1eb6eed9ff85"
+#define WX_AppSecret @"344e17a7f4faf78ed8a77bcfe74b8cb5"
+#define WX_APPKey @"1105406621"
+#define Sina_APPKey @"2524966343"
+#define Sina_AppSecret @"d60562fa54ffcc02dd9f0609d5dab239"
 
 
 
@@ -48,4 +64,6 @@
 #define kHexColor(hex) [UIColor colorWithRGB:hex]
 //防止block 循环引用
 #define WeakSelf(x)      __weak typeof (self) x = self
+//防止block 循环引用
+
 #endif /* JCDK_pch */

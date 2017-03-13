@@ -8,6 +8,7 @@
 
 #import "ScoreFiterTabCell1.h"
 #import "ScoreFitlerCollectionCell.h"
+#import "BiFenClassModel.h"
 @implementation ScoreFiterTabCell1
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -67,6 +68,29 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     ScoreFitlerCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"fliterColl" forIndexPath:indexPath];
+    BiFenClassModel *b = self.showArr[indexPath.item];
+    cell.name.text = b.c_name;
+    if (b.isSelected)
+    {
+        cell.backgroundColor = kYellowColor;
+        cell.layer.borderColor = kYellowColor.CGColor;
+
+    }
+    else
+    {
+        cell.backgroundColor = [UIColor clearColor];
+        cell.layer.borderColor = kWhiteColor1.CGColor;
+
+    }
+    cell.number.text = [NSString stringWithFormat:@"%@ 场",b.num];
     return cell;
+}
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    BiFenClassModel *b = self.showArr[indexPath.item];
+    b.isSelected = !b.isSelected;
+    [self.showArr replaceObjectAtIndex:indexPath.item withObject:b];
+    [self.collectionView reloadData];
+
 }
 @end

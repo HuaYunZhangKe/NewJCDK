@@ -15,7 +15,7 @@
 }
 @end
 @implementation GBView
-- (void)settingGBViewWithArray:(NSArray *)array
+- (void)settingGBViewWithArray:(NSMutableArray *)array
 {
     _gbArr = [NSArray arrayWithArray:array];
     _scrollView = [[UIScrollView alloc] initWithFrame:self.bounds];

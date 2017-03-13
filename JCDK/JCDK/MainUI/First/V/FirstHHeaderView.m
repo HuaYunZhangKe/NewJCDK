@@ -13,13 +13,54 @@
 - (void)awakeFromNib
 {
 //    _adHeight.constant = JCDK_Screen_HEIGHT / 4.0;
+    [super awakeFromNib];
     [self layoutIfNeeded];
+    self.winArr = [NSMutableArray new];
+    [self WinListRequestFromWeb];
+}
+#pragma mark - web service
+- (void)WinListRequestFromWeb
+{
+    //    /index.php?g=app&m=user&a=login
+    NSDictionary *paraDic = @{
+                              };
+    [BMHttpHander GetRequest:[NSString stringWithFormat:@"%@?g=app&m=index&a=massage",K_Server_Main_URL] WithParameters:paraDic WithSuccess:^(NSData * _Nullable data, NSURLResponse * _Nullable response) {
+        //        NSLog(@"%@", )
+        
+        id result = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+        NSLog(@"%@", result[@"status"]);
+        NSString *status = result[@"status"];
+        [result setObject:@"first" forKey:@"type"];
+        if ([status integerValue] == 1)
+        {
+            
+            [self performSelectorOnMainThread:@selector(webRequestSuccess:) withObject:result waitUntilDone:NO];
+            //            [self performSelectorOnMainThread:@selector(showTotast:) withObject:@"登录成功" waitUntilDone:NO];
+        }
+        else
+        {
+           
+        }
+        
+    } WithFail:^(NSData * _Nullable data, NSURLResponse * _Nullable response) {
+              
+    }];
+    
+}
+
+
+- (void)webRequestSuccess:(NSDictionary *)result
+{
+    NSString *type = result[@"type"];
+    self.winArr = [NSMutableArray arrayWithArray:result[@"list"]];
+    [self settingbgView];
+
+
 }
 
 - (void)setHeaderViewWithArray:(NSMutableArray *)array
 {
     [self setBHViewWithArray:array];
-    [self settingbgView];
     NSArray *vArray = @[self.footView,self.baseketBallView,self.introduView,self.helpView];
     for (int i = 0; i < vArray.count; i ++)
     {
@@ -56,7 +97,12 @@
 }
 - (void)settingbgView
 {
-    [self.bgView settingGBViewWithArray:@[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9"]];
+    NSMutableArray *winArray = [NSMutableArray new];
+    for (NSDictionary *dic in self.winArr)
+    {
+        [winArray addObject:dic[@"title"]];
+    }
+    [self.bgView settingGBViewWithArray:winArray];
 }
 - (void)tap:(UITapGestureRecognizer *)tap
 {

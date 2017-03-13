@@ -13,13 +13,18 @@
 #import "CanderView.h"
 #import "ClassUtils.h"
 #import "BiFenTabCell.h"
+#import "OrderWebViewVC.h"
+#import "OperSettingVC.h"
 @interface SHomeVC ()<UICollectionViewDelegate, UICollectionViewDataSource,UIScrollViewDelegate>
 @property (nonatomic, retain)UIView *scrollLine;
-@property (nonatomic, assign)BOOL fliterStatus;
-@property (nonatomic, retain)ScoreFliterView *fliter;
+@property (nonatomic, retain)ScoreFliterView *fliter1;
+@property (nonatomic, retain)ScoreFliterView *fliter2;
+@property (nonatomic, retain)ScoreFliterView *fliter3;
+
 @property (nonatomic, retain)CanderView *cView;
 @property (nonatomic, retain)NSArray *dateArr;
 @property (nonatomic, assign)NSInteger dateIndex;
+@property (nonatomic, assign)NSInteger currentSelectedIndex;//1为即时  2为赛程  3为赛果  4为关注
 
 
 @end
@@ -29,8 +34,8 @@ static NSString *shCollecionIdef = @"shcllect";
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.fliterStatus = NO;
     self.dateIndex = 0;
+    self.currentSelectedIndex = 1;
     self.view.frame = CGRectMake(0, 0, JCDK_Screen_WIDTH, JCDK_Screen_HEIGHT);
     [self setNavigationBar];
     [self.switchView addSubview:self.scrollLine];
@@ -53,33 +58,106 @@ static NSString *shCollecionIdef = @"shcllect";
         if (button == 2)
         {
             //右边第一个按钮点击
+            OperSettingVC *vc = [[OperSettingVC alloc] initWithNibName:@"OperSettingVC" bundle:nil];
+            [self.navigationController pushViewController:vc animated:YES];
         }
         if (button == 3)
         {
             //右边第二个按钮点击
-            if (!_fliterStatus)
+            if (self.currentSelectedIndex == 1)
             {
-                if (!_fliter)
+                if ([self.view.subviews containsObject:_fliter1])
                 {
-                    _fliter = [[[NSBundle mainBundle] loadNibNamed:@"ScoreFliterView" owner:self options:nil] objectAtIndex:0];
-                    _fliter.frame = CGRectMake(0, 64, JCDK_Screen_WIDTH, JCDK_Screen_HEIGHT - 250);
-                    [self.view addSubview:_fliter];
-
+                    [_fliter1 removeFromSuperview];
                 }
                 else
                 {
-                    [self.view addSubview:_fliter];
+                    if (!_fliter1)
+                    {
+                        _fliter1 = [[[NSBundle mainBundle] loadNibNamed:@"ScoreFliterView" owner:self options:nil] objectAtIndex:0];
+                        _fliter1.frame = CGRectMake(0, 64, JCDK_Screen_WIDTH, JCDK_Screen_HEIGHT - 250);
+                        [self.view addSubview:_fliter1];
+                        [_fliter1 showViewWithScoreType:@"instant_cate" PostDic:[NSMutableDictionary dictionaryWithDictionary:@{}]];
+                        _fliter1.bottomBlock = ^ (NSInteger index)
+                        {
+                            if (index == 1)
+                            {
+                                
+                            }
+                            if (index == 2)
+                            {
+                                
+                            }
+                            if (index == 3)
+                            {
+                                
+                            }
+                        };
+                    }
+                    else
+                    {
+                        [self.view addSubview:_fliter1];
+                    }
 
                 }
-                _fliterStatus = YES;
+                
+ 
+            }
+            else if(self.currentSelectedIndex == 2)
+            {
+                
+                if ([self.view.subviews containsObject:_fliter2])
+                {
+                    [_fliter2 removeFromSuperview];
+                }
+                else
+                {
+                    if (!_fliter2)
+                    {
+                        _fliter2 = [[[NSBundle mainBundle] loadNibNamed:@"ScoreFliterView" owner:self options:nil] objectAtIndex:0];
+                        _fliter2.frame = CGRectMake(0, 64, JCDK_Screen_WIDTH, JCDK_Screen_HEIGHT - 250);
+                        [self.view addSubview:_fliter2];
+                        
+                        [_fliter2 showViewWithScoreType:@"over_cate" PostDic:[NSMutableDictionary dictionaryWithDictionary:@{@"date" : @"2017-02-06"}]];
+                    }
+                    else
+                    {
+                        [self.view addSubview:_fliter2];
+                    }
+ 
+                }
+
+ 
+            }
+            else if (self.currentSelectedIndex == 3)
+            {
+                
+                if ([self.view.subviews containsObject:_fliter3])
+                {
+                    [_fliter3 removeFromSuperview];
+                }
+                else
+                {
+                    if (!_fliter3)
+                    {
+                        _fliter3 = [[[NSBundle mainBundle] loadNibNamed:@"ScoreFliterView" owner:self options:nil] objectAtIndex:0];
+                        _fliter3.frame = CGRectMake(0, 64, JCDK_Screen_WIDTH, JCDK_Screen_HEIGHT - 250);
+                        
+                        [_fliter3 showViewWithScoreType:@"next_cate" PostDic:[NSMutableDictionary dictionaryWithDictionary:@{@"date" : @"2017-02-06"}]];
+
+                        [self.view addSubview:_fliter3];
+                    }
+                    else
+                    {
+                        [self.view addSubview:_fliter3];
+                    }
+                }
             }
             else
             {
-                [_fliter removeFromSuperview];
-                _fliterStatus = NO;
-
+                
             }
-        }
+         }
         
     };
     [self.view addSubview:navigationView];
@@ -99,7 +177,7 @@ static NSString *shCollecionIdef = @"shcllect";
     self.collectionView.collectionViewLayout = flowLayout;
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
-    self.collectionView.pagingEnabled = YES;
+//    self.collectionView.pagingEnabled = YES;
     self.collectionView.backgroundColor =kHexColor(0x171a1a);
 
     [self.collectionView registerClass:[SHCollectionCell class] forCellWithReuseIdentifier:shCollecionIdef];
@@ -107,25 +185,47 @@ static NSString *shCollecionIdef = @"shcllect";
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 4;
+    return 1;
 }
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     WeakSelf(wc);
 
-    if (indexPath.row == 0)
+    if (self.currentSelectedIndex == 1)
     {
         SHCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:shCollecionIdef forIndexPath:indexPath];
-        cell.type = 1;
+        [cell showViewWithPostDic:[NSMutableDictionary dictionaryWithDictionary:@{@"ast_id":@(0),@"cid":@"",@"type":@"3",@"uid":@"1"}] Type:@"instant" AndCallBack:^(NSInteger integer) {
+            
+        }];
+        cell.gameBlock = ^(BiFenListModel *b)
+        {
+            OrderWebViewVC *vc = [[OrderWebViewVC alloc] init];
+            vc.naviTitle = b.league;
+            NSDictionary *userDic = [[NSUserDefaults standardUserDefaults] objectForKey:@"userInfo"];
+            NSString *userid = userDic[@"id"];
+            
+            NSString *urlStr = [NSString stringWithFormat:@"%@?g=app&m=match&a=match_content&id=%@&userid=%@",K_Server_Main_URL,b.bid,userid];
+            vc.urlStr = urlStr;
+            [self.navigationController pushViewController:vc animated:YES];
+        };
+        NSLog(@"index:%ld",(long)indexPath.section);
+
+       // cell.type = 1;
         return cell;
     }
-    else if (indexPath.row == 1)
+    else if (self.currentSelectedIndex == 2)
     {
         SHCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:shCollecionIdef forIndexPath:indexPath];
-        cell.type = 2;
-         BiFenTabCell *cell1 = [cell.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
-        cell1.dateLabel.text = self.dateArr[0] ;
-        NSLog(@"%@",self.dateArr[0]);
+       // cell.type = 2;
+        
+       __block BiFenTabCell *cell1;
+        [cell showViewWithPostDic:[NSMutableDictionary dictionaryWithDictionary:@{@"ast_id":@(0),@"cid":@"",@"date":@"2017-02-19",@"type":@"3",@"uid":@"1"}] Type:@"over" AndCallBack:^(NSInteger integer) {
+             cell1 = [cell.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+            cell1.dateLabel.text = self.dateArr[0];
+            NSLog(@"%@",self.dateArr[0]);
+        }];
+
+
         cell.saiguoBlock = ^(NSInteger index)
         {
             //1,上一步日期,2，下一步日期 3，日历弹窗
@@ -172,20 +272,84 @@ static NSString *shCollecionIdef = @"shcllect";
                 }
             }
         };
+        NSLog(@"index:%ld",(long)indexPath.item);
+
         return cell;
 
     }
-    else if (indexPath.row == 2)
+    else if (self.currentSelectedIndex == 3)
     {
         SHCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:shCollecionIdef forIndexPath:indexPath];
-        cell.type = 3;
+       // cell.type = 3;
+        __block BiFenTabCell *cell1;
+
+       [cell showViewWithPostDic:[NSMutableDictionary dictionaryWithDictionary:@{@"ast_id":@(0),@"cid":@"",@"date":@"2017-02-19",@"type":@"3",@"uid":@"1"}] Type:@"next" AndCallBack:^(NSInteger integer) {
+           cell1 = [cell.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+           cell1.dateLabel.text = self.dateArr[0];
+           NSLog(@"%@",self.dateArr[0]);
+
+           
+       }];
+        cell.saiguoBlock = ^(NSInteger index)
+        {
+            //1,上一步日期,2，下一步日期 3，日历弹窗
+            if (index == 1)
+            {
+                
+                if (self.dateIndex > 0) {
+                    self.dateIndex --;
+                    cell1.dateLabel.text = self.dateArr[self.dateIndex] ;
+                    
+                }
+            }
+            if (index == 2)
+            {
+                if (self.dateIndex < 6)
+                {
+                    self.dateIndex ++;
+                    cell1.dateLabel.text = self.dateArr[self.dateIndex] ;
+                    
+                }
+            }
+            if (index == 3)
+            {
+                if (!self.cView)
+                {
+                    self.cView = [[CanderView alloc] initWithFrame:CGRectMake(0, 64, JCDK_Screen_WIDTH, JCDK_Screen_HEIGHT - 64)];
+                    self.cView.dateArr = self.dateArr;
+                    [self.cView show];
+                    self.cView.index = self.dateIndex;
+                    self.cView.dateButtonBlock = ^(NSInteger index1)
+                    {
+                        _dateIndex = index1;
+                        cell1.dateLabel.text = wc.dateArr[wc.dateIndex] ;
+                        
+                    };
+                    [kAppdelegate.window addSubview:self.cView];
+                    
+                }
+                else
+                {
+                    [self.cView show];
+                    self.cView.index = self.dateIndex;
+                    [kAppdelegate.window addSubview:self.cView];
+                }
+            }
+        };
+
+        NSLog(@"index:%ld",(long)indexPath.item);
+
         return cell;
 
     }
     else
     {
         SHCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:shCollecionIdef forIndexPath:indexPath];
-        cell.type = 4;
+        [cell showViewWithPostDic:nil Type:@"running" AndCallBack:^(NSInteger integer) {
+            
+        }];
+        NSLog(@"index:%ld",(long)indexPath.item);
+        //cell.type = 4;
         return cell;
     }
 }
@@ -232,7 +396,8 @@ static NSString *shCollecionIdef = @"shcllect";
 }
 - (IBAction)switchBtnCLick:(UIButton *)sender
 {
-    
+    self.currentSelectedIndex = sender.tag - 20;
+    [self.collectionView reloadData];
     if (sender.tag == 21)
     {
         //即时
@@ -240,7 +405,9 @@ static NSString *shCollecionIdef = @"shcllect";
         [self.secondBtn setTitleColor:kWhiteColor1 forState:UIControlStateNormal];
         [self.thirdBtn setTitleColor:kWhiteColor1 forState:UIControlStateNormal];
         [self.fourthBtn setTitleColor:kWhiteColor1 forState:UIControlStateNormal];
-        [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:0] atScrollPosition:UICollectionViewScrollPositionLeft animated:YES];
+//        [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:0] atScrollPosition:UICollectionViewScrollPositionLeft animated:YES];
+        self.scrollLine.frame = CGRectMake(JCDK_Screen_WIDTH / 8.0 - 5.5 , 30, 11, 2);
+
     
 
     }
@@ -251,7 +418,9 @@ static NSString *shCollecionIdef = @"shcllect";
         [self.secondBtn setTitleColor:kYellowColor forState:UIControlStateNormal];
         [self.thirdBtn setTitleColor:kWhiteColor1 forState:UIControlStateNormal];
         [self.fourthBtn setTitleColor:kWhiteColor1 forState:UIControlStateNormal];
-          [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:1 inSection:0] atScrollPosition:UICollectionViewScrollPositionLeft animated:YES];
+        self.scrollLine.frame = CGRectMake(JCDK_Screen_WIDTH * 3 / 8.0 - 5.5 , 30, 11, 2);
+
+//          [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:1 inSection:0] atScrollPosition:UICollectionViewScrollPositionLeft animated:YES];
     }
     if (sender.tag == 23)
     {
@@ -260,7 +429,9 @@ static NSString *shCollecionIdef = @"shcllect";
         [self.secondBtn setTitleColor:kWhiteColor1 forState:UIControlStateNormal];
         [self.thirdBtn setTitleColor:kYellowColor forState:UIControlStateNormal];
         [self.fourthBtn setTitleColor:kWhiteColor1 forState:UIControlStateNormal];
-          [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:2 inSection:0] atScrollPosition:UICollectionViewScrollPositionLeft animated:YES];
+        self.scrollLine.frame = CGRectMake(JCDK_Screen_WIDTH * 5 / 8.0 - 5.5 , 30, 11, 2);
+
+//          [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:2 inSection:0] atScrollPosition:UICollectionViewScrollPositionLeft animated:YES];
     }
     if (sender.tag == 24)
     {
@@ -269,8 +440,9 @@ static NSString *shCollecionIdef = @"shcllect";
         [self.secondBtn setTitleColor:kWhiteColor1 forState:UIControlStateNormal];
         [self.thirdBtn setTitleColor:kWhiteColor1 forState:UIControlStateNormal];
         [self.fourthBtn setTitleColor:kYellowColor forState:UIControlStateNormal];
+        self.scrollLine.frame = CGRectMake(JCDK_Screen_WIDTH * 7 / 8.0 - 5.5 , 30, 11, 2);
 
-          [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:3 inSection:0] atScrollPosition:UICollectionViewScrollPositionLeft animated:YES];
+//        [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:3 inSection:0] atScrollPosition:UICollectionViewScrollPositionLeft animated:YES];
     }
     
 }

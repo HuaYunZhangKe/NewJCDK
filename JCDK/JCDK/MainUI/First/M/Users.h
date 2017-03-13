@@ -17,5 +17,7 @@
 @property (nonatomic, retain)NSString *avatar;
 @property (nonatomic, retain)NSString *betting;
 @property (nonatomic, retain)NSString *Winning;
+@property (nonatomic, retain)NSString *uid;
+
 
 @end

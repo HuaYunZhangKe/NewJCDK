@@ -1,8 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -18,7 +22,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="94" height="35"/>
                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
                             <state key="normal" title="全部">
-                                <color key="titleColor" red="0.94901960780000005" green="0.64313725489999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
                                 <action selector="topBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="SOw-ZL-BDr"/>
@@ -27,8 +31,8 @@
                         <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="16U-3W-OCn">
                             <rect key="frame" x="94" y="0.0" width="93.5" height="35"/>
                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                            <state key="normal" title="热门">
-                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <state key="normal" title="北单">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
                             <connections>
                                 <action selector="topBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="fft-CM-fHt"/>
@@ -37,8 +41,8 @@
                         <button opaque="NO" tag="104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0X5-jB-AMV">
                             <rect key="frame" x="281" y="0.0" width="93.5" height="35"/>
                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                            <state key="normal" title="解盘">
-                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <state key="normal" title="胜负彩">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
                             <connections>
                                 <action selector="topBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="cGA-S3-QRC"/>
@@ -48,7 +52,7 @@
                             <rect key="frame" x="187" y="0.0" width="94" height="35"/>
                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
                             <state key="normal" title="竞彩">
-                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleColor" red="0.94901960780000005" green="0.64313725489999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
                             <connections>
                                 <action selector="topBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="vnE-bv-e6t"/>
@@ -56,13 +60,13 @@
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Kh-tN-BZK" userLabel="line">
                             <rect key="frame" x="0.0" y="34" width="375" height="1"/>
-                            <color key="backgroundColor" red="0.027450980390000001" green="0.1019607843" blue="0.1019607843" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.027450980390000001" green="0.1019607843" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="4O2-ad-96S"/>
                             </constraints>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" red="0.12549019607843137" green="0.15686274509803921" blue="0.15686274509803921" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.12549019607843137" green="0.15686274509803921" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="16U-3W-OCn" secondAttribute="bottom" id="08f-5h-1Mq"/>
                         <constraint firstAttribute="height" constant="35" id="2Zj-Nf-eoW"/>
@@ -94,13 +98,13 @@
                         </scrollView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SXz-jO-1TT" userLabel="line">
                             <rect key="frame" x="0.0" y="24" width="375" height="1"/>
-                            <color key="backgroundColor" red="0.027450980390000001" green="0.1019607843" blue="0.1019607843" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.027450980390000001" green="0.1019607843" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="Ybs-ay-QrL"/>
                             </constraints>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" red="0.12549019607843137" green="0.15686274509803921" blue="0.15686274509803921" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.12549019607843137" green="0.15686274509803921" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="25" id="1LK-TW-2aj"/>
                         <constraint firstItem="SXz-jO-1TT" firstAttribute="leading" secondItem="eZU-OJ-3Kq" secondAttribute="leading" id="5YD-dQ-RLP"/>
@@ -114,28 +118,28 @@
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zCf-hD-vQr" customClass="JCDKBaseTableView">
                     <rect key="frame" x="0.0" y="60" width="375" height="572"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s3b-lN-YTO" userLabel="bottomView">
                     <rect key="frame" x="0.0" y="617" width="375" height="50"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k4y-gK-pX2" userLabel="line">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="3"/>
-                            <color key="backgroundColor" red="0.027450980390000001" green="0.1019607843" blue="0.1019607843" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.027450980390000001" green="0.1019607843" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="3" id="JCo-h6-DVP"/>
                             </constraints>
                         </view>
                         <button opaque="NO" tag="111" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iNP-Bg-6bz">
                             <rect key="frame" x="16" y="14.5" width="50" height="20"/>
-                            <color key="backgroundColor" red="0.94901960780000005" green="0.64313725489999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.94901960780000005" green="0.64313725489999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="50" id="FYi-RX-Jjc"/>
                                 <constraint firstAttribute="height" constant="20" id="Meq-la-CNU"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
                             <state key="normal" title="全选">
-                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
                             <connections>
                                 <action selector="bottomBtnCLick:" destination="iN0-l3-epB" eventType="touchUpInside" id="JgH-42-UcY"/>
@@ -150,7 +154,7 @@
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
                             <state key="normal" title="确定">
-                                <color key="titleColor" red="0.94901960780000005" green="0.64313725489999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleColor" red="0.94901960780000005" green="0.64313725489999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
                             <variation key="default">
                                 <mask key="constraints">
@@ -170,14 +174,14 @@
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
                             <state key="normal" title="反选">
-                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
                             <connections>
                                 <action selector="bottomBtnCLick:" destination="iN0-l3-epB" eventType="touchUpInside" id="08W-c2-Ckk"/>
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" red="0.12549019610000001" green="0.15686274510000001" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.12549019610000001" green="0.15686274510000001" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="iNP-Bg-6bz" firstAttribute="leading" secondItem="s3b-lN-YTO" secondAttribute="leading" constant="16" id="7Uf-PI-PLA"/>
                         <constraint firstItem="OP9-6c-Oa8" firstAttribute="top" secondItem="k4y-gK-pX2" secondAttribute="bottom" id="AeU-iQ-66K"/>
@@ -199,7 +203,7 @@
                     </variation>
                 </view>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="v5n-Qq-RVT" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="4fj-aC-hhK"/>
                 <constraint firstAttribute="trailing" secondItem="v5n-Qq-RVT" secondAttribute="trailing" id="DLd-VI-nIG"/>
@@ -215,7 +219,6 @@
                 <constraint firstItem="v5n-Qq-RVT" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="m3I-9o-9fz"/>
                 <constraint firstAttribute="trailing" secondItem="eZU-OJ-3Kq" secondAttribute="trailing" id="pK3-wu-Rdp"/>
             </constraints>
-            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
             <connections>
                 <outlet property="chooseAllBtn" destination="iNP-Bg-6bz" id="dih-dA-FTK"/>
                 <outlet property="fanxuanBtn" destination="Etc-ae-ll1" id="NIu-wL-YNe"/>
@@ -223,6 +226,7 @@
                 <outlet property="fourthBtn" destination="0X5-jB-AMV" id="Ec9-Jq-Pkz"/>
                 <outlet property="scrollView" destination="GHI-PI-pXK" id="iCf-jb-rRk"/>
                 <outlet property="secondBtn" destination="16U-3W-OCn" id="yhj-Hj-mYL"/>
+                <outlet property="sliderViewHeight" destination="1LK-TW-2aj" id="Wie-vN-dp2"/>
                 <outlet property="sureBtn" destination="OP9-6c-Oa8" id="SFf-mc-QyE"/>
                 <outlet property="tableView" destination="zCf-hD-vQr" id="e6i-jE-iGb"/>
                 <outlet property="thirdBtn" destination="vbV-RC-g9Z" id="Gau-G9-vzd"/>

@@ -9,5 +9,11 @@
 #import "Users.h"
 
 @implementation Users
+- (void)setValue:(id)value forUndefinedKey:(NSString *)key
+{
+    if ([key isEqualToString:@"id"]) {
+        self.uid = value;
+    }
+}
 
 @end

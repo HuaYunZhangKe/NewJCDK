@@ -11,6 +11,7 @@
 #import <WebKit/WebKit.h>
 #import "OrderWebViewVC.h"
 #import "ZhuaJiaDVC.h"
+#import "LoginVC.h"
 @interface FourthVC ()<UIWebViewDelegate>
 @property (nonatomic, retain)UIWebView *webView;
 @end
@@ -54,6 +55,20 @@
         if (button == 5)
         {
             //右边第1个按钮点击
+            NSDictionary *userDic = [[NSUserDefaults standardUserDefaults] objectForKey:@"userInfo"];
+            NSString *userid = userDic[@"id"];
+            if (userid.length == 0)
+            {
+                LoginVC *vc = [[LoginVC alloc] initWithNibName:@"LoginVC" bundle:nil];
+                [self.navigationController pushViewController:vc
+                                                     animated:YES];
+                return ;
+            }
+            OrderWebViewVC *vc = [[OrderWebViewVC alloc] init];
+            vc.naviTitle = @"专家认证";
+            NSString *urlStr = [NSString stringWithFormat:@"%@?g=app&m=rec&a=apply&userid=%@",K_Server_Main_URL,userid];
+            vc.urlStr = urlStr;
+            [self.navigationController pushViewController:vc animated:YES];
         }
         
         
@@ -64,6 +79,7 @@
     label.font = [UIFont systemFontOfSize:20.0];
     [label sizeToFit];
     label.center = CGPointMake(navigationView.centerX, navigationView.headImgView2.centerY);
+    label.top = 35;
     [navigationView addSubview:label];
     [self.view addSubview:navigationView];
 }
@@ -83,15 +99,25 @@
     NSString *backUrl = request.URL.absoluteString;
     
     NSString *tt = [self URLDecodedString:backUrl];
-    if ([tt hasPrefix:@"shouxiner://function/recindex?cmdSeq=2&"])
+    if ([tt hasPrefix:@"shouxiner://function/recIndexRecommand?cmdSeq=2&type="])
     {
-        NSString *postStr = [tt stringByReplacingOccurrencesOfString:@"shouxiner://function/recindex?cmdSeq=2" withString:@""];
-        NSString *urlStr = [NSString stringWithFormat:@"%@/?g=app&m=index&a=userlist%@&userid=1",K_Server_Main_URL,postStr];
-            ZhuaJiaDVC *vc = [[ZhuaJiaDVC alloc] initWithNibName:@"ZhuaJiaDVC" bundle:nil];
-        vc.urlStr = urlStr;
-        [self.navigationController pushViewController:vc animated:YES];
-        return NO;
+        NSString *type = [tt stringByReplacingOccurrencesOfString:@"shouxiner://function/recIndexRecommand?cmdSeq=2&type=" withString:@""];
+        NSArray *titleArr = @[@"竞彩单关",@"亚盘",@"大小球",@"串关推荐",@"胜负彩",@"蓝彩",@"滚球",@"免费专区"];
 
+        if ([type integerValue]>0 && [type integerValue]<= 6 )
+        {
+            OrderWebViewVC *vc = [[OrderWebViewVC alloc] init];
+            vc.naviTitle = titleArr[[type integerValue] - 1];
+            vc.urlStr = [NSString stringWithFormat:@"%@/?g=app&m=rec&a=cate&bet=%@",K_Server_Main_URL,type];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+         if ([type integerValue] == 8)
+         {
+             OrderWebViewVC *vc = [[OrderWebViewVC alloc] init];
+             vc.naviTitle = @"免费专区";
+             vc.urlStr = [NSString stringWithFormat:@"%@?g=app&m=rec&a=index&type=8",K_Server_Main_URL];
+             [self.navigationController pushViewController:vc animated:YES];
+         }
     }
        return YES;
 }

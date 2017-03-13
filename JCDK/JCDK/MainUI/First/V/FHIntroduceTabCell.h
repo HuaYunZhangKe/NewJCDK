@@ -8,13 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "UIImageView+WebCache.h"
-
+#import "ZKBlocks.h"
 @interface FHIntroduceTabCell : UITableViewCell
 @property (nonatomic, retain)UIView *topView;
 @property (nonatomic, retain)UIView *bottonView;
 @property (nonatomic, retain)UICollectionView *collectionView;
 @property (nonatomic, retain)UILabel *headTitleLabel;
 @property (nonatomic, retain)NSMutableDictionary *showDic;
+@property (nonatomic, copy)YSBlockWithString stringBlock;
 
 - (void)setContentWithArray:(NSArray *)array;
 @end

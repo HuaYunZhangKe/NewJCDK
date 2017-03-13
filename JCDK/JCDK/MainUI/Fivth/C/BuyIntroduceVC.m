@@ -11,6 +11,7 @@
 #import "BuyIntrTabCell.h"
 #import "NavigationView.h"
 #import "IntroduceModel.h"
+#import "LoginVC.h"
 @interface BuyIntroduceVC ()<UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, retain)IKEBaseTableView *tableView;
 @property (nonatomic, retain)NSMutableArray *intrArr;
@@ -57,6 +58,13 @@
     //    * @example  http://api.myike.com.cn/?m=api&v=locallife.mod&id=10&token=BgETMCIwH19fXVELWlwHVQNEWQ4PUVVVEVoMDAhTBBBcWlsIVgNGV1wMBBNyPzAdAl9dE0NbWFgBAgFCW14&debug=1 查看
     NSDictionary *userDic = [[NSUserDefaults standardUserDefaults] objectForKey:@"userInfo"];
     NSString *userid = userDic[@"id"];
+    if (userid.length == 0)
+    {
+        LoginVC *vc = [[LoginVC alloc] initWithNibName:@"LoginVC" bundle:nil];
+        [self.navigationController pushViewController:vc
+                                             animated:YES];
+    }
+
     NSDictionary *paraDic = @{
                               @"userid"   :userid,
                               @"type"     :@(type),

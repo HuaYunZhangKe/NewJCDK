@@ -10,6 +10,7 @@
 #import "Matchs.h"
 #import "Users.h"
 #import "Posts.h"
+#import "FNewsModel.h"
 @interface FHTableCell : UITableViewCell
 //index0
 
@@ -37,4 +38,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *commit;
 @property (weak, nonatomic) IBOutlet UILabel *fromLabel;
 @property (nonatomic, retain)Posts *post;
+
+//index4
+@property (weak, nonatomic) IBOutlet UILabel *label4_1;
+@property (weak, nonatomic) IBOutlet UILabel *label4_2;
+@property (weak, nonatomic) IBOutlet UILabel *label4_3;
 @end

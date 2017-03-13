@@ -10,6 +10,8 @@
 #import "NavigationView.h"
 #import "FocusTabCell.h"
 #import "NewsModel.h"
+#import "NewsListTabCell.h"
+#import "NewsDetailVC.h"
 @interface MyNewsVC ()<UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic ,retain)NSMutableArray *newsArr;
 @end
@@ -106,7 +108,8 @@
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 80;
+    return 150
+    ;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
@@ -120,8 +123,17 @@
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    FocusTabCell *cell = [[[NSBundle mainBundle] loadNibNamed:@"FocusTabCell" owner:self options:nil] objectAtIndex:1];
+    NewsListTabCell *cell = [[[NSBundle mainBundle] loadNibNamed:@"NewsListTabCell" owner:self options:nil] objectAtIndex:0];
     cell.news = self.newsArr [indexPath.section];
     return cell;
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NewsDetailVC *vc = [[NewsDetailVC alloc] initWithNibName:@"NewsDetailVC" bundle:nil];
+    NewsModel *news = self.newsArr[indexPath.row];
+    vc.news = news;
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 @end

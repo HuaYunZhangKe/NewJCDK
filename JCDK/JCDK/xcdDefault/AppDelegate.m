@@ -7,7 +7,10 @@
 //
 
 #import "AppDelegate.h"
-@interface AppDelegate ()
+#import <UMSocialCore/UMSocialCore.h>
+#import "WXApi.h"
+#import "WXApiManager.h"
+@interface AppDelegate ()<WXApiDelegate>
 
 @end
 
@@ -19,9 +22,40 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     [self.window makeKeyAndVisible];
     self.window.rootViewController = self.jcdkTabbarVC;
+    [self settingUMConfigue];
+
+    [WXApi registerApp:WX_AppID withDescription:@"ike"];
+
     NSLog(@"app path:%@",[[NSBundle mainBundle] bundlePath]);
     return YES;
 }
+- (void)settingUMConfigue
+{
+    //打开调试日志
+    [[UMSocialManager defaultManager] openLog:YES];
+    //设置友盟appkey
+    [[UMSocialManager defaultManager] setUmSocialAppkey:UM_appkey];
+    //设置微信的appKey和appSecret
+    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_WechatSession appKey:WX_AppID appSecret:WX_AppSecret redirectURL:@"http://www.pingspread.com"];
+    //QQ
+    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_QQ appKey:QQ_AppID appSecret:QQ_APPKey redirectURL:@"http://www.pingspread.com"];
+    //设置新浪的appId和appKey
+    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_Sina appKey:Sina_APPKey  appSecret:Sina_AppSecret redirectURL:@"http://sns.whalecloud.com/sina2/callback"];
+}
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    BOOL result = [[UMSocialManager defaultManager] handleOpenURL:url];
+        return result;
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    BOOL result = [[UMSocialManager defaultManager] handleOpenURL:url];
+    
+    
+    return result;
+    
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

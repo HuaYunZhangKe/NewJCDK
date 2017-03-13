@@ -18,8 +18,65 @@
 	<string>1.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>weixin</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>wx6e0f1eb6eed9ff85</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>qq</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>tencent1105710253</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>sina</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>wb2524966343</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>weixin</string>
+		<string>mqqOpensdkSSoLogin</string>
+		<string>mqzone</string>
+		<string>sinaweibohd</string>
+		<string>sinaweibo</string>
+		<string>sinaweibosso</string>
+		<string>weibosdk</string>
+		<string>weibosdk2.5</string>
+		<string>alipayauth</string>
+		<string>alipay</string>
+		<string>alipays</string>
+		<string>safepay</string>
+		<string>mqq</string>
+		<string>mqqapi</string>
+		<string>mqqopensdkapiV3</string>
+		<string>mqqopensdkapiV2</string>
+		<string>mqqapiwallet</string>
+		<string>mqqwpa</string>
+		<string>baidumap</string>
+		<string>mqqbrowser</string>
+		<string>wtloginmqq2</string>
+	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
@@ -27,6 +84,28 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>爱科生活请求获取使用蓝牙的权限</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>爱科生活请求获取使用日历的权限</string>
+	<key>NSCameraUsageDescription</key>
+	<string>爱科生活请求获取使用相机的权限</string>
+	<key>NSHealthShareUsageDescription</key>
+	<string>爱科生活请求获取使用健康分享的权限</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>爱科生活请求获取使用健康更新的权限</string>
+	<key>NSLocationUsageDescription</key>
+	<string>爱科生活请求获取使用定位的权限</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>爱科生活请求使用GPS</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>爱科生活请求获取使用麦克风的权限</string>
+	<key>NSMotionUsageDescription</key>
+	<string>爱科生活请求获取使用运动与健身的权限</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>爱科生活请求获取使用相册的权限</string>
+	<key>NSRemindersUsageDescription</key>
+	<string>爱科生活请求获取使用提醒事项的权限</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>

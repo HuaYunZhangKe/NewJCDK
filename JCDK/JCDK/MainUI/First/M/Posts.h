@@ -13,14 +13,14 @@
 @interface Posts : BaseModel
 
 @property (nonatomic, retain)NSString *pid;
-@property (nonatomic, retain)NSString *post_title;
-@property (nonatomic, retain)NSString *post_excerpt;
-@property (nonatomic, retain)NSString *user_nicename;
-@property (nonatomic, retain)NSString *post_source;
-@property (nonatomic, retain)NSString *post_modified;
+@property (nonatomic, retain)NSString *updtime;
+@property (nonatomic, retain)NSString *img;
+@property (nonatomic, retain)NSString *title;
+@property (nonatomic, retain)NSString *link;
+@property (nonatomic, retain)NSString *summary;
+@property (nonatomic, retain)NSString *content;
+@property (nonatomic, retain)NSString *pubtime;
 @property (nonatomic, retain)NSString *smeta;
-@property (nonatomic, retain)NSString *comment_count;
-@property (nonatomic, retain)NSString *post_like;
 
 
 @end

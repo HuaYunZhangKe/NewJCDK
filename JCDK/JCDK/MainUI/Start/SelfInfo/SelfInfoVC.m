@@ -14,8 +14,11 @@
 #import "ChangeSignVC.h"
 #import "ChangeNickNameVC.h"
 #import <UIImageView+WebCache.h>
-@interface SelfInfoVC ()<UITableViewDelegate,UITableViewDataSource>
+#import <AFNetworking.h>
+@interface SelfInfoVC ()<UITableViewDelegate,UITableViewDataSource,UIImagePickerControllerDelegate>
 @property (nonatomic ,retain)NSMutableDictionary *infoDic;
+
+
 @end
 
 @implementation SelfInfoVC
@@ -37,6 +40,49 @@
     navigationView.frame = CGRectMake(0, 0, JCDK_Screen_WIDTH, 64);
     [self.view addSubview:navigationView];
 
+}
+- (void)uploadAvatorWithURL:(UIImage *)image
+{
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    NSDictionary *userDic = [[NSUserDefaults standardUserDefaults] objectForKey:@"userInfo"];
+    NSString *userid = userDic[@"id"];
+    NSDictionary *dict = @{@"userid":userid};
+    
+    //formData: 专门用于拼接需要上传的数据,在此位置生成一个要上传的数据体
+    [manager POST:[NSString stringWithFormat:@"%@?g=app&m=user&a=avatar_upload",K_Server_Main_URL] parameters:dict constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+        
+        NSData *data = UIImagePNGRepresentation(image);
+        
+        // 在网络开发中，上传文件时，是文件不允许被覆盖，文件重名
+        // 要解决此问题，
+        // 可以在上传时使用当前的系统事件作为文件名
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        // 设置时间格式
+        formatter.dateFormat = @"yyyyMMddHHmmss";
+        NSString *str = [formatter stringFromDate:[NSDate date]];
+        NSString *fileName = [NSString stringWithFormat:@"%@.png", str];
+        
+        //上传
+        /*
+         此方法参数
+         1. 要上传的[二进制数据]
+         2. 对应网站上[upload.php中]处理文件的[字段"file"]
+         3. 要保存在服务器上的[文件名]
+         4. 上传文件的[mimeType]
+         */
+        [formData appendPartWithFileData:data name:@"file" fileName:fileName mimeType:@"image/png"];
+        
+    } progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSLog(@"上传成功 %@", responseObject);
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+        NSLog(@"上传失败 %@", error);
+    }];
+    
 }
 - (void)saveBtnClick:(UIButton *)button
 {
@@ -103,7 +149,7 @@
 
 - (void)webRequestSuccess:(NSDictionary *)result
 {
-    NSString *type = result[@"type"];
+//    NSString *type = result[@"type"];
       [self.tableView reloadData];
     
 }
@@ -292,6 +338,7 @@
         //        UIImage *tempImage;
         NSData *photo = UIImageJPEGRepresentation(image, 0.3);
         UIImage *tempImage = [UIImage imageWithData:photo];
+        [self uploadAvatorWithURL:tempImage];
         InfoCell1 *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
         cell.pic1.image = tempImage;
 //        NSString *baseString = [photo base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];

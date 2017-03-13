@@ -12,6 +12,6 @@
 @property (nonatomic, retain)UICollectionView *collectionView;
 @property (nonatomic, retain)UICollectionViewFlowLayout *cflowLayout;
 @property (nonatomic, assign)CGFloat collHeight;
-@property (nonatomic, retain)NSArray *showArr;
+@property (nonatomic, retain)NSMutableArray *showArr;
 + (CGFloat)cellHeightForArray:(NSArray *)array;
 @end

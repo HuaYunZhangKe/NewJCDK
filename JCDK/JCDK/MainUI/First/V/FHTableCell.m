@@ -12,6 +12,8 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+    _headPic.contentMode = UIViewContentModeScaleAspectFill;
+    _headPic.clipsToBounds = YES;
     self.zhibBtno.layer.cornerRadius = 3;
     self.jiepanBtn.layer.cornerRadius = 3;
     // Initialization code
@@ -25,35 +27,25 @@
 - (void)setMacth:(Matchs *)macth
 {
 
-    self.zLabel.text = macth.hometeam;
-    self.fLabel.text = macth.visitingteam;
-    [self.fPic sd_setImageWithURL:[NSURL URLWithString:macth.visiting_pic] placeholderImage:kPlaceHoderImage];
-    [self.zPic sd_setImageWithURL:[NSURL URLWithString:macth.home_pic] placeholderImage:kPlaceHoderImage];
-    self.time.text =[NSString stringWithFormat:@"%@",macth.starttime] ;
-    self.joinLabel.text = [NSString stringWithFormat:@"%@参与",macth.betnum];
+    self.label4_1.text = [NSString stringWithFormat:@"%@   %@",macth.league_name,macth.num];
+    self.label4_2.text = [NSString stringWithFormat:@"%@vs%@",macth.hometeam,macth.visitingteam ];
+    self.label4_3.text = [NSString stringWithFormat:@"%@ 推荐",macth.betnum];
+    
 }
 - (void)setPost:(Posts *)post
 {
-    [self.headPic sd_setImageWithURL:[NSURL URLWithString:post.smeta] placeholderImage:kPlaceHoderImage];
-    self.zan.text = post.post_like;
-    self.commit.text = post.comment_count;
-    self.titleLabel.text = post.post_title;
-    self.subTitle.text = post.post_excerpt;
-    NSString *String = [NSString stringWithFormat:@"%@来自%@",post.user_nicename,post.post_source];
-    NSRange range1 = [String rangeOfString:post.user_nicename];
-    NSRange range2 = [String rangeOfString:post.post_source];
+    [self.headPic sd_setImageWithURL:[NSURL URLWithString:post.img] placeholderImage:kPlaceHoderImage];
+//    self.zan.text = post.post_like;
+//    self.commit.text = post.comment_count;
+    self.titleLabel.text = post.title;
+    self.subTitle.text = post.content;
+    NSString *String = [NSString stringWithFormat:@"%@%@",@"发布日期",post.pubtime];
+    NSRange range1 = [String rangeOfString:@"发布日期"];
+    NSRange range2 = [String rangeOfString:post.pubtime];
 
     NSMutableAttributedString *attiString = [[NSMutableAttributedString alloc] initWithString:String attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:11],NSForegroundColorAttributeName:kWhiteColor2}];
     [attiString addAttribute:NSForegroundColorAttributeName value:kYellowColor range:range1];
     [attiString addAttribute:NSForegroundColorAttributeName value:kYellowColor range:range2];
     self.fromLabel.attributedText = attiString;
-//    post_excerpt,文章摘要
-//    user_nicename,作者
-//    post_source,来源
-//    b.post_modified,发布时间
-//    smeta,文章图片
-//    comment_count,评论数
-//    post_like 点赞数
-
 }
 @end

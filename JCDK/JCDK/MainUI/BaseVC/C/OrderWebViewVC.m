@@ -9,7 +9,6 @@
 #import "OrderWebViewVC.h"
 #import "NavigationView.h"
 @interface OrderWebViewVC ()<UIWebViewDelegate>
-
 @end
 
 @implementation OrderWebViewVC
@@ -19,7 +18,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     WeakSelf(wc);
     NavigationView *navigationView = [[[NSBundle mainBundle] loadNibNamed:@"NavigationView" owner:self options:nil] objectAtIndex:4];
-    navigationView.titleLabel4.text = @"专家详情";
+    navigationView.titleLabel4.text = self.naviTitle;
     navigationView.buttonBlock4 = ^(NSInteger button)
     {
         [wc.navigationController popViewControllerAnimated:NO];

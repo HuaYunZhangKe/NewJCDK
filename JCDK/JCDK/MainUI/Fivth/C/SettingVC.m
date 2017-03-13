@@ -11,8 +11,15 @@
 #import "LoginVC.h"
 #import "AppDelegate.h"
 #import "RegistVC.h"
+#import "ShareView.h"
+#import <UMSocialCore/UMSocialCore.h>
+#import "AboutUsVC.h"
+#import "OrderWebViewVC.h"
+
+
 @interface SettingVC ()<UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic ,retain)NSArray *dataArr;
+@property (nonatomic, retain)ShareView *shareview;
 @end
 
 @implementation SettingVC
@@ -40,7 +47,7 @@
     [self.view addSubview:navigationView];
 
 //    _tableView.backgroundColor = kAppColor;
-    _dataArr = @[@[@"修改密码"],@[@"清空缓存"],@[@"给我们评分",@"分享给好友",@"用户协议",@"关于竞彩大咖"]];
+    _dataArr = @[@[@"修改密码"],@[@"清空缓存"],@[@"分享给好友",@"用户协议",@"关于竞彩大咖"]];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -152,6 +159,8 @@
 #pragma mark - tableView delegate
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    WeakSelf(wc);
+
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (indexPath.row == 0 && indexPath.section == 0)
     {
@@ -159,13 +168,106 @@
         vc.fromWhere = 2;
         [self.navigationController pushViewController:vc animated:YES];
     }
+    if (indexPath.row == 0 && indexPath.section == 2)
+    {
+        self.shareview = [[ShareView alloc] initWithFrame:self.view.bounds];
+        self.shareview.shareTypeBlock = ^(NSString *type)
+        {
+            if ([type integerValue] == 1)
+            {
+                [wc shareDataWithPlatform:UMSocialPlatformType_WechatTimeLine];
+            }
+            else if ([type integerValue] == 2)
+            {
+                [wc shareDataWithPlatform:UMSocialPlatformType_WechatSession];
+                
+            }
+            else if ([type integerValue] == 3)
+            {
+                [wc shareDataWithPlatform:UMSocialPlatformType_QQ];
+                
+            }
+            else
+            {
+                [wc shareDataWithPlatform:UMSocialPlatformType_Sina];
+                
+            }
+        };
+        [self.view addSubview:self.shareview];
+    }
+    if (indexPath.row == 1 && indexPath.section == 2)
+    {
+        //用户协议
+        OrderWebViewVC *vc = [[OrderWebViewVC alloc] init];
+        vc.urlStr = @"http://114.55.227.5/user.html";
+        vc.naviTitle = @"用户协议";
+        [self.navigationController pushViewController:vc animated:YES];
+        
+    }
+    if (indexPath.row == 2 && indexPath.section == 2)
+    {
+        //关于竞彩大咖
+        AboutUsVC *vc = [[AboutUsVC alloc] initWithNibName:@"AboutUsVC" bundle:nil];
+        [self.navigationController pushViewController:vc animated:YES];
+
+        
+
+    }
+
     if (indexPath.section == self.dataArr.count)
      {
          LoginVC *vc =  [[LoginVC alloc] initWithNibName:@"LoginVC" bundle:nil];
          [[NSUserDefaults standardUserDefaults] setObject:@"0" forKey:@"isLogin"];
          [self.navigationController pushViewController:vc animated:YES];
-              }
+     }
+    
+    
 }
+
+- (void)shareDataWithPlatform:(UMSocialPlatformType)platformType
+{
+    UMSocialMessageObject *messageObject = [self creatMessageObject];
+    //调用分享接口
+    [[UMSocialManager defaultManager] shareToPlatform:platformType messageObject:messageObject currentViewController:self completion:^(id data, NSError *error) {
+        NSString *message = nil;
+        if (!error) {
+            message = [NSString stringWithFormat:@"分享成功"];
+        }
+        else{
+            if (error) {
+                message = [NSString stringWithFormat:@"失败原因Code: %d\n",(int)error.code];
+            }
+            else{
+                message = [NSString stringWithFormat:@"分享失败"];
+            }
+        }
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"share"
+                                                        message:message
+                                                       delegate:nil
+                                              cancelButtonTitle:NSLocalizedString(@"确定", nil)
+                                              otherButtonTitles:nil];
+        [alert show];
+    }];
+    
+}
+
+- (UMSocialMessageObject *)creatMessageObject
+{
+  
+    //创建分享消息对象
+    UMSocialMessageObject *messageObject = [UMSocialMessageObject messageObject];
+    NSString *title = @"竞彩大咖";
+    NSString *url = @"http://www.baidu.com";
+    NSString *text = @"竞彩大咖";
+    //    UIImage *image = [UIImage imageNamed:@"xiaowanzi.jpg"];
+    //纯文本分享
+    messageObject.text = text;
+    UMShareWebpageObject *shareObject = [UMShareWebpageObject shareObjectWithTitle:title descr:text thumImage:@"icon_setting.png"];
+    [shareObject setWebpageUrl:url];
+    messageObject.shareObject = shareObject;
+    return messageObject;
+}
+
 
 
 @end
